@@ -1,0 +1,574 @@
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[04-Dec-2017 13:26:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Console\Kernel does not exist in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('App\\Console\\Ker...')
+#1 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#2 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php(564): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#3 /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->makeWith('App\\Console\\Ker...', Array)
+#4 in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[05-Jan-2018 10:41:44 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/symfony/process/Process.php on line 333
+[05-Jan-2018 15:57:39 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/symfony/process/Process.php on line 333
+[05-Jan-2018 16:53:38 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/symfony/process/Process.php on line 333
+[05-Jan-2018 17:05:04 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/symfony/process/Pipes/UnixPipes.php on line 112
+[05-Jan-2018 17:21:27 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/symfony/process/Process.php on line 1561
+[05-Jan-2018 17:55:45 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/symfony/process/Pipes/UnixPipes.php on line 102
+[05-Jan-2018 18:44:12 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/symfony/process/Pipes/UnixPipes.php on line 119
+[05-Jan-2018 18:46:09 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/symfony/process/Process.php on line 333
+[06-Jan-2018 01:02:01 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/symfony/process/Process.php on line 1321
+[06-Jan-2018 02:17:24 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/symfony/process/Process.php on line 1514
+[06-Jan-2018 02:21:00 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/symfony/process/Process.php on line 333
+[06-Jan-2018 02:23:04 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/symfony/process/Pipes/UnixPipes.php on line 102
+[06-Jan-2018 02:47:53 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/symfony/console/Output/BufferedOutput.php on line 28
+[06-Jan-2018 03:01:02 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/wwweb/review.wwwebdesignstudios.com/queue_soft_7r8ae9d0i/vendor/symfony/process/Process.php on line 1321
