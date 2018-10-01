@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+caption h3 {
+margin: 0;
+}
+caption {
+background-color: black;
+color: white;
+}
+th h3 {
+background-color: #6dbb0a;
+padding: 10px;
+color: white;
+text-shadow: 0px 1px 1px #528f04;
+margin: 0;
+}
+th {
+background-color: #eee;
+}

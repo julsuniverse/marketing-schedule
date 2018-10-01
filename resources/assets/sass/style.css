@@ -1,0 +1,145 @@
+a{
+	color: #909090;
+	transition: all 0.3s;
+}
+
+.print_logo{
+	display:none;
+}
+
+a:hover, a:focus{
+	color: #444;
+}
+
+.clear{
+	clear: both;
+}
+
+.fa-fw{
+	margin-right: 6px;
+	color: #7e7e7e;
+}
+
+.link-black{
+	color: #444;
+}
+
+.link-black:hover{
+	color: #000;
+	text-decoration: none;
+}
+
+.logo{
+	width: 240px;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 35px;
+}
+
+.box{
+	-webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+	-ms-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+	-o-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+
+.navbar{
+	border-bottom: 1px solid #dfdfdf;
+}
+
+.sidebar ul li a, .sidebar ul li a.active {
+    background-color: #fff;
+}
+
+.navbar-toggle{
+	background-color:#fff; 
+	border:1px solid #444;
+}
+
+.navbar-toggle .icon-bar{
+	background: #444;
+}
+
+.sidebar ul li a.active{
+	background-color: #eee;
+}
+
+.hide-form{
+	display: block;
+}
+
+[data-role="dynamic-fields"] > .form-inline + .form-inline {
+	margin-top: 0.5em;
+}
+
+[data-role="dynamic-fields"] > .form-inline [data-role="add"] {
+	/*display: none;*/
+}
+
+[data-role="dynamic-fields"] > .form-inline:last-child [data-role="add"] {
+	display: inline-block;
+}
+
+#social-form-hide:first-child   [data-role="remove"] {
+	/*display: none;*/
+}
+
+.well, .form-inline{
+	overflow: hidden;
+}
+
+#social-form-hide{
+	display: none;
+}
+
+.dropdown-menu {
+	z-index: 9999999999;
+}
+
+input[type="file"]{
+	  height:auto;
+  }
+
+.btn-purple{
+	background: #a465d0;
+	background-image: linear-gradient(#a465d0 10%, #9241cc, #a465d0);
+	color: #fff;
+	border-color: #9241cc;
+}
+
+.btn-purple:hover {
+	background-image: linear-gradient(#a465d0 60%, #9241cc, #a465d0);
+	color: #fff;
+	border-color: #7127a7;
+}
+
+.btn-brown{
+	background: #ffa80b;
+	background-image: linear-gradient(#f09a00 10%, #d68a00, #ffa400);
+	color: #fff;
+	border-color: #d68a00;
+}
+
+.btn-brown:hover {
+	background-image: linear-gradient(#ffa400 60%, #d68a00, #ffa400);
+	color: #fff;
+	border-color: #b27300;
+}
+
+@media (max-width: 767px){
+	.navbar .dropdown-menu a {
+	    color: #444;
+	}
+}
+
+@media (min-width: 768px) {
+	.form-inline .form-control {
+		 width: 100%;
+	}
+}
+
+div.dataTables_filter input {
+	width: 175px !important;
+	margin-right: -14px;
+}

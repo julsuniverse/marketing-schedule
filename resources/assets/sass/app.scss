@@ -4,6 +4,20 @@
 
 // Variables
 @import "variables";
-
+@import "~font-awesome/css/font-awesome.css";
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~bootstrap3/dist/css/bootstrap.css";
+@import "~metismenu/dist/metisMenu.css";
+@import "timeline.css";
+@import "sb-admin-2.css";
+@import "~morris/morris.css"; //alias morris -> morris.js
+@import "bootstrap-social.css";
+@import "~datatables/media/css/jquery.dataTables.css";
+@import "~datatables-bootstrap/css/dataTables.bootstrap.css";
+@import "~datatables-responsive/css/responsive.dataTables.scss";
+@import "~bootstrap-datepicker/dist/css/bootstrap-datepicker.css";
+@import "coreport.css";
+@import "reportprint.css";
+@import "style.css";
+
+

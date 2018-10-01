@@ -6,6 +6,15 @@
  */
 
 require('./bootstrap');
+require('jquery-base64');
+require('metismenu');
+require('./sb-admin-2');
+require('bootstrap-datepicker');
+require('datatables');
+require('jquery-validation');
+require('datatables-bootstrap');
+require('datatables-responsive');
+require('./layout.js');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
