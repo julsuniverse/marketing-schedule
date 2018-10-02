@@ -15,6 +15,7 @@ require('jquery-validation');
 require('datatables-bootstrap');
 require('datatables-responsive');
 require('./layout.js');
+require('./marketing.js');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

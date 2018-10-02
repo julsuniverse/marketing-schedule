@@ -4,11 +4,8 @@
 @section('sub-title', 'Marketing')
 
 @section('content')
-    <table class="table table-hover table-bordered table-responsive" id="dataTables">
+    <table class="table table-hover table-bordered table-responsive" id="marketing-dataTables">
         <thead>
-
-        </thead>
-        <tbody>
         <tr class="table-header">
             <th>#</th>
             <th>Company</th>
@@ -23,7 +20,28 @@
             <th>Text/Emails</th>
             <th>Report</th>
         </tr>
+        </thead>
+        <tbody>
+            @foreach($offices as $office)
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td><b>{{ $office->company->company_name }}</b>: {{ $office->office_name}}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            @endforeach
+
         </tbody>
     </table>
+
+    {{ $offices ->links() }}
 
 @endsection

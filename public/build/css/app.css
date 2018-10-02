@@ -11153,6 +11153,7 @@ a{
 	color: #909090;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
+	display: block;
 }
 
 .print_logo{

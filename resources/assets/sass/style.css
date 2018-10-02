@@ -1,6 +1,7 @@
 a{
 	color: #909090;
 	transition: all 0.3s;
+	display: block;
 }
 
 .print_logo{

@@ -79247,6 +79247,7 @@ __webpack_require__("./node_modules/jquery-validation/dist/jquery.validate.js");
 __webpack_require__("./node_modules/datatables-bootstrap/js/dataTables.bootstrap.js");
 __webpack_require__("./node_modules/datatables-responsive/js/dataTables.responsive.js");
 __webpack_require__("./resources/assets/js/layout.js");
+__webpack_require__("./resources/assets/js/marketing.js");
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -79694,6 +79695,16 @@ function additional_urls(type, soc_id, off_id, com_id) {
         //////////////////
     }
 }
+
+/***/ }),
+
+/***/ "./resources/assets/js/marketing.js":
+/***/ (function(module, exports) {
+
+$('#marketing-dataTables').DataTable({
+    responsive: true,
+    paging: false
+});
 
 /***/ }),
 
