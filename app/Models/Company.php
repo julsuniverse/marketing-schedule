@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Class Company
  * @package App\Models
+ * @mixin \Eloquent
  */
 class Company extends Model
 {

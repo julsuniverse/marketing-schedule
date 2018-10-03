@@ -15,8 +15,7 @@ class CreateMarketingsTable extends Migration
     {
         Schema::create('marketings', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('company_office_id');
-            $table->string('date');
+            $table->integer('company_id');
             $table->integer('traffic');
             $table->integer('calls');
             $table->integer('forms');
@@ -24,12 +23,17 @@ class CreateMarketingsTable extends Migration
             $table->integer('posts');
             $table->integer('citations');
             $table->integer('pr');
+            $table->integer('month');
+            $table->integer('year');
             $table->timestamps();
         });
 
         Schema::table('marketings', function (Blueprint $table) {
-            $table->foreign('company_office_id')
-                ->references('id')->on('office')
+            $table->index(['month']);
+            $table->index(['year']);
+
+            $table->foreign('company_id')
+                ->references('id')->on('company')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
@@ -42,10 +46,6 @@ class CreateMarketingsTable extends Migration
      */
     public function down()
     {
-        Schema::table('marketings', function (Blueprint $table) {
-            $table->dropIndex(['company_office_id']);
-        });
-
         Schema::dropIfExists('marketings');
     }
 }
