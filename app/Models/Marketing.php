@@ -14,8 +14,8 @@ class Marketing extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function office()
+    public function company()
     {
-        return $this->hasOne(Office::class);
+        return $this->hasOne(Company::class);
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Marketing;
 use App\Repositories\CompanyRepository;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,7 @@ class MarketingController extends Controller
      */
     public function index()
     {
-        $offices = $this->companyRepository->getMarketing();
-        return view('marketing.index')->with('offices', $offices);
+        $marketings = Marketing::with('company')->paginate(20);
+        return view('marketing.index')->with('marketings', $marketings);
     }
 }

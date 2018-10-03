@@ -22,10 +22,10 @@
         </tr>
         </thead>
         <tbody>
-            @foreach($offices as $office)
+            @foreach($marketings as $marketing)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td><b>{{ $office->company->company_name }}</b>: {{ $office->office_name}}</td>
+                    <td>{{ $marketing->company->company_name }}</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -42,6 +42,6 @@
         </tbody>
     </table>
 
-    {{ $offices ->links() }}
+    {{ $marketings->links() }}
 
 @endsection

@@ -19,8 +19,8 @@ class Company extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function offices()
+    public function marketings()
     {
-        return $this->hasMany(Office::class);
+        return $this->hasMany(Marketing::class);
     }
 }

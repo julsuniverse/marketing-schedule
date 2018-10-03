@@ -23,9 +23,4 @@ class Office extends Model
     {
         return $this->belongsTo(Company::class);
     }
-
-    public function marketings()
-    {
-        return $this->hasMany(Marketing::class);
-    }
 }
