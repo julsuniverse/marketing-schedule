@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Events\CompanySaved;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -15,6 +16,13 @@ class Company extends Model
      * @inheritdoc
      */
     protected $table = 'company';
+
+    /**
+     * @inheritdoc
+     */
+    protected $dispatchesEvents = [
+        'created' => CompanySaved::class,
+    ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
