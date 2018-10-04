@@ -13,6 +13,7 @@
         "twilio/sdk": "^5.15"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.2",
         "barryvdh/laravel-ide-helper": "*",
         "fzaninotto/faker": "~1.4",
         "guzzlehttp/guzzle": "*",
