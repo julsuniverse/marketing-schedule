@@ -41,7 +41,10 @@ class CreateMarketingFromCompany extends Command
      */
     public function handle()
     {
-        $companies = Company::where('domain_id', '!=', null)->get();
+        $companies = Company::where([
+            ['domain_id', '!=', null],
+            'marketing' => 1]
+        )->get();
 
         foreach ($companies as $company) {
             $this->marketingRepository->create($company);

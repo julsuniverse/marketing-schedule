@@ -33,7 +33,15 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td>
+                        @php
+                            $count = 0;
+                            foreach ($marketing->company->offices as $office) {
+                                $count += $office->reviews->count();
+                            }
+                        @endphp
+                        {{ $count }}
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>

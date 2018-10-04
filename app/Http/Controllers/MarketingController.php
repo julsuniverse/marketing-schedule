@@ -21,7 +21,11 @@ class MarketingController extends Controller
      */
     public function index()
     {
-        $marketings = Marketing::with('company')->paginate(20);
+        $marketings = Marketing::where(['month' => date('m'), 'year' => date('Y')])
+            ->with('company')
+            ->with('company.offices.reviews')
+            ->paginate(20);
+
         return view('marketing.index')->with('marketings', $marketings);
     }
 }

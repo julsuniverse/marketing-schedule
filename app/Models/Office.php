@@ -23,4 +23,9 @@ class Office extends Model
     {
         return $this->belongsTo(Company::class);
     }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }

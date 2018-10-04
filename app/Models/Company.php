@@ -31,4 +31,12 @@ class Company extends Model
     {
         return $this->hasMany(Marketing::class);
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function offices()
+    {
+        return $this->hasMany(Office::class);
+    }
 }
