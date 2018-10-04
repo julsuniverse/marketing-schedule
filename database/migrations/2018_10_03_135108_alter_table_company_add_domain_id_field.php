@@ -21,6 +21,8 @@ class AlterTableCompanyAddDomainIdField extends Migration
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
+
+        Artisan::call('company:add-domains');
     }
 
     /**
@@ -31,6 +33,7 @@ class AlterTableCompanyAddDomainIdField extends Migration
     public function down()
     {
         Schema::table('company', function (Blueprint $table) {
+            $table->dropForeign(['domain_id']);
             $table->dropColumn('domain_id');
         });
     }

@@ -16,13 +16,13 @@ class CreateMarketingsTable extends Migration
         Schema::create('marketings', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('company_id');
-            $table->integer('traffic');
-            $table->integer('calls');
-            $table->integer('forms');
-            $table->integer('pages');
-            $table->integer('posts');
-            $table->integer('citations');
-            $table->integer('pr');
+            $table->integer('traffic')->nullable();
+            $table->integer('calls')->nullable();
+            $table->integer('forms')->nullable();
+            $table->integer('pages')->nullable();
+            $table->integer('posts')->nullable();
+            $table->integer('citations')->nullable();
+            $table->integer('pr')->nullable();
             $table->integer('month');
             $table->integer('year');
             $table->timestamps();

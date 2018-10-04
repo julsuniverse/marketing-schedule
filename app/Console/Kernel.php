@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\CreateMarketingFromCompany;
 use App\Console\Commands\RelateDomainsToCompany;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -14,6 +15,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         RelateDomainsToCompany::class,
+        CreateMarketingFromCompany::class
     ];
 
     /**

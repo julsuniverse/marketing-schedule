@@ -2534,7 +2534,8 @@ INSERT INTO `company_social_profile` (`id`, `company_social_profile_account_name
 (183, 'Google+', 'https://plus.google.com/u/0/+Solutiant', '', '', 94, 1, '2018-08-11 04:03:35', '2018-08-11 04:03:35'),
 (184, 'Google+', 'https://plus.google.com/u/0/b/101950780870447845222/101950780870447845222', '', '', 98, 1, '2018-08-11 23:25:38', '2018-08-11 23:25:38'),
 (185, 'YouTube', 'https://www.youtube.com/channel/UCT_zv4YI5hIgEPN1lvc9P3g', '', '', 98, 1, '2018-08-11 23:26:19', '2018-08-11 23:26:19'),
-(186, 'Instagram', 'https://www.instagram.com/solutiant/', 'Solutiant', 'Teleco4400', 94, 1, '2018-08-19 12:55:09', '2018-08-19 12:55:09'),
+(186, 'Instagram', 'https://www.instagram.com/solutiant/', 'Sol
+utiant', 'Teleco4400', 94, 1, '2018-08-19 12:55:09', '2018-08-19 12:55:09'),
 (187, 'Facebook', 'https://www.facebook.com/HollywoodHormoneTherapy/', 'Joe@hollywoodhormone.com', 'SALEEN26!', 96, 1, '2018-08-21 12:32:41', '2018-08-21 12:32:41'),
 (188, 'Twitter', 'https://twitter.com/hhormonetherapy', 'hhormonetherapy', 'HHtherapy26!$', 96, 1, '2018-08-21 12:33:14', '2018-08-21 12:33:14'),
 (189, 'Instagram', 'https://www.instagram.com/hollywoodhormonetherapy/', 'hollywoodhormonetherapy', 'HHtherapy26!$', 96, 1, '2018-08-21 13:21:01', '2018-08-21 13:21:01'),

@@ -49,6 +49,8 @@ class RelateDomainsToCompany extends Command
             $company->domain_id = $domain->id;
             $company->save();
         }
+
+        $this->info('Domains were related.');
     }
 
 
