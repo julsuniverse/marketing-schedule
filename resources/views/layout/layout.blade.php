@@ -18,12 +18,15 @@
         @include('layout.nav')
     </div>
     <div id="page-wrapper">
-        <div class="row">
+        <div class="row" id="app">
             <h2 class="heading">@yield('sub-title')</h2>
             <div class="add-line clear"></div>
 
             @yield('content')
         </div>
+    </div>
+    <div id="spinner">
+        <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
     </div>
     <script src="{{ asset('build/js/app.js') }}"></script>
     </body>

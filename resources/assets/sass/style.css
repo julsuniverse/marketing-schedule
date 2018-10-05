@@ -132,6 +132,18 @@ input[type="file"]{
 	display: block;
 }
 
+.marketing-cell
+{
+	height: 25px;
+}
+
+.marketing-cell input
+{
+	width: 85px;
+	max-width: 85px;
+}
+
+
 @media (max-width: 767px){
 	.navbar .dropdown-menu a {
 	    color: #444;

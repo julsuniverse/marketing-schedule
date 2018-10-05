@@ -20,31 +20,49 @@
         </div>
     </div>
 
-    <table class="table table-hover table-bordered table-responsive" id="marketing-dataTables">
-        <thead>
-        <tr class="table-header">
-            <th>#</th>
-            <th>Company</th>
-            <th>Traffic</th>
-            <th>Calls</th>
-            <th>Forms</th>
-            <th>Pages</th>
-            <th>Posts</th>
-            <th>Citations</th>
-            <th>PR</th>
-            <th>Reviews</th>
-            <th>Text/Emails</th>
-            <th>Report</th>
-        </tr>
-        </thead>
-        <tbody>
+        <table class="table table-hover table-bordered table-responsive" id="marketing-dataTables">
+            <thead>
+            <tr class="table-header">
+                <th>#</th>
+                <th>Company</th>
+                <th>Traffic</th>
+                <th>Calls</th>
+                <th>Forms</th>
+                <th>Pages</th>
+                <th>Posts</th>
+                <th>Citations</th>
+                <th>PR</th>
+                <th>Reviews</th>
+                <th>Text/Emails</th>
+                <th>Report</th>
+            </tr>
+            </thead>
+            <tbody>
             @foreach($marketingData->marketings as $marketing)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $marketing->company->company_name }}</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <marketing-input
+                                :value="{{ $marketing->traffic ?: 'null' }}"
+                                :field="'traffic'"
+                                :marketing_id="{{ $marketing->id }}"
+                        ></marketing-input>
+                    </td>
+                    <td>
+                        <marketing-input
+                                :value="{{ $marketing->calls ?: 'null' }}"
+                                :field="'calls'"
+                                :marketing_id="{{ $marketing->id }}"
+                        ></marketing-input>
+                    </td>
+                    <td>
+                        <marketing-input
+                                :value="{{ $marketing->forms ?: 'null' }}"
+                                :field="'forms'"
+                                :marketing_id="{{ $marketing->id }}"
+                        ></marketing-input>
+                    </td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -67,9 +85,10 @@
                 </tr>
             @endforeach
 
-        </tbody>
-    </table>
+            </tbody>
+        </table>
 
-    {{ $marketingData->marketings->links() }}
+        {{ $marketingData->marketings->links() }}
+
 
 @endsection

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Marketing;
 use App\Repositories\MarketingRepository;
 use Illuminate\Http\Request;
 
@@ -28,5 +29,17 @@ class MarketingController extends Controller
         $marketingData = $this->marketingRepository->getMarketing($month, $year);
 
         return view('marketing.index', compact('marketingData'));
+    }
+
+    public function update(Request $request)
+    {
+        $request->validate([
+            'value' => 'int|nullable',
+        ]);
+
+        Marketing::where('id', $request->marketing_id)
+            ->update([
+                $request->field => $request->value
+            ]);
     }
 }

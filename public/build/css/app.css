@@ -11287,6 +11287,18 @@ input[type="file"]{
 	display: block;
 }
 
+.marketing-cell
+{
+	height: 25px;
+}
+
+.marketing-cell input
+{
+	width: 85px;
+	max-width: 85px;
+}
+
+
 @media (max-width: 767px){
 	.navbar .dropdown-menu a {
 	    color: #444;
@@ -11509,5 +11521,23 @@ div.dtr-modal div.dtr-modal-background {
   div.dtr-modal div.dtr-modal-display {
     width: 95%;
   }
+}
+
+#spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 99999999;
+  text-align: center;
+  color: #fff;
+  font-size: 70px;
+  display: none;
+}
+
+#spinner i {
+  margin-top: 22%;
 }
 
