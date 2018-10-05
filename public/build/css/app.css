@@ -11283,6 +11283,10 @@ input[type="file"]{
 	border-color: #b27300;
 }
 
+.btn {
+	display: block;
+}
+
 @media (max-width: 767px){
 	.navbar .dropdown-menu a {
 	    color: #444;

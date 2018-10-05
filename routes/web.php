@@ -13,4 +13,4 @@
 
 Route::post('/send_sms', 'DataController@get_data');
 
-Route::get('/marketing', 'MarketingController@index');
+Route::get('/marketing/{month?}/{year?}', 'MarketingController@index')->name('marketing');
