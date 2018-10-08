@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*h1 {*/
+/*display: none;*/
+/*}*/
+/*.messagebox {*/
+/*display: none;*/
+/*}*/
+/*.tittle {*/
+/*display: none;*/
+/*}*/
+/*.form input {*/
+/*display: none;*/
+/*}*/
+/*.signup-link {*/
+/*display: none;*/
+/*}*/
+/*.btn, .panel-heading {*/
+    /*display: none;*/
+/*}*/
+
+
+a, .hide-form, .signup-link, .form input, .tittle, .messagebox, h1, .btn,
+.panel-heading, .dataTables_filter, .sorting:after, .sorting_asc:after,
+.dataTables_length{
+display: none;
+}
+
+
+.print_logo{
+    display: block;
+    width:250px;
+    text-align: center;
+    margin:0 auto;
+}
+
+@page {
+    @top-left {
+        content: "";
+    }
+    @bottom-left {
+        content: "";
+    }
+    size: auto;   /* auto is the initial value */
+    margin: 15px 35px;  /* this affects the margin in the printer settings */
+}
+

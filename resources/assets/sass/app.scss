@@ -4,6 +4,38 @@
 
 // Variables
 @import "variables";
-
+@import "~font-awesome/css/font-awesome.css";
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~bootstrap3/dist/css/bootstrap.css";
+@import "~metismenu/dist/metisMenu.css";
+@import "timeline.css";
+@import "sb-admin-2.css";
+@import "~morris/morris.css"; //alias morris -> morris.js
+@import "bootstrap-social.css";
+@import "~datatables/media/css/jquery.dataTables.css";
+@import "~datatables-bootstrap/css/dataTables.bootstrap.css";
+@import "~datatables-responsive/css/responsive.dataTables.scss";
+@import "~bootstrap-datepicker/dist/css/bootstrap-datepicker.css";
+@import "coreport.css";
+@import "reportprint.css";
+@import "style.css";
+@import "marketing";
+
+#spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 99999999;
+  text-align: center;
+  color: #fff;
+  font-size: 70px;
+  display: none;
+  i {
+    margin-top: 22%;
+  }
+}
+
+
