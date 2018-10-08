@@ -132,7 +132,22 @@
                         @endphp
                         {{ $count }}
                     </td>
-                    <td></td>
+                    <td>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="marketing-message" style="background-color: @if ($marketing->company->reports_email_count == 0) grey @else yellow @endif">
+                                    {{ $marketing->company->reports_email_count }}
+                                </span>
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="marketing-message" style="background-color: @if ($marketing->company->reports_email_count == 0) grey @else yellow @endif">
+                                    {{ $marketing->company->reports_sms_count }}
+                                </span>
+                                <i class="fa fa-mobile" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </td>
                     <td>
                         <button class="btn btn-info btn-xs">
                             <i class="fa fa-sign-out" aria-hidden="true"></i>

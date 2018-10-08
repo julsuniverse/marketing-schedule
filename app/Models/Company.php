@@ -13,6 +13,11 @@ use Illuminate\Database\Eloquent\Model;
 class Company extends Model
 {
     /**
+     * @var array
+     */
+    protected $guarded = [];
+
+    /**
      * @inheritdoc
      */
     protected $table = 'company';
@@ -38,5 +43,20 @@ class Company extends Model
     public function offices()
     {
         return $this->hasMany(Office::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function reports_email()
+    {
+        return $this->hasMany(SmsEmailReport::class, 'company_id', 'id');
+    }
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function reports_sms()
+    {
+        return $this->hasMany(SmsEmailReport::class, 'company_id', 'id');
     }
 }

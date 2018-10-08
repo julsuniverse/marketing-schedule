@@ -27,8 +27,18 @@ class MarketingRepository
     public function getMarketing($month, $year)
     {
         $marketing = Marketing::where(['month' => $month, 'year' => $year])
-            ->with('company')
-            ->with('company.offices.reviews')
+            ->with(['company.offices.reviews',
+                'company' => function ($query) use ($month, $year) {
+                    $query->withCount(['reports_email' => function ($query) use ($month, $year) {
+                        $query->time('where', 'email1_timestamp', $year, $month)
+                            ->time('orWhere', 'email2_timestamp', $year, $month)
+                            ->time('orWhere', 'email3_timestamp', $year, $month);
+                    }])->withCount(['reports_sms' => function ($query) use ($month, $year) {
+                        $query->time('where', 'sms1_timestamp', $year, $month)
+                            ->time('orWhere', 'sms2_timestamp', $year, $month)
+                            ->time('orWhere', 'sms3_timestamp', $year, $month);
+                    }]);
+                }])
             ->paginate(20);
 
         if ($month == 12) {
