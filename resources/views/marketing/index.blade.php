@@ -149,9 +149,9 @@
                         </div>
                     </td>
                     <td>
-                        <button class="btn btn-info btn-xs">
-                            <i class="fa fa-sign-out" aria-hidden="true"></i>
-                        </button>
+                        <marketing-report
+                            :marketing_id="{{ $marketing->id }}"
+                        ></marketing-report>
                     </td>
                 </tr>
             @endforeach

@@ -1780,6 +1780,42 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Marketing/MarketingReport.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['marketing_id'],
+    data: function data() {
+        return {};
+    },
+
+    methods: {
+        click: function click() {
+            $('#spinner').show();
+
+            axios({
+                method: 'POST',
+                url: '/report/' + this.marketing_id
+            }).then(function (response) {}).catch(function (response) {
+                alert('Something went wrong');
+            }).finally(function () {
+                $('#spinner').hide();
+            });
+        }
+    }
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -68276,6 +68312,43 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-57acc64a\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Marketing/MarketingReport.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "button",
+    {
+      staticClass: "btn btn-info btn-xs",
+      on: {
+        click: function($event) {
+          _vm.click()
+        }
+      }
+    },
+    [
+      _c("i", {
+        staticClass: "fa fa-sign-out",
+        attrs: { "aria-hidden": "true" }
+      })
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-57acc64a", module.exports)
+  }
+}
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-811c0f86\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Marketing/MarketingColor.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -79467,6 +79540,7 @@ __webpack_require__("./resources/assets/js/marketing.js");
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing-input', __webpack_require__("./resources/assets/js/components/Marketing/MarketingInput.vue"));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing-color', __webpack_require__("./resources/assets/js/components/Marketing/MarketingColor.vue"));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing-report', __webpack_require__("./resources/assets/js/components/Marketing/MarketingReport.vue"));
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   el: '#app'
@@ -79610,6 +79684,54 @@ if (false) {(function () {
     hotAPI.createRecord("data-v-a1c4d5b8", Component.options)
   } else {
     hotAPI.reload("data-v-a1c4d5b8", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/Marketing/MarketingReport.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Marketing/MarketingReport.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-57acc64a\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Marketing/MarketingReport.vue")
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Marketing/MarketingReport.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-57acc64a", Component.options)
+  } else {
+    hotAPI.reload("data-v-57acc64a", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true

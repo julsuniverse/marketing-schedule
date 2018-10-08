@@ -26,6 +26,7 @@ import Vue from 'vue';
 
 Vue.component('marketing-input', require('./components/Marketing/MarketingInput.vue'));
 Vue.component('marketing-color', require('./components/Marketing/MarketingColor.vue'));
+Vue.component('marketing-report', require('./components/Marketing/MarketingReport.vue'));
 
 const app = new Vue({
     el: '#app'

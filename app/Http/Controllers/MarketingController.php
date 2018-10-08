@@ -4,16 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Marketing;
 use App\Repositories\MarketingRepository;
+use App\Services\ReportService;
 use Illuminate\Http\Request;
 
 class MarketingController extends Controller
 {
     /** @var MarketingRepository $marketingRepository */
     private $marketingRepository;
+    /** @var ReportService $reportService */
+    private $reportService;
 
-    public function __construct(MarketingRepository $marketingRepository)
+    public function __construct(MarketingRepository $marketingRepository, ReportService $reportService)
     {
         $this->marketingRepository = $marketingRepository;
+        $this->reportService = $reportService;
     }
 
     /**
@@ -44,10 +48,8 @@ class MarketingController extends Controller
             ]);
     }
 
-
     public function updateColors(Request $request)
     {
-        dump($request);
         $request->validate([
             'status' => 'required|int',
         ]);
@@ -57,5 +59,10 @@ class MarketingController extends Controller
                 //$request->field => $request->value,
                 $request->field . '_status' => $request->status
             ]);
+    }
+
+    public function report(Marketing $marketing)
+    {
+        $this->reportService->make($marketing);
     }
 }
