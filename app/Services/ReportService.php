@@ -7,6 +7,14 @@ use App\Models\Marketing;
 
 class ReportService
 {
+    /** @var \Illuminate\Config\Repository|mixed $admin_email */
+    private $admin_email;
+
+    public function __construct()
+    {
+        $this->admin_email = config('app.admin_email');
+    }
+
     /**
      * @param Marketing $marketing
      */
@@ -25,6 +33,6 @@ class ReportService
                 }]);
             }])->first();
 
-        \Mail::to('logicslancer@gmail.com')->send(new ReportMarketing($marketing));
+        \Mail::to($this->admin_email)->send(new ReportMarketing($marketing));
     }
 }
