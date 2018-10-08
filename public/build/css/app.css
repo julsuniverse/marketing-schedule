@@ -11287,17 +11287,9 @@ input[type="file"]{
 	display: block;
 }
 
-.marketing-cell
-{
-	height: 25px;
+.no-padding {
+	padding: 0 !important;
 }
-
-.marketing-cell input
-{
-	width: 85px;
-	max-width: 85px;
-}
-
 
 @media (max-width: 767px){
 	.navbar .dropdown-menu a {
@@ -11521,6 +11513,52 @@ div.dtr-modal div.dtr-modal-background {
   div.dtr-modal div.dtr-modal-display {
     width: 95%;
   }
+}
+
+.marketing-td {
+  position: relative;
+  padding: 0 !important;
+  text-align: left;
+}
+
+.marketing-td .marketing-cell {
+  text-align: left;
+}
+
+.marketing-td .marketing-cell-color {
+  height: 41px;
+  padding-top: 10px;
+  padding-left: 3px;
+}
+
+.marketing-td .marketing-cell-input {
+  text-align: center;
+  padding-top: 2px;
+  position: absolute;
+  top: 9px;
+  right: 0;
+  background: #fff;
+  height: 23px;
+  width: 25px;
+}
+
+.marketing-td .marketing-cell-input input {
+  width: 25px;
+  height: 23px;
+}
+
+.marketing-cell {
+  height: 25px;
+  text-align: center;
+}
+
+.marketing-cell .marketing-cell-span {
+  text-transform: uppercase;
+}
+
+.marketing-cell input {
+  width: 85px;
+  max-width: 85px;
 }
 
 #spinner {

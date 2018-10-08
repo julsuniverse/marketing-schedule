@@ -63,10 +63,66 @@
                                 :marketing_id="{{ $marketing->id }}"
                         ></marketing-input>
                     </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="marketing-td">
+                        <marketing-color
+                                :status="{{ $marketing->pages_status }}"
+                                :value="{{ $marketing->pages ?: 'null' }}"
+                                :field="'pages'"
+                                :marketing_id="{{ $marketing->id }}"
+                                :statuses="{{ $statuses }}"
+                        ></marketing-color>
+
+                        <marketing-input
+                                :value="{{ $marketing->pages ?: 'null' }}"
+                                :field="'pages'"
+                                :marketing_id="{{ $marketing->id }}"
+                        ></marketing-input>
+                    </td>
+                    <td class="marketing-td">
+                        <marketing-color
+                                :status="{{ $marketing->posts_status }}"
+                                :value="{{ $marketing->posts ?: 'null' }}"
+                                :field="'posts'"
+                                :marketing_id="{{ $marketing->id }}"
+                                :statuses="{{ $statuses }}"
+                        ></marketing-color>
+
+                        <marketing-input
+                                :value="{{ $marketing->posts ?: 'null' }}"
+                                :field="'posts'"
+                                :marketing_id="{{ $marketing->id }}"
+                        ></marketing-input>
+                    </td>
+                    <td class="marketing-td" >
+                        <marketing-color
+                                :status="{{ $marketing->citations_status }}"
+                                :value="{{ $marketing->citations ?: 'null' }}"
+                                :field="'citations'"
+                                :marketing_id="{{ $marketing->id }}"
+                                :statuses="{{ $statuses }}"
+                        ></marketing-color>
+
+                        <marketing-input
+                                :value="{{ $marketing->citations ?: 'null' }}"
+                                :field="'citations'"
+                                :marketing_id="{{ $marketing->id }}"
+                        ></marketing-input>
+                    </td>
+                    <td class="marketing-td" >
+                        <marketing-color
+                                :status="{{ $marketing->pr_status }}"
+                                :value="{{ $marketing->pr ?: 'null' }}"
+                                :field="'pr'"
+                                :marketing_id="{{ $marketing->id }}"
+                                :statuses="{{ $statuses }}"
+                        ></marketing-color>
+
+                        <marketing-input
+                                :value="{{ $marketing->pr ?: 'null' }}"
+                                :field="'pr'"
+                                :marketing_id="{{ $marketing->id }}"
+                        ></marketing-input>
+                    </td>
                     <td>
                         @php
                             $count = 0;

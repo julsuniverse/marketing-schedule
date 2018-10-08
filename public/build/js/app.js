@@ -1633,7 +1633,76 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/MarketingInput.vue":
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Marketing/MarketingColor.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['value', 'field', 'marketing_id', 'status', 'statuses'],
+    data: function data() {
+        return {
+            val: this.value,
+            current_status: this.status
+        };
+    },
+
+    methods: {
+        click: function click() {
+            var index = this.getIndex();
+            if (Object.keys(this.statuses).length - 1 == index) {
+                this.current_status = this.statuses[0].value;
+            } else {
+                this.current_status = this.statuses[index + 1].value;
+            }
+
+            this.saveInput();
+        },
+        getIndex: function getIndex() {
+            var _this = this;
+
+            return _.findIndex(this.statuses, function (status) {
+                return status.value === _this.current_status;
+            });
+        },
+        saveInput: function saveInput() {
+            $('#spinner').show();
+            axios({
+                method: 'POST',
+                url: '/update-colors',
+                data: {
+                    'marketing_id': this.marketing_id,
+                    'value': this.val ? this.val : null,
+                    'field': this.field,
+                    'status': this.current_status
+                }
+            }).then(function (response) {}).catch(function (response) {
+                alert('Something went wrong');
+            }).finally(function () {
+                $('#spinner').hide();
+            });
+        }
+    },
+    computed: {
+        getStatusName: function getStatusName() {
+            return this.statuses[this.getIndex()].name;
+        },
+        getColor: function getColor() {
+            return this.statuses[this.getIndex()].color;
+        }
+    }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Marketing/MarketingInput.vue":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1693,8 +1762,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 data: {
                     'marketing_id': this.marketing_id,
                     'value': this.val ? this.val : null,
-                    'field': this.field,
-                    'company_id': this.company_id
+                    'field': this.field
                 }
             }).then(function (response) {
                 _this2.value = _this2.val;
@@ -68208,7 +68276,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-4f79893b\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/MarketingInput.vue":
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-811c0f86\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Marketing/MarketingColor.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -68218,7 +68286,55 @@ var render = function() {
   return _c(
     "div",
     {
-      staticClass: "marketing-cell",
+      staticClass: "marketing-cell marketing-cell-color",
+      style: { "background-color": _vm.getColor },
+      on: {
+        click: function($event) {
+          _vm.click()
+        }
+      }
+    },
+    [
+      _c(
+        "span",
+        {
+          staticClass: "marketing-cell-span",
+          model: {
+            value: _vm.current_status,
+            callback: function($$v) {
+              _vm.current_status = $$v
+            },
+            expression: "current_status"
+          }
+        },
+        [_vm._v(_vm._s(_vm.getStatusName))]
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-811c0f86", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-a1c4d5b8\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Marketing/MarketingInput.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "marketing-cell marketing-cell-input",
       on: {
         click: function($event) {
           _vm.click()
@@ -68286,7 +68402,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-4f79893b", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-a1c4d5b8", module.exports)
   }
 }
 
@@ -79349,7 +79465,8 @@ __webpack_require__("./resources/assets/js/marketing.js");
  */
 
 
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing-input', __webpack_require__("./resources/assets/js/components/MarketingInput.vue"));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing-input', __webpack_require__("./resources/assets/js/components/Marketing/MarketingInput.vue"));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing-color', __webpack_require__("./resources/assets/js/components/Marketing/MarketingColor.vue"));
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   el: '#app'
@@ -79408,15 +79525,15 @@ window.axios.defaults.headers.common = {
 
 /***/ }),
 
-/***/ "./resources/assets/js/components/MarketingInput.vue":
+/***/ "./resources/assets/js/components/Marketing/MarketingColor.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
 /* script */
-var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/MarketingInput.vue")
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Marketing/MarketingColor.vue")
 /* template */
-var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-4f79893b\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/MarketingInput.vue")
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-811c0f86\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Marketing/MarketingColor.vue")
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -79433,7 +79550,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/MarketingInput.vue"
+Component.options.__file = "resources/assets/js/components/Marketing/MarketingColor.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -79442,9 +79559,57 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4f79893b", Component.options)
+    hotAPI.createRecord("data-v-811c0f86", Component.options)
   } else {
-    hotAPI.reload("data-v-4f79893b", Component.options)
+    hotAPI.reload("data-v-811c0f86", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/Marketing/MarketingInput.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Marketing/MarketingInput.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-a1c4d5b8\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Marketing/MarketingInput.vue")
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Marketing/MarketingInput.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-a1c4d5b8", Component.options)
+  } else {
+    hotAPI.reload("data-v-a1c4d5b8", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true

@@ -132,17 +132,9 @@ input[type="file"]{
 	display: block;
 }
 
-.marketing-cell
-{
-	height: 25px;
+.no-padding {
+	padding: 0 !important;
 }
-
-.marketing-cell input
-{
-	width: 85px;
-	max-width: 85px;
-}
-
 
 @media (max-width: 767px){
 	.navbar .dropdown-menu a {

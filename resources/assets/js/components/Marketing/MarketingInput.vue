@@ -1,5 +1,5 @@
 <template>
-    <div @click="click()" class="marketing-cell">
+    <div @click="click()" class="marketing-cell marketing-cell-input">
         <span v-model="val" v-if="!showInput">{{ val }}</span>
         <input type="text"
                v-model="val"
@@ -49,7 +49,6 @@
                         'marketing_id': this.marketing_id,
                         'value' : this.val ? this.val : null,
                         'field' : this.field,
-                        'company_id' : this.company_id
                     }
                 })
                     .then(response => {

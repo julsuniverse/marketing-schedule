@@ -27,8 +27,9 @@ class MarketingController extends Controller
         $year = $request->year ?: date('Y');
 
         $marketingData = $this->marketingRepository->getMarketing($month, $year);
+        $statuses = Marketing::getStatuses();
 
-        return view('marketing.index', compact('marketingData'));
+        return view('marketing.index', compact('marketingData', 'statuses'));
     }
 
     public function update(Request $request)
@@ -37,9 +38,24 @@ class MarketingController extends Controller
             'value' => 'int|nullable',
         ]);
 
-        Marketing::where('id', $request->marketing_id)
+        return Marketing::where('id', $request->marketing_id)
             ->update([
                 $request->field => $request->value
+            ]);
+    }
+
+
+    public function updateColors(Request $request)
+    {
+        dump($request);
+        $request->validate([
+            'status' => 'required|int',
+        ]);
+
+        return Marketing::where('id', $request->marketing_id)
+            ->update([
+                //$request->field => $request->value,
+                $request->field . '_status' => $request->status
             ]);
     }
 }
