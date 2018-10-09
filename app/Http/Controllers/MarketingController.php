@@ -32,7 +32,7 @@ class MarketingController extends Controller
         $year = $request->year ?: date('Y');
 
         $marketingData = $this->marketingService->getData($month, $year);
-        //dd($marketingData);
+
         $statuses = Marketing::getStatuses();
         $statuses_pr = Marketing::getStatusesPr();
 

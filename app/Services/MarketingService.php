@@ -21,7 +21,7 @@ class MarketingService
      */
     public function getData($month, $year) : \stdClass
     {
-        $marketings = $this->marketingRepository->getMarketing($month, $year, 2);
+        $marketings = $this->marketingRepository->getMarketing($month, $year, 20);
 
         $nextDate = $this->getNextDate($month, $year);
         $prevDate = $this->getPrevDate($month, $year);
