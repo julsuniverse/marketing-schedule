@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Models\Company;
 use App\Models\Marketing;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class MarketingRepository
 {
@@ -25,7 +26,11 @@ class MarketingRepository
         return $marketing;
     }
 
-    public function countReviews(Marketing $marketing)
+    /**
+     * @param Marketing $marketing
+     * @return int
+     */
+    public function countReviews(Marketing $marketing) :int
     {
         $count = 0;
         foreach ($marketing->company->offices as $office) {
@@ -36,11 +41,12 @@ class MarketingRepository
     }
 
     /**
-     * @param integer $month
-     * @param integer $year
-     * @return \stdClass
+     * @param $month
+     * @param $year
+     * @param bool $paginate
+     * @return Marketing | LengthAwarePaginator
      */
-    public function getMarketing($month, $year) : \stdClass
+    public function getMarketing($month, $year, $paginate = false)
     {
         $marketing = Marketing::where(['month' => $month, 'year' => $year])
             ->with(['company.offices.reviews',
@@ -54,29 +60,13 @@ class MarketingRepository
                             ->time('orWhere', 'sms2_timestamp', $year, $month)
                             ->time('orWhere', 'sms3_timestamp', $year, $month);
                     }]);
-                }])
-            ->paginate(20);
+                }]);
 
-        if ($month == 12) {
-            $nextDate = ['month' => 1, 'year' => $year + 1];
-        } else {
-            $nextDate = ['month' => $month + 1, 'year' => $year];
+        if($paginate) {
+            return $marketing->paginate($paginate);
         }
 
-        if ($month == 1) {
-            $prevDate = ['month' => 12, 'year' => $year - 1];
-        } else {
-            $prevDate = ['month' => $month - 1, 'year' => $year];
-        }
-
-
-        $marketingData = new \stdClass();
-        $marketingData->marketings = $marketing;
-        $marketingData->date = date('F, Y', strtotime($year . '-' . $month));
-        $marketingData->nextDate = $nextDate;
-        $marketingData->prevDate = $prevDate;
-
-        return $marketingData;
+        return $marketing->get();
     }
 
     /**
@@ -86,4 +76,6 @@ class MarketingRepository
     {
         Marketing::truncate();
     }
+
+
 }

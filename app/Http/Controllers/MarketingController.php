@@ -4,19 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Marketing;
 use App\Repositories\MarketingRepository;
+use App\Services\MarketingService;
 use App\Services\ReportService;
 use Illuminate\Http\Request;
 
 class MarketingController extends Controller
 {
-    /** @var MarketingRepository $marketingRepository */
-    private $marketingRepository;
+    /** @var MarketingService  $marketingService*/
+    private $marketingService;
     /** @var ReportService $reportService */
     private $reportService;
 
-    public function __construct(MarketingRepository $marketingRepository, ReportService $reportService)
+    public function __construct(MarketingService $marketingService, ReportService $reportService)
     {
-        $this->marketingRepository = $marketingRepository;
+        $this->marketingService = $marketingService;
         $this->reportService = $reportService;
     }
 
@@ -30,7 +31,8 @@ class MarketingController extends Controller
         $month = $request->month ?: date('m');
         $year = $request->year ?: date('Y');
 
-        $marketingData = $this->marketingRepository->getMarketing($month, $year);
+        $marketingData = $this->marketingService->getData($month, $year);
+        //dd($marketingData);
         $statuses = Marketing::getStatuses();
         $statuses_pr = Marketing::getStatusesPr();
 

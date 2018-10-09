@@ -49,6 +49,7 @@
                                 :field="'traffic'"
                                 :marketing_id="{{ $marketing->id }}"
                         ></marketing-input>
+                        <span> {{ $marketing->diffTraffic }}%</span>
                     </td>
                     <!-- Calls -->
                     <td>
@@ -57,6 +58,7 @@
                                 :field="'calls'"
                                 :marketing_id="{{ $marketing->id }}"
                         ></marketing-input>
+                        <span> {{ $marketing->diffCalls }}%</span>
                     </td>
                     <!-- Forms -->
                     <td>
@@ -65,6 +67,7 @@
                                 :field="'forms'"
                                 :marketing_id="{{ $marketing->id }}"
                         ></marketing-input>
+                        <span> {{ $marketing->diffForms }}%</span>
                     </td>
                     <!-- Pages -->
                     <td class="marketing-td">
