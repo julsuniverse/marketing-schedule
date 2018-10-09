@@ -21,6 +21,9 @@ class Marketing extends Model
     const STATUS_ORDERED = 2;
     const STATUS_COMPLETED = 3;
 
+    const STATUS_WRITTEN = 4;
+    const STATUS_DISTRIBUTED = 5;
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -29,6 +32,9 @@ class Marketing extends Model
         return $this->belongsTo(Company::class);
     }
 
+    /**
+     * @return \Illuminate\Support\Collection
+     */
     public static function getStatuses()
     {
         return collect([
@@ -51,6 +57,40 @@ class Marketing extends Model
                 'name' => 'completed',
                 'color' => 'green',
                 'value' => self::STATUS_COMPLETED,
+            ]
+        ]);
+    }
+
+    /**
+     * @return \Illuminate\Support\Collection
+     */
+    public static function getStatusesPr()
+    {
+        return collect([
+            [
+                'name' => 'none',
+                'color' => 'gray',
+                'value' => self::STATUS_NONE,
+            ],
+            [
+                'name' => 'schedule',
+                'color' => 'red',
+                'value' => self::STATUS_SCHEDULE,
+            ],
+            [
+                'name' => 'ordered',
+                'color' => 'yellow',
+                'value' => self::STATUS_ORDERED,
+            ],
+            [
+                'name' => 'written',
+                'color' => 'green',
+                'value' => self::STATUS_WRITTEN,
+            ],
+            [
+                'name' => 'distributed',
+                'color' => 'LightSkyBlue',
+                'value' => self::STATUS_DISTRIBUTED,
             ]
         ]);
     }

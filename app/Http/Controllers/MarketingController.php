@@ -32,8 +32,9 @@ class MarketingController extends Controller
 
         $marketingData = $this->marketingRepository->getMarketing($month, $year);
         $statuses = Marketing::getStatuses();
+        $statuses_pr = Marketing::getStatusesPr();
 
-        return view('marketing.index', compact('marketingData', 'statuses'));
+        return view('marketing.index', compact('marketingData', 'statuses', 'statuses_pr'));
     }
 
     public function update(Request $request)
