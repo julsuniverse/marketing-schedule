@@ -14,7 +14,7 @@ class CreateMarketingFromCompany extends Command
      *
      * @var string
      */
-    protected $signature = 'marketing:init';
+    protected $signature = 'marketing:init {--reset}';
 
     /**
      * The console command description.
@@ -45,6 +45,11 @@ class CreateMarketingFromCompany extends Command
             ['domain_id', '!=', null],
             'marketing' => 1]
         )->get();
+
+        if($this->option('reset')) {
+            $this->marketingRepository->truncate();
+            $this->info('Old Marketing records were deleted.');
+        }
 
         foreach ($companies as $company) {
             $this->marketingRepository->create($company);

@@ -40,7 +40,7 @@ class MarketingRepository
      * @param integer $year
      * @return \stdClass
      */
-    public function getMarketing($month, $year)
+    public function getMarketing($month, $year) : \stdClass
     {
         $marketing = Marketing::where(['month' => $month, 'year' => $year])
             ->with(['company.offices.reviews',
@@ -77,5 +77,13 @@ class MarketingRepository
         $marketingData->prevDate = $prevDate;
 
         return $marketingData;
+    }
+
+    /**
+     * @return void
+     */
+    public function truncate() : void
+    {
+        Marketing::truncate();
     }
 }
