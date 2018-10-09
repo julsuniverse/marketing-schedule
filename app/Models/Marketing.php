@@ -16,6 +16,11 @@ class Marketing extends Model
      */
     protected $guarded = [];
 
+    public $diffTraffic;
+    public $diffCalls;
+    public $diffForms;
+    public $diffPosts;
+
     const STATUS_NONE = 0;
     const STATUS_SCHEDULE = 1;
     const STATUS_ORDERED = 2;
@@ -23,6 +28,13 @@ class Marketing extends Model
 
     const STATUS_WRITTEN = 4;
     const STATUS_DISTRIBUTED = 5;
+
+    protected $appends = [
+        'diffTraffic',
+        'diffCalls',
+        'diffForms',
+        'diffPosts',
+    ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
