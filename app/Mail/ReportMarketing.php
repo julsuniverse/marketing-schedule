@@ -28,6 +28,7 @@ class ReportMarketing extends Mailable
     public function build()
     {
         return $this->view('emails.marketing.report', ['marketing' => $this->marketing])
+            ->from(config('app.report_sender'))
             ->subject('Monthly Marketing Schedule Process for ' . date('F, Y'));
     }
 }
