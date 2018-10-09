@@ -114,7 +114,7 @@
                                 :value="{{ $marketing->pr ?: 'null' }}"
                                 :field="'pr'"
                                 :marketing_id="{{ $marketing->id }}"
-                                :statuses="{{ $statuses }}"
+                                :statuses="{{ $statuses_pr }}"
                         ></marketing-color>
 
                         <marketing-input
