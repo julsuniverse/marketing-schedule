@@ -42,6 +42,7 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $marketing->company->company_name }}</td>
+                    <!-- Traffic -->
                     <td>
                         <marketing-input
                                 :value="{{ $marketing->traffic ?: 'null' }}"
@@ -49,6 +50,7 @@
                                 :marketing_id="{{ $marketing->id }}"
                         ></marketing-input>
                     </td>
+                    <!-- Calls -->
                     <td>
                         <marketing-input
                                 :value="{{ $marketing->calls ?: 'null' }}"
@@ -56,6 +58,7 @@
                                 :marketing_id="{{ $marketing->id }}"
                         ></marketing-input>
                     </td>
+                    <!-- Forms -->
                     <td>
                         <marketing-input
                                 :value="{{ $marketing->forms ?: 'null' }}"
@@ -63,6 +66,7 @@
                                 :marketing_id="{{ $marketing->id }}"
                         ></marketing-input>
                     </td>
+                    <!-- Pages -->
                     <td class="marketing-td">
                         <marketing-color
                                 :status="{{ $marketing->pages_status }}"
@@ -78,6 +82,7 @@
                                 :marketing_id="{{ $marketing->id }}"
                         ></marketing-input>
                     </td>
+                    <!-- Posts -->
                     <td class="marketing-td">
                         <marketing-color
                                 :status="{{ $marketing->posts_status }}"
@@ -93,6 +98,7 @@
                                 :marketing_id="{{ $marketing->id }}"
                         ></marketing-input>
                     </td>
+                    <!-- Citations -->
                     <td class="marketing-td" >
                         <marketing-color
                                 :status="{{ $marketing->citations_status }}"
@@ -108,6 +114,7 @@
                                 :marketing_id="{{ $marketing->id }}"
                         ></marketing-input>
                     </td>
+                    <!-- PR -->
                     <td class="marketing-td" >
                         <marketing-color
                                 :status="{{ $marketing->pr_status }}"
@@ -123,15 +130,15 @@
                                 :marketing_id="{{ $marketing->id }}"
                         ></marketing-input>
                     </td>
+                    <!-- Reviews -->
                     <td>
-                        @php
-                            $count = 0;
-                            foreach ($marketing->company->offices as $office) {
-                                $count += $office->reviews->count();
-                            }
-                        @endphp
-                        {{ $count }}
+                        <marketing-input
+                                :value="{{ $marketing->reviews }}"
+                                :field="'reviews'"
+                                :marketing_id="{{ $marketing->id }}"
+                        ></marketing-input>
                     </td>
+                    <!-- Text/Emails -->
                     <td>
                         <div class="row">
                             <div class="col-md-6">
@@ -148,6 +155,7 @@
                             </div>
                         </div>
                     </td>
+                    <!-- Report -->
                     <td>
                         <marketing-report
                             :marketing_id="{{ $marketing->id }}"

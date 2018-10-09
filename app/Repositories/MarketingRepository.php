@@ -13,10 +13,26 @@ class MarketingRepository
      */
     public function create(Company $company): Marketing
     {
-        return $company->marketings()->create([
+
+        $marketing = $company->marketings()->create([
             'month' => date('m'),
             'year' => date('Y')
         ]);
+
+        $marketing->reviews = $this->countReviews($marketing);
+        $marketing->save();
+
+        return $marketing;
+    }
+
+    public function countReviews(Marketing $marketing)
+    {
+        $count = 0;
+        foreach ($marketing->company->offices as $office) {
+            $count += $office->reviews->count();
+        }
+
+        return $count;
     }
 
     /**
