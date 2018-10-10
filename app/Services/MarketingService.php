@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use App\Models\Marketing;
 use App\Repositories\MarketingRepository;
 
 class MarketingService
@@ -77,28 +76,34 @@ class MarketingService
                 $marketing->diffReviews = 0;
                 continue;
             }
+
             $oldMarketing = $oldMarketings[$marketing->company_id];
-            $marketing->diffTraffic = $this->calculateDifference($oldMarketing->traffic, $marketing->traffic);
-            $marketing->diffCalls = $this->calculateDifference($oldMarketing->calls, $marketing->calls);
-            $marketing->diffForms = $this->calculateDifference($oldMarketing->forms, $marketing->forms);
-            $marketing->diffReviews = $this->calculateDifference($oldMarketing->reviews, $marketing->reviews);
+            $marketing->diffTraffic = $this->calculateDifference($oldMarketing->traffic ?? 0, $marketing->traffic ?? 0);
+            $marketing->diffCalls = $this->calculateDifference($oldMarketing->calls ?? 0, $marketing->calls ?? 0);
+            $marketing->diffForms = $this->calculateDifference($oldMarketing->forms ?? 0, $marketing->forms ?? 0);
+            $marketing->diffReviews = $this->calculateDifference($oldMarketing->reviews ?? 0, $marketing->reviews ?? 0);
         }
 
         return $marketings;
     }
 
     /**
-     * @param Marketing $old
-     * @param Marketing $new
+     * @param int $old
+     * @param int $new
      * @return float|int
      */
-    public function calculateDifference(Marketing $old, Marketing $new)
+    public function calculateDifference(int $old, int $new)
     {
-        $res = $old * 100 / $new;
-        if($old < $new) {
-            $res = $res * -1;
+        if($old == 0 || $new == 0) {
+            return 0;
         }
 
-        return $res;
+        if($old > $new) {
+            $res = ($old - $new) / $old * 100;
+        } else {
+            $res = ($old - $new) / $new * 100;
+        }
+
+        return round($res, 2);
     }
 }

@@ -11526,7 +11526,7 @@ div.dtr-modal div.dtr-modal-background {
 }
 
 .marketing-td .marketing-cell-color {
-  height: 41px;
+  height: 42px;
   padding-top: 10px;
   padding-left: 3px;
 }
@@ -11548,7 +11548,7 @@ div.dtr-modal div.dtr-modal-background {
 }
 
 .marketing-cell {
-  height: 25px;
+  height: 16px;
   text-align: center;
 }
 
@@ -11564,6 +11564,20 @@ div.dtr-modal div.dtr-modal-background {
 .marketing-message {
   padding: 4px 5px;
   margin-right: 5px;
+}
+
+.marketing-diff {
+  font-size: 10px;
+  text-align: center;
+  height: 10px;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
 }
 
 #spinner {
