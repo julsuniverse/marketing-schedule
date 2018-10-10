@@ -11,7 +11,9 @@
 |
 */
 Route::post('/send_sms', 'DataController@get_data');
-
+Route::get('/', function() {
+   return redirect('/marketing');
+});
 Route::get('/marketing/{month?}/{year?}', 'MarketingController@index')->name('marketing');
 Route::post('/update', 'MarketingController@update');
 Route::post('/update-colors', 'MarketingController@updateColors');
