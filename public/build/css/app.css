@@ -11515,8 +11515,11 @@ div.dtr-modal div.dtr-modal-background {
   }
 }
 
-.marketing-td {
+.marketing-table td {
   position: relative;
+}
+
+.marketing-td {
   padding: 0 !important;
   text-align: left;
 }
@@ -11570,6 +11573,11 @@ div.dtr-modal div.dtr-modal-background {
   font-size: 10px;
   text-align: center;
   height: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto 0;
 }
 
 .red {

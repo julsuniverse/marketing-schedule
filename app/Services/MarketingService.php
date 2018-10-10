@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\Marketing;
 use App\Repositories\MarketingRepository;
 
 class MarketingService
@@ -87,14 +88,28 @@ class MarketingService
         return $marketings;
     }
 
+    public function getDifferenceByMarketing(Marketing $marketing, string $field)
+    {
+        $month = $marketing->month;
+        $year = $marketing->year;
+
+        $prevDate = $this->getPrevDate($month, $year);
+
+        $oldMarketing = Marketing::where(['company_id' => $marketing->company_id, 'year' => $prevDate['year'], 'month' => $prevDate['month']])
+            ->orderBy('id', 'DESC')
+            ->first();
+
+        return $this->calculateDifference($oldMarketing->{$field}, $marketing->{$field});
+    }
+
     /**
      * @param int $old
      * @param int $new
      * @return float|int
      */
-    public function calculateDifference(int $old, int $new)
+    public function calculateDifference(?int $old, ?int $new)
     {
-        if($old == 0 || $new == 0) {
+        if(($old === null || $new === null) || ($old === 0 && $new === 0)) {
             return 0;
         }
 

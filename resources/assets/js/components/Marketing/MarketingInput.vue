@@ -7,19 +7,23 @@
                @blur="saveInput()"
                @keypress.enter="saveInput()"
                ref="inp" />
+        <div
+                v-if="with_difference"
+                class="marketing-diff" :class="findColor"> {{ diff }}%</div>
     </div>
 </template>
 
 <script>
     export default {
         props: [
-            'value', 'field', 'marketing_id'
+            'value', 'field', 'marketing_id', 'difference', 'with_difference'
         ],
         data() {
             return {
                 val: this.value,
                 showInput: false,
-                saving: false
+                saving: false,
+                diff: this.difference
             }
         },
         methods: {
@@ -52,7 +56,9 @@
                     }
                 })
                     .then(response => {
-                        this.value = this.val;
+                        if(this.with_difference) {
+                            this.diff = response.data;
+                        }
                     })
                     .catch(response => {
                         alert('Something went wrong');
@@ -63,9 +69,16 @@
                         this.hideInput();
                         $('#spinner').hide();
                     });
-
-
             }
         },
+        computed: {
+            findColor() {
+                if(this.diff > 0) {
+                    return 'green';
+                } else if (this.diff < 0) {
+                    return 'red';
+                }
+            }
+        }
     }
 </script>

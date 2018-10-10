@@ -16,8 +16,8 @@ class MarketingRepository
     {
 
         $marketing = $company->marketings()->create([
-            'month' => 9, // date('m'),
-            'year' => 2018,//date('Y')
+            'month' => date('m'),
+            'year' => date('Y')
         ]);
 
         $marketing->reviews = $this->countReviews($marketing);

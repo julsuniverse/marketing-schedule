@@ -20,7 +20,7 @@
         </div>
     </div>
 
-        <table class="table table-hover table-bordered table-responsive" id="marketing-dataTables">
+        <table class="table table-hover table-bordered table-responsive marketing-table" id="marketing-dataTables">
             <thead>
             <tr class="table-header">
                 <th>#</th>
@@ -48,8 +48,9 @@
                                 :value="{{ $marketing->traffic ?: 'null' }}"
                                 :field="'traffic'"
                                 :marketing_id="{{ $marketing->id }}"
+                                :difference="{{ $marketing->diffTraffic }}"
+                                :with_difference="true"
                         ></marketing-input>
-                        <div class="marketing-diff @if($marketing->diffTraffic > 0) green @elseif($marketing->diffTraffic < 0) red @endif"> {{ $marketing->diffTraffic }}%</div>
                     </td>
                     <!-- Calls -->
                     <td>
@@ -57,8 +58,9 @@
                                 :value="{{ $marketing->calls ?: 'null' }}"
                                 :field="'calls'"
                                 :marketing_id="{{ $marketing->id }}"
+                                :difference="{{ $marketing->diffCalls }}"
+                                :with_difference="true"
                         ></marketing-input>
-                        <div class="marketing-diff @if($marketing->diffCalls > 0) green @elseif($marketing->diffCalls < 0) red @endif"> {{ $marketing->diffCalls }}%</div>
                     </td>
                     <!-- Forms -->
                     <td>
@@ -66,8 +68,9 @@
                                 :value="{{ $marketing->forms ?: 'null' }}"
                                 :field="'forms'"
                                 :marketing_id="{{ $marketing->id }}"
+                                :difference="{{ $marketing->diffForms }}"
+                                :with_difference="true"
                         ></marketing-input>
-                        <div class="marketing-diff @if($marketing->diffForms > 0) green @elseif($marketing->diffForms < 0) red @endif"> {{ $marketing->diffForms }}%</div>
                     </td>
                     <!-- Pages -->
                     <td class="marketing-td">
@@ -139,8 +142,9 @@
                                 :value="{{ $marketing->reviews }}"
                                 :field="'reviews'"
                                 :marketing_id="{{ $marketing->id }}"
+                                :difference="{{ $marketing->diffReviews }}"
+                                :with_difference="true"
                         ></marketing-input>
-                        <div class="marketing-diff @if($marketing->diffReviews > 0) green @elseif($marketing->diffReviews < 0) red @endif"> {{ $marketing->diffReviews }}%</div>
                     </td>
                     <!-- Text/Emails -->
                     <td>

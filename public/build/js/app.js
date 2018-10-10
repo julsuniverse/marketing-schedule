@@ -1719,14 +1719,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['value', 'field', 'marketing_id'],
+    props: ['value', 'field', 'marketing_id', 'difference', 'with_difference'],
     data: function data() {
         return {
             val: this.value,
             showInput: false,
-            saving: false
+            saving: false,
+            diff: this.difference
         };
     },
 
@@ -1765,7 +1769,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     'field': this.field
                 }
             }).then(function (response) {
-                _this2.value = _this2.val;
+                if (_this2.with_difference) {
+                    _this2.diff = response.data;
+                }
             }).catch(function (response) {
                 alert('Something went wrong');
                 _this2.val = null;
@@ -1774,6 +1780,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this2.hideInput();
                 $('#spinner').hide();
             });
+        }
+    },
+    computed: {
+        findColor: function findColor() {
+            if (this.diff > 0) {
+                return 'green';
+            } else if (this.diff < 0) {
+                return 'red';
+            }
         }
     }
 });
@@ -68465,6 +68480,12 @@ var render = function() {
               }
             }
           })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.with_difference
+        ? _c("div", { staticClass: "marketing-diff", class: _vm.findColor }, [
+            _vm._v(" " + _vm._s(_vm.diff) + "%")
+          ])
         : _vm._e()
     ]
   )
