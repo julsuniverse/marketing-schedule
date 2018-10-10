@@ -117,9 +117,9 @@ class MarketingService
         }
 
         if($old > $new) {
-            $res = ($old - $new) / $old * 100;
+            $res = ($new - $old) / $old * 100;
         } else {
-            $res = ($old - $new) / $new * 100;
+            $res = ($new - $old) / $new * 100;
         }
 
         return round($res, 2);
