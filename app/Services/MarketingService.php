@@ -99,6 +99,9 @@ class MarketingService
             ->orderBy('id', 'DESC')
             ->first();
 
+        if(!$oldMarketing) {
+            return 0;
+        }
         return $this->calculateDifference($oldMarketing->{$field}, $marketing->{$field});
     }
 
