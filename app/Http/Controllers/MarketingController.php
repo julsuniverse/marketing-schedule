@@ -45,10 +45,13 @@ class MarketingController extends Controller
             'value' => 'int|nullable',
         ]);
 
-        return Marketing::where('id', $request->marketing_id)
-            ->update([
-                $request->field => $request->value
-            ]);
+        $field = $request->field;
+
+        $marketing =  Marketing::where('id', $request->marketing_id)->first();
+        $marketing->{$field} = $request->value;
+        $marketing->save();
+
+        return $this->marketingService->getDifferenceByMarketing($marketing, $field);
     }
 
     public function updateColors(Request $request)
