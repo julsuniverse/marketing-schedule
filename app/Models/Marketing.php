@@ -15,7 +15,12 @@ class Marketing extends Model
      * @var array
      */
     protected $guarded = [];
-
+    protected $appends = [
+        'diffTraffic',
+        'diffCalls',
+        'diffForms',
+        'diffPosts',
+    ];
     public $diffTraffic;
     public $diffCalls;
     public $diffForms;
@@ -29,11 +34,12 @@ class Marketing extends Model
     const STATUS_WRITTEN = 4;
     const STATUS_DISTRIBUTED = 5;
 
-    protected $appends = [
-        'diffTraffic',
-        'diffCalls',
-        'diffForms',
-        'diffPosts',
+    private static $colors = [
+        'gray' => '#999',
+        'red' => '#ff4747',
+        'yellow' => '#fcff77',
+        'green' => '#4ca741',
+        'blue' => '#87cefa',
     ];
 
     /**
@@ -52,22 +58,22 @@ class Marketing extends Model
         return collect([
             [
                 'name' => 'none',
-                'color' => 'gray',
+                'color' => self::$colors['gray'],
                 'value' => self::STATUS_NONE,
             ],
             [
                 'name' => 'schedule',
-                'color' => 'red',
+                'color' => self::$colors['red'],
                 'value' => self::STATUS_SCHEDULE,
             ],
             [
                 'name' => 'ordered',
-                'color' => 'yellow',
+                'color' => self::$colors['yellow'],
                 'value' => self::STATUS_ORDERED,
             ],
             [
                 'name' => 'completed',
-                'color' => 'green',
+                'color' => self::$colors['green'],
                 'value' => self::STATUS_COMPLETED,
             ]
         ]);
@@ -81,27 +87,27 @@ class Marketing extends Model
         return collect([
             [
                 'name' => 'none',
-                'color' => 'gray',
+                'color' => self::$colors['gray'],
                 'value' => self::STATUS_NONE,
             ],
             [
                 'name' => 'schedule',
-                'color' => 'red',
+                'color' => self::$colors['red'],
                 'value' => self::STATUS_SCHEDULE,
             ],
             [
                 'name' => 'ordered',
-                'color' => 'yellow',
+                'color' => self::$colors['yellow'],
                 'value' => self::STATUS_ORDERED,
             ],
             [
                 'name' => 'written',
-                'color' => 'green',
+                'color' => self::$colors['green'],
                 'value' => self::STATUS_WRITTEN,
             ],
             [
                 'name' => 'distributed',
-                'color' => 'LightSkyBlue',
+                'color' => self::$colors['blue'],
                 'value' => self::STATUS_DISTRIBUTED,
             ]
         ]);
