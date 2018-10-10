@@ -1722,6 +1722,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['value', 'field', 'marketing_id', 'difference', 'with_difference'],
@@ -1780,6 +1781,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this2.hideInput();
                 $('#spinner').hide();
             });
+        },
+        isNumber: function isNumber($event) {
+            var e = e ? e : window.event;
+            var charCode = e.which ? e.which : e.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode !== 46) {
+                e.preventDefault();
+            } else {
+                return true;
+            }
         }
     },
     computed: {
@@ -68463,15 +68473,20 @@ var render = function() {
               blur: function($event) {
                 _vm.saveInput()
               },
-              keypress: function($event) {
-                if (
-                  !("button" in $event) &&
-                  _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-                ) {
-                  return null
+              keypress: [
+                function($event) {
+                  if (
+                    !("button" in $event) &&
+                    _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                  ) {
+                    return null
+                  }
+                  _vm.saveInput()
+                },
+                function($event) {
+                  _vm.isNumber($event)
                 }
-                _vm.saveInput()
-              },
+              ],
               input: function($event) {
                 if ($event.target.composing) {
                   return
