@@ -6,14 +6,27 @@
  */
 
 require('./bootstrap');
+require('jquery-base64');
+require('metismenu');
+require('./sb-admin-2');
+require('bootstrap-datepicker');
+require('datatables');
+require('jquery-validation');
+require('datatables-bootstrap');
+require('datatables-responsive');
+require('./layout.js');
+require('./marketing.js');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+import Vue from 'vue';
 
-Vue.component('example', require('./components/Example.vue'));
+Vue.component('marketing-input', require('./components/Marketing/MarketingInput.vue'));
+Vue.component('marketing-color', require('./components/Marketing/MarketingColor.vue'));
+Vue.component('marketing-report', require('./components/Marketing/MarketingReport.vue'));
 
 const app = new Vue({
     el: '#app'

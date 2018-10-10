@@ -5,7 +5,7 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=5.6.4",
+        "php": ">=7.1",
         "doctrine/dbal": "^2.8",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "~1.0",
@@ -13,6 +13,7 @@
         "twilio/sdk": "^5.15"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.2",
         "barryvdh/laravel-ide-helper": "*",
         "fzaninotto/faker": "~1.4",
         "guzzlehttp/guzzle": "*",

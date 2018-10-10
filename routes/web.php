@@ -10,8 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return 'Hello World';
-});
-
 Route::post('/send_sms', 'DataController@get_data');
+Route::get('/', function() {
+   return redirect('/marketing');
+});
+Route::get('/marketing/{month?}/{year?}', 'MarketingController@index')->name('marketing');
+Route::post('/update', 'MarketingController@update');
+Route::post('/update-colors', 'MarketingController@updateColors');
+Route::post('/report/{marketing}', 'MarketingController@report');

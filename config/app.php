@@ -135,6 +135,9 @@ return [
     |
     */
 
+    'admin_email' => env('ADMIN_EMAIL'),
+    'report_sender' => env('REPORT_SENDER'),
+
     'providers' => [
 
         /*
