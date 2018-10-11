@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Marketing;
 
 use App\Events\CompanySaved;
+use App\Models\Office;
+use App\Models\SmsEmailReport;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -52,11 +54,17 @@ class Company extends Model
     {
         return $this->hasMany(SmsEmailReport::class, 'company_id', 'id');
     }
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function reports_sms()
     {
         return $this->hasMany(SmsEmailReport::class, 'company_id', 'id');
+    }
+
+    public function keywords()
+    {
+        return $this->belongsToMany(Keyword::class);
     }
 }

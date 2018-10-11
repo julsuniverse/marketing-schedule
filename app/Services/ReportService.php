@@ -3,7 +3,7 @@
 namespace App\Services;
 
 use App\Mail\ReportMarketing;
-use App\Models\Marketing;
+use App\Models\Marketing\Marketing;
 
 class ReportService
 {
@@ -16,7 +16,7 @@ class ReportService
     }
 
     /**
-     * @param Marketing $marketing
+     * @param \App\Models\Marketing\Marketing $marketing
      */
     public function make(Marketing $marketing)
     {

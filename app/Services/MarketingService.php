@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Models\Marketing;
+use App\Models\Marketing\Marketing;
 use App\Repositories\MarketingRepository;
 
 class MarketingService
