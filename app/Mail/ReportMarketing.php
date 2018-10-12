@@ -2,7 +2,7 @@
 
 namespace App\Mail;
 
-use App\Models\Marketing;
+use App\Models\Marketing\Marketing;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -11,11 +11,11 @@ class ReportMarketing extends Mailable
 {
     use Queueable, SerializesModels;
 
-    /** @var Marketing $marketing */
+    /** @var \App\Models\Marketing\Marketing $marketing */
     private $marketing;
 
     /**
-     * @param Marketing $marketing
+     * @param \App\Models\Marketing\Marketing $marketing
      */
     public function __construct(Marketing $marketing)
     {

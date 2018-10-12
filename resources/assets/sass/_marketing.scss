@@ -1,5 +1,11 @@
-.marketing-table td {
+#marketing {
   position: relative;
+}
+
+.marketing-table {
+  td {
+    position: relative;
+  }
 }
 
 .marketing-td {
@@ -39,7 +45,7 @@
     margin-right: 32px;
   }
   input {
-    width: 85px;
+    width: 70px;
     max-width: 85px;
   }
 }
@@ -60,10 +66,10 @@
   margin: auto 0;
 }
 
-.red {
+.text-red {
   color: red;
 }
 
-.green {
+.text-green {
   color: green;
 }

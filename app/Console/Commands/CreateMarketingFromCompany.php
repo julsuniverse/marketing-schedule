@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Company;
-use App\Models\Marketing;
+use App\Models\Marketing\Company;
+use App\Models\Marketing\Marketing;
 use App\Repositories\MarketingRepository;
 use Illuminate\Console\Command;
 

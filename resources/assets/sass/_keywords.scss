@@ -1,0 +1,76 @@
+.keywords {
+  border: 2px solid $orange;
+  max-width: 320px;
+  width: 320px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: -8px 2px 31px 2px rgba(0, 0, 0, 0.38);
+  overflow-x: hidden;
+  height: 410px;
+  transition: 1s all;
+
+  &.keywords-hide {
+    width: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .keywords-inner {
+    position: absolute;
+    right: 0;
+    width: 320px;
+
+    &.keywords-inner-hide {
+      right: -320;
+    }
+  }
+
+  .company-name {
+    border: 6px solid #ea8201;
+    padding: 1px 10px;
+  }
+
+  .key {
+    padding: 3px 10px;
+  }
+
+  .add {
+    padding: 5px 10px;
+    background-color: $orange;
+
+    .matches {
+      background-color: #fff;
+      padding: 4px;
+    }
+
+    .add-keyword {
+      background-color: green;
+      border: 2px solid #fff;
+      padding: 3px 6px;
+    }
+  }
+}
+
+#open-close {
+  background-color: $orange;
+  height: 26px;
+  width: 132px;
+  content: "keywords";
+  position: absolute;
+  right: 266px;
+  top: 104px;
+  transform: rotate(270deg);
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding-top: 2px;
+  cursor: pointer;
+  z-index: 999;
+  transition: 1s all;
+
+  &.open-close-hide {
+    right: -52px;
+  }
+}

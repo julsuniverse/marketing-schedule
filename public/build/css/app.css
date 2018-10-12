@@ -11515,6 +11515,10 @@ div.dtr-modal div.dtr-modal-background {
   }
 }
 
+#marketing {
+  position: relative;
+}
+
 .marketing-table td {
   position: relative;
 }
@@ -11561,7 +11565,7 @@ div.dtr-modal div.dtr-modal-background {
 }
 
 .marketing-cell input {
-  width: 85px;
+  width: 70px;
   max-width: 85px;
 }
 
@@ -11581,12 +11585,94 @@ div.dtr-modal div.dtr-modal-background {
   margin: auto 0;
 }
 
-.red {
+.text-red {
   color: red;
 }
 
-.green {
+.text-green {
   color: green;
+}
+
+.keywords {
+  border: 2px solid #ea8201;
+  max-width: 320px;
+  width: 320px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-box-shadow: -8px 2px 31px 2px rgba(0, 0, 0, 0.38);
+          box-shadow: -8px 2px 31px 2px rgba(0, 0, 0, 0.38);
+  overflow-x: hidden;
+  height: 410px;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+.keywords.keywords-hide {
+  width: 0;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.keywords .keywords-inner {
+  position: absolute;
+  right: 0;
+  width: 320px;
+}
+
+.keywords .keywords-inner.keywords-inner-hide {
+  right: -320;
+}
+
+.keywords .company-name {
+  border: 6px solid #ea8201;
+  padding: 1px 10px;
+}
+
+.keywords .key {
+  padding: 3px 10px;
+}
+
+.keywords .add {
+  padding: 5px 10px;
+  background-color: #ea8201;
+}
+
+.keywords .add .matches {
+  background-color: #fff;
+  padding: 4px;
+}
+
+.keywords .add .add-keyword {
+  background-color: green;
+  border: 2px solid #fff;
+  padding: 3px 6px;
+}
+
+#open-close {
+  background-color: #ea8201;
+  height: 26px;
+  width: 132px;
+  content: "keywords";
+  position: absolute;
+  right: 266px;
+  top: 104px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding-top: 2px;
+  cursor: pointer;
+  z-index: 999;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+#open-close.open-close-hide {
+  right: -52px;
 }
 
 #spinner {
@@ -11605,5 +11691,9 @@ div.dtr-modal div.dtr-modal-background {
 
 #spinner i {
   margin-top: 22%;
+}
+
+a:hover {
+  text-decoration: none;
 }
 

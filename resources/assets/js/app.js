@@ -1,10 +1,3 @@
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 require('./bootstrap');
 require('jquery-base64');
 require('metismenu');
@@ -17,16 +10,13 @@ require('datatables-responsive');
 require('./layout.js');
 require('./marketing.js');
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
 import Vue from 'vue';
 
 Vue.component('marketing-input', require('./components/Marketing/MarketingInput.vue'));
 Vue.component('marketing-color', require('./components/Marketing/MarketingColor.vue'));
 Vue.component('marketing-report', require('./components/Marketing/MarketingReport.vue'));
+Vue.component('keywords', require('./components/Marketing/Keywords.vue'));
+Vue.component('marketing', require('./components/Marketing/Marketing.vue'));
 
 const app = new Vue({
     el: '#app'

@@ -1633,6 +1633,127 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Marketing/Keywords.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['activeCompany', 'month', 'year'],
+    data: function data() {
+        return {
+            clicked: true,
+            value: '',
+            keywords: this.activeCompany.keywords
+        };
+    },
+
+    methods: {
+        click: function click() {
+            this.clicked = !this.clicked;
+        },
+        addCompany: function addCompany() {
+            var _this = this;
+
+            axios({
+                method: 'POST',
+                url: '/keyword/store',
+                data: {
+                    'company_id': this.activeCompany.id,
+                    'keyword': this.value,
+                    'month': this.month,
+                    'year': this.year
+                }
+            }).then(function (response) {
+                _this.value = '';
+                _this.keywords.push(response.data);
+                _this.activeCompany.keywords = _this.keywords;
+                console.log(response.data);
+            }).catch(function (response) {
+                alert('Something went wrong');
+            }).finally(function () {
+                //$('#spinner').hide();
+
+            });
+        }
+    }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Marketing/Marketing.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['marketings', 'statuses', 'statuses_pr'],
+    data: function data() {
+        return {
+            activeCompany: null,
+            showKeywords: false
+        };
+    },
+
+    methods: {
+        selectCompany: function selectCompany(company) {
+            var _this = this;
+
+            console.log(company);
+            console.log(this.activeCompany);
+            if (!this.activeCompany || company.id !== this.activeCompany.id) {
+                this.showKeywords = false;
+                this.$nextTick(function () {
+                    _this.activeCompany = company;
+                    _this.showKeywords = true;
+                });
+            }
+        }
+    },
+    created: function created() {
+        console.log(this.marketings);
+    }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Marketing/MarketingColor.vue":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1795,9 +1916,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     computed: {
         findColor: function findColor() {
             if (this.diff > 0) {
-                return 'green';
+                return 'text-green';
             } else if (this.diff < 0) {
-                return 'red';
+                return 'text-red';
             }
         }
     }
@@ -68374,6 +68495,112 @@ if (false) {
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-6a7ebaec\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Marketing/Keywords.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "span",
+      {
+        class: _vm.clicked ? "" : "open-close-hide",
+        attrs: { id: "open-close" },
+        on: {
+          click: function($event) {
+            _vm.click()
+          }
+        }
+      },
+      [
+        _vm._v("\n        Keywords\n        "),
+        _c("i", {
+          staticClass: "fa",
+          class: _vm.clicked ? "fa-angle-down" : "fa-angle-up",
+          attrs: { "aria-hidden": "true" }
+        })
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "keywords", class: _vm.clicked ? "" : "keywords-hide" },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "keywords-inner",
+            class: _vm.clicked ? "" : "keywords-inner-hide"
+          },
+          [
+            _c("div", { staticClass: "company-name" }, [
+              _vm._v(_vm._s(_vm.activeCompany.company_name))
+            ]),
+            _vm._v(" "),
+            _vm._l(_vm.keywords, function(keyword) {
+              return _c("div", { staticClass: "key" }, [
+                _vm._v(_vm._s(keyword.text))
+              ])
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "add" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.value,
+                    expression: "value"
+                  }
+                ],
+                attrs: { name: "keyword", placeholder: "Enter keyword" },
+                domProps: { value: _vm.value },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.value = $event.target.value
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "matches" }, [_vm._v("0")]),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "add-keyword",
+                  on: {
+                    click: function($event) {
+                      _vm.addCompany()
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "fa fa-plus" })]
+              )
+            ])
+          ],
+          2
+        )
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-6a7ebaec", module.exports)
+  }
+}
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-811c0f86\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Marketing/MarketingColor.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -79548,13 +79775,6 @@ module.exports = function(module) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__("./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 __webpack_require__("./resources/assets/js/bootstrap.js");
 __webpack_require__("./node_modules/jquery-base64/jquery.base64.js");
 __webpack_require__("./node_modules/metismenu/dist/metisMenu.js");
@@ -79567,19 +79787,16 @@ __webpack_require__("./node_modules/datatables-responsive/js/dataTables.responsi
 __webpack_require__("./resources/assets/js/layout.js");
 __webpack_require__("./resources/assets/js/marketing.js");
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
 
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing-input', __webpack_require__("./resources/assets/js/components/Marketing/MarketingInput.vue"));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing-color', __webpack_require__("./resources/assets/js/components/Marketing/MarketingColor.vue"));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing-report', __webpack_require__("./resources/assets/js/components/Marketing/MarketingReport.vue"));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('keywords', __webpack_require__("./resources/assets/js/components/Marketing/Keywords.vue"));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing', __webpack_require__("./resources/assets/js/components/Marketing/Marketing.vue"));
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
-  el: '#app'
+    el: '#app'
 });
 
 /***/ }),
@@ -79632,6 +79849,102 @@ window.axios.defaults.headers.common = {
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/Marketing/Keywords.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Marketing/Keywords.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-6a7ebaec\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Marketing/Keywords.vue")
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Marketing/Keywords.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6a7ebaec", Component.options)
+  } else {
+    hotAPI.reload("data-v-6a7ebaec", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/Marketing/Marketing.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Marketing/Marketing.vue")
+/* template */
+var __vue_template__ = null
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Marketing/Marketing.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-641f2514", Component.options)
+  } else {
+    hotAPI.reload("data-v-641f2514", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
 
 /***/ }),
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Marketing;
 
-use App\Models\Marketing;
-use App\Repositories\MarketingRepository;
+use App\Http\Controllers\Controller;
+use App\Models\Marketing\Marketing;
 use App\Services\MarketingService;
 use App\Services\ReportService;
 use Illuminate\Http\Request;

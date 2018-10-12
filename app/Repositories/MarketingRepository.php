@@ -2,15 +2,15 @@
 
 namespace App\Repositories;
 
-use App\Models\Company;
-use App\Models\Marketing;
+use App\Models\Marketing\Company;
+use App\Models\Marketing\Marketing;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 class MarketingRepository
 {
     /**
-     * @param Company $company
-     * @return Marketing
+     * @param \App\Models\Marketing\Company $company
+     * @return \App\Models\Marketing\Marketing
      */
     public function create(Company $company): Marketing
     {
@@ -27,7 +27,7 @@ class MarketingRepository
     }
 
     /**
-     * @param Marketing $marketing
+     * @param \App\Models\Marketing\Marketing $marketing
      * @return int
      */
     public function countReviews(Marketing $marketing) :int
@@ -44,7 +44,7 @@ class MarketingRepository
      * @param $month
      * @param $year
      * @param bool $paginate
-     * @return Marketing | LengthAwarePaginator
+     * @return \App\Models\Marketing\Marketing | LengthAwarePaginator
      */
     public function getMarketing($month, $year, $paginate = false)
     {
@@ -59,6 +59,9 @@ class MarketingRepository
                         $query->time('where', 'sms1_timestamp', $year, $month)
                             ->time('orWhere', 'sms2_timestamp', $year, $month)
                             ->time('orWhere', 'sms3_timestamp', $year, $month);
+                    }])
+                    ->with(['keywords' => function($query) use ($month, $year) {
+                        $query->where(['month' => $month, 'year' => $year]);
                     }]);
                 }]);
 
