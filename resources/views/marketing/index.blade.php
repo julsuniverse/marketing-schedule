@@ -19,7 +19,12 @@
             </a>
         </div>
     </div>
-    <marketing inline-template>
+
+    <marketing inline-template
+               :marketings="{{ collect($marketingData->marketings->items()) }}"
+               :statuses="{{ $statuses }}"
+               :statuses_pr="{{ $statuses_pr }}"
+    >
         <div id="marketing">
             <table class="table table-hover table-bordered table-responsive marketing-table" id="marketing-dataTables">
                 <thead>
@@ -39,130 +44,128 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($marketingData->marketings as $marketing)
-                    <tr>
-                        <td>{{ $loop->iteration }}</td>
+                    <tr v-for="(marketing, index) in marketings">
+                        <td>@{{ index + 1}}</td>
                         <td>
-                            <div @click="selectCompany({{ $marketing->company }})">
-                                {{ $marketing->company->company_name }}
+                            <div @click="selectCompany( marketing.company )">
+                                @{{ marketing.company.company_name }}
                             </div>
                         </td>
-                        <!-- Traffic -->
                         <td>
                             <marketing-input
-                                    :value="{{ $marketing->traffic ?: 'null' }}"
+                                    :value="marketing.traffic ? marketing.traffic : null"
                                     :field="'traffic'"
-                                    :marketing_id="{{ $marketing->id }}"
-                                    :difference="{{ $marketing->diffTraffic }}"
+                                    :marketing_id="marketing.id"
+                                    :difference="marketing.diffTraffic"
                                     :with_difference="true"
                             ></marketing-input>
                         </td>
                         <!-- Calls -->
                         <td>
                             <marketing-input
-                                    :value="{{ $marketing->calls ?: 'null' }}"
+                                    :value="marketing.calls ? marketing.calls : null "
                                     :field="'calls'"
-                                    :marketing_id="{{ $marketing->id }}"
-                                    :difference="{{ $marketing->diffCalls }}"
+                                    :marketing_id="marketing.id"
+                                    :difference="marketing.diffCalls"
                                     :with_difference="true"
                             ></marketing-input>
                         </td>
                         <!-- Forms -->
                         <td>
                             <marketing-input
-                                    :value="{{ $marketing->forms ?: 'null' }}"
+                                    :value="marketing.forms ? marketing.forms : null"
                                     :field="'forms'"
-                                    :marketing_id="{{ $marketing->id }}"
-                                    :difference="{{ $marketing->diffForms }}"
+                                    :marketing_id="marketing.id"
+                                    :difference="marketing.diffForms"
                                     :with_difference="true"
                             ></marketing-input>
                         </td>
                         <!-- Pages -->
                         <td class="marketing-td">
                             <marketing-color
-                                    :status="{{ $marketing->pages_status }}"
-                                    :value="{{ $marketing->pages ?: 'null' }}"
+                                    :status="marketing.pages_status"
+                                    :value="marketing.pages ? marketing.pages :  null"
                                     :field="'pages'"
-                                    :marketing_id="{{ $marketing->id }}"
-                                    :statuses="{{ $statuses }}"
+                                    :marketing_id="marketing.id"
+                                    :statuses="statuses"
                             ></marketing-color>
 
                             <marketing-input
-                                    :value="{{ $marketing->pages ?: 'null' }}"
+                                    :value="marketing.pages ? marketing.pages : null"
                                     :field="'pages'"
-                                    :marketing_id="{{ $marketing->id }}"
+                                    :marketing_id="marketing.id"
                             ></marketing-input>
                         </td>
                         <!-- Posts -->
                         <td class="marketing-td">
                             <marketing-color
-                                    :status="{{ $marketing->posts_status }}"
-                                    :value="{{ $marketing->posts ?: 'null' }}"
+                                    :status="marketing.posts_status"
+                                    :value="marketing.posts ? marketing.posts : null"
                                     :field="'posts'"
-                                    :marketing_id="{{ $marketing->id }}"
-                                    :statuses="{{ $statuses }}"
+                                    :marketing_id="marketing.id"
+                                    :statuses="statuses"
                             ></marketing-color>
 
                             <marketing-input
-                                    :value="{{ $marketing->posts ?: 'null' }}"
+                                    :value="marketing.posts ? marketing.posts : null "
                                     :field="'posts'"
-                                    :marketing_id="{{ $marketing->id }}"
+                                    :marketing_id="marketing.id"
                             ></marketing-input>
                         </td>
                         <!-- Citations -->
                         <td class="marketing-td" >
                             <marketing-color
-                                    :status="{{ $marketing->citations_status }}"
-                                    :value="{{ $marketing->citations ?: 'null' }}"
+                                    :status="marketing.citations_status"
+                                    :value="marketing.citations ? marketing.citations : null"
                                     :field="'citations'"
-                                    :marketing_id="{{ $marketing->id }}"
-                                    :statuses="{{ $statuses }}"
+                                    :marketing_id="marketing.id"
+                                    :statuses="statuses"
                             ></marketing-color>
 
                             <marketing-input
-                                    :value="{{ $marketing->citations ?: 'null' }}"
+                                    :value="marketing.citations ? marketing.citations : null"
                                     :field="'citations'"
-                                    :marketing_id="{{ $marketing->id }}"
+                                    :marketing_id="marketing.id"
                             ></marketing-input>
                         </td>
                         <!-- PR -->
                         <td class="marketing-td" >
                             <marketing-color
-                                    :status="{{ $marketing->pr_status }}"
-                                    :value="{{ $marketing->pr ?: 'null' }}"
+                                    :status="marketing.pr_status"
+                                    :value="marketing.pr ? marketing.pr : null"
                                     :field="'pr'"
-                                    :marketing_id="{{ $marketing->id }}"
-                                    :statuses="{{ $statuses_pr }}"
+                                    :marketing_id="marketing.id"
+                                    :statuses="statuses_pr"
                             ></marketing-color>
 
                             <marketing-input
-                                    :value="{{ $marketing->pr ?: 'null' }}"
+                                    :value="marketing.pr ? marketing.pr : null"
                                     :field="'pr'"
-                                    :marketing_id="{{ $marketing->id }}"
+                                    :marketing_id="marketing.id"
                             ></marketing-input>
                         </td>
                         <!-- Reviews -->
                         <td>
                             <marketing-input
-                                    :value="{{ $marketing->reviews }}"
+                                    :value="marketing.reviews"
                                     :field="'reviews'"
-                                    :marketing_id="{{ $marketing->id }}"
-                                    :difference="{{ $marketing->diffReviews }}"
+                                    :marketing_id="marketing.id"
+                                    :difference="marketing.diffReviews"
                                     :with_difference="true"
                             ></marketing-input>
                         </td>
                         <!-- Text/Emails -->
-                        <td>
+                        <td style="max-width: 80px">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <span class="marketing-message" style="background-color: @if ($marketing->company->reports_email_count == 0) grey @else yellow @endif">
-                                        {{ $marketing->company->reports_email_count }}
+                                    <span class="marketing-message" :style="{'background-color' : (marketing.company.reports_email_count == 0) ? 'grey' : 'yellow'}">
+                                        @{{ marketing.company.reports_email_count }}
                                     </span>
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
                                 </div>
                                 <div class="col-md-6">
-                                    <span class="marketing-message" style="background-color: @if ($marketing->company->reports_email_count == 0) grey @else yellow @endif">
-                                        {{ $marketing->company->reports_sms_count }}
+                                    <span class="marketing-message" :style="{'background-color' : (marketing.company.reports_email_count == 0) ? 'grey' : 'yellow'}">
+                                        @{{ marketing.company.reports_sms_count }}
                                     </span>
                                     <i class="fa fa-mobile" aria-hidden="true"></i>
                                 </div>
@@ -171,11 +174,10 @@
                         <!-- Report -->
                         <td>
                             <marketing-report
-                                    :marketing_id="{{ $marketing->id }}"
+                                    :marketing_id="marketing.id"
                             ></marketing-report>
                         </td>
                     </tr>
-                @endforeach
 
                 </tbody>
             </table>

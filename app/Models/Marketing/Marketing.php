@@ -19,12 +19,8 @@ class Marketing extends Model
         'diffTraffic',
         'diffCalls',
         'diffForms',
-        'diffPosts',
+        'diffReviews',
     ];
-    public $diffTraffic;
-    public $diffCalls;
-    public $diffForms;
-    public $diffPosts;
 
     const STATUS_NONE = 0;
     const STATUS_SCHEDULE = 1;
@@ -41,6 +37,46 @@ class Marketing extends Model
         'green' => '#4ca741',
         'blue' => '#87cefa',
     ];
+
+    public function setDiffTrafficAttribute($value)
+    {
+        return $this->attributes['diffTraffic'] = $value;
+    }
+
+    public function getDiffTrafficAttribute()
+    {
+        return $this->attributes['diffTraffic'];
+    }
+
+    public function setDiffCallsAttribute($value)
+    {
+        return $this->attributes['diffCalls'] = $value;
+    }
+
+    public function getDiffCallsAttribute()
+    {
+        return $this->attributes['diffCalls'];
+    }
+
+    public function setDiffFormsAttribute($value)
+    {
+        return $this->attributes['diffForms'] = $value;
+    }
+
+    public function getDiffFormsAttribute()
+    {
+        return $this->attributes['diffForms'];
+    }
+
+    public function setDiffReviewsAttribute($value)
+    {
+        return $this->attributes['diffReviews'] = $value;
+    }
+
+    public function getDiffReviewsAttribute()
+    {
+        return $this->attributes['diffReviews'];
+    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

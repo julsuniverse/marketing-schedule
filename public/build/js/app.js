@@ -1703,6 +1703,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }).then(function (response) {
                 _this.value = '';
                 _this.keywords.push(response.data);
+                _this.activeCompany.keywords = _this.keywords;
                 console.log(response.data);
             }).catch(function (response) {
                 alert('Something went wrong');
@@ -1723,6 +1724,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['marketings', 'statuses', 'statuses_pr'],
     data: function data() {
         return {
             activeCompany: null,
@@ -1731,17 +1733,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     methods: {
-        selectCompany: function selectCompany(id) {
+        selectCompany: function selectCompany(company) {
             var _this = this;
 
-            if (id !== this.activeCompany) {
+            console.log(company);
+            console.log(this.activeCompany);
+            if (!this.activeCompany || company.id !== this.activeCompany.id) {
                 this.showKeywords = false;
                 this.$nextTick(function () {
-                    _this.activeCompany = id;
+                    _this.activeCompany = company;
                     _this.showKeywords = true;
                 });
             }
         }
+    },
+    created: function created() {
+        console.log(this.marketings);
     }
 });
 
@@ -79787,7 +79794,6 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing-color', __webpa
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing-report', __webpack_require__("./resources/assets/js/components/Marketing/MarketingReport.vue"));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('keywords', __webpack_require__("./resources/assets/js/components/Marketing/Keywords.vue"));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing', __webpack_require__("./resources/assets/js/components/Marketing/Marketing.vue"));
-//Vue.component('company-name', require('./components/Marketing/CompanyName.vue'));
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     el: '#app'

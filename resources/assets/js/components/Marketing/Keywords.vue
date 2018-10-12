@@ -61,6 +61,7 @@
                     .then(response => {
                         this.value = '';
                         this.keywords.push(response.data);
+                        this.activeCompany.keywords = this.keywords;
                         console.log(response.data);
                     })
                     .catch(response => {

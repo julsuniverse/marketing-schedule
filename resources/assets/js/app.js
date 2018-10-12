@@ -17,7 +17,6 @@ Vue.component('marketing-color', require('./components/Marketing/MarketingColor.
 Vue.component('marketing-report', require('./components/Marketing/MarketingReport.vue'));
 Vue.component('keywords', require('./components/Marketing/Keywords.vue'));
 Vue.component('marketing', require('./components/Marketing/Marketing.vue'));
-//Vue.component('company-name', require('./components/Marketing/CompanyName.vue'));
 
 const app = new Vue({
     el: '#app'
