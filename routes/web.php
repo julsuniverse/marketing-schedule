@@ -18,3 +18,5 @@ Route::get('/marketing/{month?}/{year?}', 'Marketing\MarketingController@index')
 Route::post('/update', 'Marketing\MarketingController@update');
 Route::post('/update-colors', 'Marketing\MarketingController@updateColors');
 Route::post('/report/{marketing}', 'Marketing\MarketingController@report');
+
+Route::post('/keyword/store', 'Marketing\KeywordController@store');

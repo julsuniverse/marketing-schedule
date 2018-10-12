@@ -84,9 +84,9 @@
         computed: {
             findColor() {
                 if(this.diff > 0) {
-                    return 'green';
+                    return 'text-green';
                 } else if (this.diff < 0) {
-                    return 'red';
+                    return 'text-red';
                 }
             }
         }

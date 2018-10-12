@@ -20,6 +20,7 @@
 @import "reportprint.css";
 @import "style.css";
 @import "marketing";
+@import "keywords";
 
 #spinner {
   position: absolute;
@@ -36,6 +37,10 @@
   i {
     margin-top: 22%;
   }
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 

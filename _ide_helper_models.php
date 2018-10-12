@@ -195,6 +195,28 @@ namespace App\Models\Marketing{
 
 namespace App\Models\Marketing{
 /**
+ * App\Models\Marketing\CompanyKeywords
+ *
+ * @property int $id
+ * @property int $company_id
+ * @property int $keyword_id
+ * @property int $month
+ * @property int $year
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\CompanyKeywords whereCompanyId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\CompanyKeywords whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\CompanyKeywords whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\CompanyKeywords whereKeywordId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\CompanyKeywords whereMonth($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\CompanyKeywords whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\CompanyKeywords whereYear($value)
+ */
+	class CompanyKeywords extends \Eloquent {}
+}
+
+namespace App\Models\Marketing{
+/**
  * Class Company
  *
  * @package App\Models

@@ -31,6 +31,8 @@ class MarketingService
         $marketingData = new \stdClass();
         $marketingData->marketings = $marketings;
         $marketingData->date = date('F, Y', strtotime($year . '-' . $month));
+        $marketingData->month = $month;
+        $marketingData->year = $year;
         $marketingData->nextDate = $nextDate;
         $marketingData->prevDate = $prevDate;
 
