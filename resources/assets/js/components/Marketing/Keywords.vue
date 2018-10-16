@@ -8,7 +8,7 @@
 
             <div class="keywords-inner" :class="clicked ? '' : 'keywords-inner-hide'">
                 <div class="company-name">{{ activeCompany.company_name }}</div>
-                <div class="key" v-for="keyword in filterShow">{{ keyword.text }}</div>
+                <div class="key" v-for="keyword in filterShow">{{ keyword.text }} ({{ keyword.pivot.count }})</div>
 
                 <nav aria-label="Page navigation" class="keywords-pagination">
                     <ul class="pagination">
@@ -28,7 +28,7 @@
                             name="keyword"
                             placeholder="Enter keyword"
                     />
-                    <span class="matches">0</span>
+                    <span class="matches">{{ matches }}</span>
                     <span class="add-keyword" @click="addCompany()">
                         <i class="fa fa-plus"></i>
                     </span>
@@ -48,7 +48,8 @@
                 value: '',
                 keywords: this.activeCompany.keywords,
                 per_page: 12,
-                current_page: 1
+                current_page: 1,
+                matches: 0
             }
         },
         methods: {
@@ -68,9 +69,14 @@
                 })
                     .then(response => {
                         this.value = '';
-                        this.keywords.push(response.data);
+                        let new_keywords = response.data.keywords[0];
+                        let index = _.findIndex(this.keywords, function(keyword) { return keyword.id == new_keywords.id; });
+                        if(index != -1) {
+                            this.keywords[index] = new_keywords;
+                        } else {
+                            this.keywords.push(new_keywords);
+                        }
                         this.activeCompany.keywords = this.keywords;
-                        console.log(response.data);
                     })
                     .catch(response => {
                         alert('Something went wrong');
@@ -83,7 +89,7 @@
             },
             changeCurrentPage(page) {
                 this.current_page = page;
-            }
+            },
         },
         computed: {
             filtered() {
@@ -95,7 +101,7 @@
                 return Math.ceil(Object.keys(this.filtered).length / this.per_page);
             },
             filterShow() {
-                return this.filtered.filter((keyword, index) => {
+                let keywords =  this.filtered.filter((keyword, index) => {
                     if (
                         !((index > (this.per_page * (this.current_page - 1) - 1)) &&
                             (index < this.per_page * this.current_page))
@@ -103,8 +109,14 @@
                         return false;
                     }
                     return true;
-                })
-            },
+                });
+                if(Object.keys(keywords).length === 1) {
+                    this.matches = keywords[0].pivot.count;
+                } else {
+                    this.matches = 0;
+                }
+                return keywords;
+            }
         }
     }
 </script>

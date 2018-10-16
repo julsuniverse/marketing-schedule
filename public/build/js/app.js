@@ -1688,7 +1688,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             value: '',
             keywords: this.activeCompany.keywords,
             per_page: 12,
-            current_page: 1
+            current_page: 1,
+            matches: 0
         };
     },
 
@@ -1710,9 +1711,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }
             }).then(function (response) {
                 _this.value = '';
-                _this.keywords.push(response.data);
+                var new_keywords = response.data.keywords[0];
+                var index = _.findIndex(_this.keywords, function (keyword) {
+                    return keyword.id == new_keywords.id;
+                });
+                if (index != -1) {
+                    _this.keywords[index] = new_keywords;
+                } else {
+                    _this.keywords.push(new_keywords);
+                }
                 _this.activeCompany.keywords = _this.keywords;
-                console.log(response.data);
             }).catch(function (response) {
                 alert('Something went wrong');
             }).finally(function () {
@@ -1738,12 +1746,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         filterShow: function filterShow() {
             var _this3 = this;
 
-            return this.filtered.filter(function (keyword, index) {
+            var keywords = this.filtered.filter(function (keyword, index) {
                 if (!(index > _this3.per_page * (_this3.current_page - 1) - 1 && index < _this3.per_page * _this3.current_page)) {
                     return false;
                 }
                 return true;
             });
+            if (Object.keys(keywords).length === 1) {
+                this.matches = keywords[0].pivot.count;
+            } else {
+                this.matches = 0;
+            }
+            return keywords;
         }
     }
 });
@@ -68570,7 +68584,12 @@ var render = function() {
             _vm._v(" "),
             _vm._l(_vm.filterShow, function(keyword) {
               return _c("div", { staticClass: "key" }, [
-                _vm._v(_vm._s(keyword.text))
+                _vm._v(
+                  _vm._s(keyword.text) +
+                    " (" +
+                    _vm._s(keyword.pivot.count) +
+                    ")"
+                )
               ])
             }),
             _vm._v(" "),
@@ -68638,7 +68657,9 @@ var render = function() {
                 }
               }),
               _vm._v(" "),
-              _c("span", { staticClass: "matches" }, [_vm._v("0")]),
+              _c("span", { staticClass: "matches" }, [
+                _vm._v(_vm._s(_vm.matches))
+              ]),
               _vm._v(" "),
               _c(
                 "span",
