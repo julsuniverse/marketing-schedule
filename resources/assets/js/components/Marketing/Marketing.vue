@@ -11,8 +11,6 @@
         },
         methods: {
             selectCompany(company) {
-                console.log(company);
-                console.log(this.activeCompany);
                if (!this.activeCompany || company.id !== this.activeCompany.id) {
                    this.showKeywords = false;
                    this.$nextTick(() => {
@@ -23,7 +21,6 @@
             }
         },
         created() {
-            console.log(this.marketings);
         }
     }
 </script>

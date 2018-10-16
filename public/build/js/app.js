@@ -1673,6 +1673,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['activeCompany', 'month', 'year'],
@@ -1680,7 +1686,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             clicked: true,
             value: '',
-            keywords: this.activeCompany.keywords
+            keywords: this.activeCompany.keywords,
+            per_page: 12,
+            current_page: 1
         };
     },
 
@@ -1711,6 +1719,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 //$('#spinner').hide();
 
             });
+        },
+        changeCurrentPage: function changeCurrentPage(page) {
+            this.current_page = page;
+        }
+    },
+    computed: {
+        filtered: function filtered() {
+            var _this2 = this;
+
+            return this.keywords.filter(function (keyword, index) {
+                return keyword.text.indexOf(_this2.value) !== -1;
+            });
+        },
+        countPages: function countPages() {
+            return Math.ceil(Object.keys(this.filtered).length / this.per_page);
+        },
+        filterShow: function filterShow() {
+            var _this3 = this;
+
+            return this.filtered.filter(function (keyword, index) {
+                if (!(index > _this3.per_page * (_this3.current_page - 1) - 1 && index < _this3.per_page * _this3.current_page)) {
+                    return false;
+                }
+                return true;
+            });
         }
     }
 });
@@ -1736,8 +1769,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         selectCompany: function selectCompany(company) {
             var _this = this;
 
-            console.log(company);
-            console.log(this.activeCompany);
             if (!this.activeCompany || company.id !== this.activeCompany.id) {
                 this.showKeywords = false;
                 this.$nextTick(function () {
@@ -1747,9 +1778,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
         }
     },
-    created: function created() {
-        console.log(this.marketings);
-    }
+    created: function created() {}
 });
 
 /***/ }),
@@ -68539,11 +68568,46 @@ var render = function() {
               _vm._v(_vm._s(_vm.activeCompany.company_name))
             ]),
             _vm._v(" "),
-            _vm._l(_vm.keywords, function(keyword) {
+            _vm._l(_vm.filterShow, function(keyword) {
               return _c("div", { staticClass: "key" }, [
                 _vm._v(_vm._s(keyword.text))
               ])
             }),
+            _vm._v(" "),
+            _c(
+              "nav",
+              {
+                staticClass: "keywords-pagination",
+                attrs: { "aria-label": "Page navigation" }
+              },
+              [
+                _c(
+                  "ul",
+                  { staticClass: "pagination" },
+                  _vm._l(_vm.countPages, function(i) {
+                    return _c(
+                      "li",
+                      {
+                        on: {
+                          click: function($event) {
+                            _vm.changeCurrentPage(i)
+                          }
+                        }
+                      },
+                      [
+                        _c("a", { attrs: { href: "javascript:void(0)" } }, [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(i) +
+                              "\n                        "
+                          )
+                        ])
+                      ]
+                    )
+                  })
+                )
+              ]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "add" }, [
               _c("input", {
@@ -68555,9 +68619,16 @@ var render = function() {
                     expression: "value"
                   }
                 ],
-                attrs: { name: "keyword", placeholder: "Enter keyword" },
+                attrs: {
+                  type: "text",
+                  name: "keyword",
+                  placeholder: "Enter keyword"
+                },
                 domProps: { value: _vm.value },
                 on: {
+                  keypress: function($event) {
+                    _vm.current_page = 1
+                  },
                   input: function($event) {
                     if ($event.target.composing) {
                       return
