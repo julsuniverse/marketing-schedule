@@ -12,6 +12,9 @@
                     <input type="checkbox" :checked="keyword.pivot.completed" @change="complete(keyword)" />
                     {{ keyword.text }}
                     ({{ keyword.pivot.count }})
+                    <span @click="deleteKeyword(keyword)">
+                        <i class="fa fa-close"></i>
+                    </span>
                 </div>
 
                 <nav aria-label="Page navigation" class="keywords-pagination">
@@ -108,6 +111,27 @@
                 })
                     .then(response => {
 
+                    })
+                    .catch(response => {
+                        alert('Something went wrong');
+                    })
+            },
+            deleteKeyword(keyword) {
+                axios({
+                    method: 'POST',
+                    url: '/keyword/delete',
+                    data: {
+                        'keyword': keyword.id,
+                        'company': keyword.pivot.company_id,
+                        'month': this.month,
+                        'year': this.year
+                    }
+                })
+                    .then(response => {
+                        this.keywords = this.keywords.filter((kw) => {
+                           return kw.id !== keyword.id;
+                        });
+                        this.activeCompany.keywords = this.keywords;
                     })
                     .catch(response => {
                         alert('Something went wrong');

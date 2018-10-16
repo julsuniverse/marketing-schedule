@@ -1683,6 +1683,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['activeCompany', 'month', 'year'],
@@ -1749,24 +1752,45 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }).then(function (response) {}).catch(function (response) {
                 alert('Something went wrong');
             });
+        },
+        deleteKeyword: function deleteKeyword(keyword) {
+            var _this2 = this;
+
+            axios({
+                method: 'POST',
+                url: '/keyword/delete',
+                data: {
+                    'keyword': keyword.id,
+                    'company': keyword.pivot.company_id,
+                    'month': this.month,
+                    'year': this.year
+                }
+            }).then(function (response) {
+                _this2.keywords = _this2.keywords.filter(function (kw) {
+                    return kw.id !== keyword.id;
+                });
+                _this2.activeCompany.keywords = _this2.keywords;
+            }).catch(function (response) {
+                alert('Something went wrong');
+            });
         }
     },
     computed: {
         filtered: function filtered() {
-            var _this2 = this;
+            var _this3 = this;
 
             return this.keywords.filter(function (keyword, index) {
-                return keyword.text.indexOf(_this2.value) !== -1;
+                return keyword.text.indexOf(_this3.value) !== -1;
             });
         },
         countPages: function countPages() {
             return Math.ceil(Object.keys(this.filtered).length / this.per_page);
         },
         filterShow: function filterShow() {
-            var _this3 = this;
+            var _this4 = this;
 
             var keywords = this.filtered.filter(function (keyword, index) {
-                if (!(index > _this3.per_page * (_this3.current_page - 1) - 1 && index < _this3.per_page * _this3.current_page)) {
+                if (!(index > _this4.per_page * (_this4.current_page - 1) - 1 && index < _this4.per_page * _this4.current_page)) {
                     return false;
                 }
                 return true;
@@ -68620,7 +68644,18 @@ var render = function() {
                     _vm._s(keyword.text) +
                     "\n                (" +
                     _vm._s(keyword.pivot.count) +
-                    ")\n            "
+                    ")\n                "
+                ),
+                _c(
+                  "span",
+                  {
+                    on: {
+                      click: function($event) {
+                        _vm.deleteKeyword(keyword)
+                      }
+                    }
+                  },
+                  [_c("i", { staticClass: "fa fa-close" })]
                 )
               ])
             }),

@@ -30,4 +30,13 @@ class KeywordController extends Controller
             ->wherePivot('year', $request->year)
             ->updateExistingPivot($request->company, ['completed' => $request->completed]);
     }
+
+    public function delete(Request $request)
+    {
+        $keyword = Keyword::where('id', $request->keyword)->first();
+        $keyword->companies()
+            ->wherePivot('month', $request->month)
+            ->wherePivot('year', $request->year)
+            ->detach();
+    }
 }
