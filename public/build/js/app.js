@@ -1673,6 +1673,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['activeCompany', 'month', 'year'],
@@ -1680,7 +1693,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             clicked: true,
             value: '',
-            keywords: this.activeCompany.keywords
+            keywords: this.activeCompany.keywords,
+            per_page: 11,
+            current_page: 1,
+            matches: 0
         };
     },
 
@@ -1702,16 +1718,93 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }
             }).then(function (response) {
                 _this.value = '';
-                _this.keywords.push(response.data);
+                var new_keywords = response.data.keywords[0];
+                var index = _.findIndex(_this.keywords, function (keyword) {
+                    return keyword.id == new_keywords.id;
+                });
+                if (index != -1) {
+                    _this.keywords[index] = new_keywords;
+                } else {
+                    _this.keywords.push(new_keywords);
+                }
                 _this.activeCompany.keywords = _this.keywords;
-                console.log(response.data);
             }).catch(function (response) {
                 alert('Something went wrong');
             }).finally(function () {
                 //$('#spinner').hide();
 
             });
+        },
+        changeCurrentPage: function changeCurrentPage(page) {
+            this.current_page = page;
+        },
+        complete: function complete(keyword) {
+            axios({
+                method: 'POST',
+                url: '/keyword/edit',
+                data: {
+                    'completed': !keyword.pivot.completed,
+                    'keyword': keyword.id,
+                    'company': keyword.pivot.company_id,
+                    'month': this.month,
+                    'year': this.year
+                }
+            }).then(function (response) {}).catch(function (response) {
+                alert('Something went wrong');
+            });
+        },
+        deleteKeyword: function deleteKeyword(keyword) {
+            var _this2 = this;
+
+            axios({
+                method: 'POST',
+                url: '/keyword/delete',
+                data: {
+                    'keyword': keyword.id,
+                    'company': keyword.pivot.company_id,
+                    'month': this.month,
+                    'year': this.year
+                }
+            }).then(function (response) {
+                _this2.keywords = _this2.keywords.filter(function (kw) {
+                    return kw.id !== keyword.id;
+                });
+                _this2.activeCompany.keywords = _this2.keywords;
+            }).catch(function (response) {
+                alert('Something went wrong');
+            });
         }
+    },
+    computed: {
+        filtered: function filtered() {
+            var _this3 = this;
+
+            return this.keywords.filter(function (keyword, index) {
+                return keyword.text.indexOf(_this3.value) !== -1;
+            });
+        },
+        countPages: function countPages() {
+            return Math.ceil(Object.keys(this.filtered).length / this.per_page);
+        },
+        filterShow: function filterShow() {
+            var _this4 = this;
+
+            var keywords = this.filtered.filter(function (keyword, index) {
+                if (!(index > _this4.per_page * (_this4.current_page - 1) - 1 && index < _this4.per_page * _this4.current_page)) {
+                    return false;
+                }
+                return true;
+            });
+            if (Object.keys(keywords).length === 1) {
+                this.matches = keywords[0].pivot.count;
+            } else {
+                this.matches = 0;
+            }
+            return keywords;
+        }
+    },
+    mounted: function mounted() {
+        console.log('keywords', this.keywords);
     }
 });
 
@@ -1736,8 +1829,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         selectCompany: function selectCompany(company) {
             var _this = this;
 
-            console.log(company);
-            console.log(this.activeCompany);
             if (!this.activeCompany || company.id !== this.activeCompany.id) {
                 this.showKeywords = false;
                 this.$nextTick(function () {
@@ -1745,10 +1836,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     _this.showKeywords = true;
                 });
             }
+        },
+        getBackground: function getBackground(marketing) {
+            return this.activeCompany && marketing.company_id == this.activeCompany.id ? '#f5f5f5' : '#fff';
         }
-    },
-    created: function created() {
-        console.log(this.marketings);
     }
 });
 
@@ -68539,11 +68630,72 @@ var render = function() {
               _vm._v(_vm._s(_vm.activeCompany.company_name))
             ]),
             _vm._v(" "),
-            _vm._l(_vm.keywords, function(keyword) {
+            _vm._l(_vm.filterShow, function(keyword) {
               return _c("div", { staticClass: "key" }, [
-                _vm._v(_vm._s(keyword.text))
+                _c("input", {
+                  attrs: { type: "checkbox" },
+                  domProps: { checked: keyword.pivot.completed },
+                  on: {
+                    change: function($event) {
+                      _vm.complete(keyword)
+                    }
+                  }
+                }),
+                _vm._v(
+                  "\n                " +
+                    _vm._s(keyword.text) +
+                    "\n                (" +
+                    _vm._s(keyword.pivot.count) +
+                    ")\n                "
+                ),
+                _c(
+                  "span",
+                  {
+                    on: {
+                      click: function($event) {
+                        _vm.deleteKeyword(keyword)
+                      }
+                    }
+                  },
+                  [_c("i", { staticClass: "fa fa-close" })]
+                )
               ])
             }),
+            _vm._v(" "),
+            _c(
+              "nav",
+              {
+                staticClass: "keywords-pagination",
+                attrs: { "aria-label": "Page navigation" }
+              },
+              [
+                _c(
+                  "ul",
+                  { staticClass: "pagination" },
+                  _vm._l(_vm.countPages, function(i) {
+                    return _c(
+                      "li",
+                      {
+                        on: {
+                          click: function($event) {
+                            _vm.changeCurrentPage(i)
+                          }
+                        }
+                      },
+                      [
+                        _c("a", { attrs: { href: "javascript:void(0)" } }, [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(i) +
+                              "\n                        "
+                          )
+                        ])
+                      ]
+                    )
+                  })
+                )
+              ]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "add" }, [
               _c("input", {
@@ -68555,9 +68707,16 @@ var render = function() {
                     expression: "value"
                   }
                 ],
-                attrs: { name: "keyword", placeholder: "Enter keyword" },
+                attrs: {
+                  type: "text",
+                  name: "keyword",
+                  placeholder: "Enter keyword"
+                },
                 domProps: { value: _vm.value },
                 on: {
+                  keypress: function($event) {
+                    _vm.current_page = 1
+                  },
                   input: function($event) {
                     if ($event.target.composing) {
                       return
@@ -68567,7 +68726,9 @@ var render = function() {
                 }
               }),
               _vm._v(" "),
-              _c("span", { staticClass: "matches" }, [_vm._v("0")]),
+              _c("span", { staticClass: "matches" }, [
+                _vm._v(_vm._s(_vm.matches))
+              ]),
               _vm._v(" "),
               _c(
                 "span",

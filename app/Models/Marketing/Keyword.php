@@ -13,6 +13,6 @@ class Keyword extends Model
 
     public function companies()
     {
-        $this->belongsToMany(Company::class);
+        return $this->belongsToMany(Company::class, 'company_keywords')->withPivot(['month', 'year', 'count', 'completed']);
     }
 }

@@ -11620,6 +11620,7 @@ div.dtr-modal div.dtr-modal-background {
   position: absolute;
   right: 0;
   width: 320px;
+  height: 406px;
 }
 
 .keywords .keywords-inner.keywords-inner-hide {
@@ -11638,6 +11639,9 @@ div.dtr-modal div.dtr-modal-background {
 .keywords .add {
   padding: 5px 10px;
   background-color: #ea8201;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .keywords .add .matches {
@@ -11648,6 +11652,21 @@ div.dtr-modal div.dtr-modal-background {
 .keywords .add .add-keyword {
   background-color: green;
   border: 2px solid #fff;
+  padding: 3px 6px;
+}
+
+.keywords .keywords-pagination {
+  position: absolute;
+  bottom: 33px;
+  left: 10px;
+}
+
+.keywords .keywords-pagination .pagination {
+  margin: 0;
+}
+
+.keywords .keywords-pagination a {
+  font-size: 11px;
   padding: 3px 6px;
 }
 
@@ -11695,5 +11714,9 @@ div.dtr-modal div.dtr-modal-background {
 
 a:hover {
   text-decoration: none;
+}
+
+[v-cloak] {
+  display: none;
 }
 

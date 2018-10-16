@@ -20,3 +20,5 @@ Route::post('/update-colors', 'Marketing\MarketingController@updateColors');
 Route::post('/report/{marketing}', 'Marketing\MarketingController@report');
 
 Route::post('/keyword/store', 'Marketing\KeywordController@store');
+Route::post('/keyword/edit', 'Marketing\KeywordController@edit');
+Route::post('/keyword/delete', 'Marketing\KeywordController@delete');

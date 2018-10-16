@@ -24,6 +24,7 @@
                :marketings="{{ collect($marketingData->marketings->items()) }}"
                :statuses="{{ $statuses }}"
                :statuses_pr="{{ $statuses_pr }}"
+               v-cloak
     >
         <div id="marketing">
             <table class="table table-hover table-bordered table-responsive marketing-table" id="marketing-dataTables">
@@ -44,7 +45,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(marketing, index) in marketings">
+                    <tr v-for="(marketing, index) in marketings" :style="{'background-color': getBackground(marketing)}">
                         <td>@{{ index + 1}}</td>
                         <td>
                             <div @click="selectCompany( marketing.company )">
