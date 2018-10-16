@@ -24,6 +24,7 @@
                :marketings="{{ collect($marketingData->marketings->items()) }}"
                :statuses="{{ $statuses }}"
                :statuses_pr="{{ $statuses_pr }}"
+               v-cloak
     >
         <div id="marketing">
             <table class="table table-hover table-bordered table-responsive marketing-table" id="marketing-dataTables">

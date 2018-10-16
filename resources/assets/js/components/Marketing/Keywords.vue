@@ -8,7 +8,11 @@
 
             <div class="keywords-inner" :class="clicked ? '' : 'keywords-inner-hide'">
                 <div class="company-name">{{ activeCompany.company_name }}</div>
-                <div class="key" v-for="keyword in filterShow">{{ keyword.text }} ({{ keyword.pivot.count }})</div>
+                <div class="key" v-for="keyword in filterShow">
+                    <input type="checkbox" :checked="keyword.pivot.completed" @change="complete(keyword)" />
+                    {{ keyword.text }}
+                    ({{ keyword.pivot.count }})
+                </div>
 
                 <nav aria-label="Page navigation" class="keywords-pagination">
                     <ul class="pagination">
@@ -47,7 +51,7 @@
                 clicked: true,
                 value: '',
                 keywords: this.activeCompany.keywords,
-                per_page: 12,
+                per_page: 11,
                 current_page: 1,
                 matches: 0
             }
@@ -90,6 +94,25 @@
             changeCurrentPage(page) {
                 this.current_page = page;
             },
+            complete(keyword) {
+                axios({
+                    method: 'POST',
+                    url: '/keyword/edit',
+                    data: {
+                        'completed': !keyword.pivot.completed,
+                        'keyword': keyword.id,
+                        'company': keyword.pivot.company_id,
+                        'month': this.month,
+                        'year': this.year
+                    }
+                })
+                    .then(response => {
+
+                    })
+                    .catch(response => {
+                        alert('Something went wrong');
+                    })
+            }
         },
         computed: {
             filtered() {
@@ -117,6 +140,9 @@
                 }
                 return keywords;
             }
+        },
+        mounted() {
+            console.log('keywords', this.keywords);
         }
     }
 </script>

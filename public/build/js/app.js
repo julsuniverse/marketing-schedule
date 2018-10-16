@@ -1679,6 +1679,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['activeCompany', 'month', 'year'],
@@ -1687,7 +1691,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             clicked: true,
             value: '',
             keywords: this.activeCompany.keywords,
-            per_page: 12,
+            per_page: 11,
             current_page: 1,
             matches: 0
         };
@@ -1730,6 +1734,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         changeCurrentPage: function changeCurrentPage(page) {
             this.current_page = page;
+        },
+        complete: function complete(keyword) {
+            axios({
+                method: 'POST',
+                url: '/keyword/edit',
+                data: {
+                    'completed': !keyword.pivot.completed,
+                    'keyword': keyword.id,
+                    'company': keyword.pivot.company_id,
+                    'month': this.month,
+                    'year': this.year
+                }
+            }).then(function (response) {}).catch(function (response) {
+                alert('Something went wrong');
+            });
         }
     },
     computed: {
@@ -1759,6 +1778,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
             return keywords;
         }
+    },
+    mounted: function mounted() {
+        console.log('keywords', this.keywords);
     }
 });
 
@@ -68584,11 +68606,21 @@ var render = function() {
             _vm._v(" "),
             _vm._l(_vm.filterShow, function(keyword) {
               return _c("div", { staticClass: "key" }, [
+                _c("input", {
+                  attrs: { type: "checkbox" },
+                  domProps: { checked: keyword.pivot.completed },
+                  on: {
+                    change: function($event) {
+                      _vm.complete(keyword)
+                    }
+                  }
+                }),
                 _vm._v(
-                  _vm._s(keyword.text) +
-                    " (" +
+                  "\n                " +
+                    _vm._s(keyword.text) +
+                    "\n                (" +
                     _vm._s(keyword.pivot.count) +
-                    ")"
+                    ")\n            "
                 )
               ])
             }),
