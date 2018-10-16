@@ -18,9 +18,10 @@
                        this.showKeywords = true;
                    });
                }
+            },
+            getBackground(marketing) {
+                return this.activeCompany && marketing.company_id == this.activeCompany.id ? '#f5f5f5' : '#fff';
             }
-        },
-        created() {
         }
     }
 </script>

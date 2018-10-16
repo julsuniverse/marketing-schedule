@@ -1836,9 +1836,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     _this.showKeywords = true;
                 });
             }
+        },
+        getBackground: function getBackground(marketing) {
+            return this.activeCompany && marketing.company_id == this.activeCompany.id ? '#f5f5f5' : '#fff';
         }
-    },
-    created: function created() {}
+    }
 });
 
 /***/ }),

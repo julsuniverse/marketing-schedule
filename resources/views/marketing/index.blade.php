@@ -45,7 +45,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(marketing, index) in marketings">
+                    <tr v-for="(marketing, index) in marketings" :style="{'background-color': getBackground(marketing)}">
                         <td>@{{ index + 1}}</td>
                         <td>
                             <div @click="selectCompany( marketing.company )">
