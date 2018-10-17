@@ -110,7 +110,9 @@
                     }
                 })
                     .then(response => {
-
+                        let index = _.findIndex(this.keywords, function(k) { return k.id === keyword.id; });
+                        this.keywords[index].pivot.completed = !keyword.pivot.completed;
+                        this.activeCompany.keywords = this.keywords;
                     })
                     .catch(response => {
                         alert('Something went wrong');
