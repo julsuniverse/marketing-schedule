@@ -1739,6 +1739,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.current_page = page;
         },
         complete: function complete(keyword) {
+            var _this2 = this;
+
             axios({
                 method: 'POST',
                 url: '/keyword/edit',
@@ -1749,12 +1751,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     'month': this.month,
                     'year': this.year
                 }
-            }).then(function (response) {}).catch(function (response) {
+            }).then(function (response) {
+                var index = _.findIndex(_this2.keywords, function (k) {
+                    return k.id === keyword.id;
+                });
+                _this2.keywords[index].pivot.completed = !keyword.pivot.completed;
+                _this2.activeCompany.keywords = _this2.keywords;
+            }).catch(function (response) {
                 alert('Something went wrong');
             });
         },
         deleteKeyword: function deleteKeyword(keyword) {
-            var _this2 = this;
+            var _this3 = this;
 
             axios({
                 method: 'POST',
@@ -1766,10 +1774,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     'year': this.year
                 }
             }).then(function (response) {
-                _this2.keywords = _this2.keywords.filter(function (kw) {
+                _this3.keywords = _this3.keywords.filter(function (kw) {
                     return kw.id !== keyword.id;
                 });
-                _this2.activeCompany.keywords = _this2.keywords;
+                _this3.activeCompany.keywords = _this3.keywords;
             }).catch(function (response) {
                 alert('Something went wrong');
             });
@@ -1777,20 +1785,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     computed: {
         filtered: function filtered() {
-            var _this3 = this;
+            var _this4 = this;
 
             return this.keywords.filter(function (keyword, index) {
-                return keyword.text.indexOf(_this3.value) !== -1;
+                return keyword.text.indexOf(_this4.value) !== -1;
             });
         },
         countPages: function countPages() {
             return Math.ceil(Object.keys(this.filtered).length / this.per_page);
         },
         filterShow: function filterShow() {
-            var _this4 = this;
+            var _this5 = this;
 
             var keywords = this.filtered.filter(function (keyword, index) {
-                if (!(index > _this4.per_page * (_this4.current_page - 1) - 1 && index < _this4.per_page * _this4.current_page)) {
+                if (!(index > _this5.per_page * (_this5.current_page - 1) - 1 && index < _this5.per_page * _this5.current_page)) {
                     return false;
                 }
                 return true;
