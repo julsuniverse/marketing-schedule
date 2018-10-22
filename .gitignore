@@ -13,3 +13,6 @@ yarn-error.log
 .env
 .phpunit.result.cache
 /storage/debugbar
+
+ssh.sh
+wwweb_lmms
