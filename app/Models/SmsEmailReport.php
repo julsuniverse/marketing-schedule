@@ -21,9 +21,12 @@ class SmsEmailReport extends Model
      */
     public function scopeTime($query, $where, $field, $year, $month)
     {
+        if ($month >= 1 && $month <=9) {
+            $month = '0' . $month;
+        }
         return $query->{$where}([
-            [$field, '>=', $year . '-' . $month . '01 00:00:00'],
-            [$field, '<=', $year . '-' . $month . '31 23:59:59']
+            [$field, '>=', $year . '-' . $month . '-01 00:00:00'],
+            [$field, '<=', $year . '-' . $month . '-31 23:59:59']
         ]);
     }
 }
