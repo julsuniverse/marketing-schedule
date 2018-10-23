@@ -20,6 +20,7 @@ class Marketing extends Model
         'diffCalls',
         'diffForms',
         'diffReviews',
+        'last_email_date', 'last_sms_date'
     ];
 
     const STATUS_NONE = 0;
@@ -37,6 +38,42 @@ class Marketing extends Model
         'green' => '#4ca741',
         'blue' => '#87cefa',
     ];
+
+    public function getLastEmailDateAttribute()
+    {
+        $reports = $this->company->reports_email;
+        $dates = [];
+        foreach ($reports as $report) {
+            $dates[] = $report->email1_timestamp;
+            $dates[] = $report->email2_timestamp;
+            $dates[] = $report->email3_timestamp;
+        }
+        if (count($dates) > 0) {
+            $max = max($dates);
+            $max = date('Y-m-d', strtotime($max));
+            return $max;
+        } else {
+            return null;
+        }
+    }
+
+    public function getLastSmsDateAttribute()
+    {
+        $reports = $this->company->reports_sms;
+        $dates = [];
+        foreach ($reports as $report) {
+            $dates[] = $report->sms1_timestamp;
+            $dates[] = $report->sms2_timestamp;
+            $dates[] = $report->sms3_timestamp;
+        }
+        if (count($dates) > 0) {
+            $max = max($dates);
+            $max = date('Y-m-d', strtotime($max));
+            return $max;
+        } else {
+            return null;
+        }
+    }
 
     public function setDiffTrafficAttribute($value)
     {
