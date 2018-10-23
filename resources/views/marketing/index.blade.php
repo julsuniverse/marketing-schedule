@@ -156,19 +156,31 @@
                             ></marketing-input>
                         </td>
                         <!-- Text/Emails -->
-                        <td style="max-width: 80px">
+                        <td style="max-width: 80px" class="marketing-td">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <span class="marketing-message" :style="{'background-color' : (Object.keys(marketing.company.reports_email).length === 0) ? '#999' : '#fcff77'}">
-                                        @{{ Object.keys(marketing.company.reports_email).length }}
-                                    </span>
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <div class="marketing-message-cell">
+                                        <span class="marketing-message" :style="{'background-color' : (Object.keys(marketing.company.reports_email).length === 0) ? '#999' : '#fcff77'}">
+                                            @{{ Object.keys(marketing.company.reports_email).length }}
+                                        </span>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <span class="marketing-diff">
+                                            @{{marketing.last_email_date }}
+                                        </span>
+                                    </div>
+
                                 </div>
                                 <div class="col-md-6">
-                                    <span class="marketing-message" :style="{'background-color' : (Object.keys(marketing.company.reports_sms).length === 0) ? '#999' : '#fcff77'}">
-                                        @{{Object.keys(marketing.company.reports_sms).length }}
-                                    </span>
-                                    <i class="fa fa-mobile" aria-hidden="true"></i>
+                                    <div class="marketing-message-cell">
+                                        <span class="marketing-message" :style="{'background-color' : (Object.keys(marketing.company.reports_sms).length === 0) ? '#999' : '#fcff77'}">
+                                            @{{Object.keys(marketing.company.reports_sms).length }}
+                                        </span>
+                                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                                        <span class="marketing-diff">
+                                            @{{marketing.last_sms_date }}
+                                        </span>
+                                    </div>
+
                                 </div>
                             </div>
                         </td>

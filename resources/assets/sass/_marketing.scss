@@ -50,10 +50,17 @@
   }
 }
 
-.marketing-message {
-  padding: 4px 5px;
-  margin-right: 5px;
+.marketing-message-cell {
+  height: 42px;
+  padding-top: 6px;
+  padding-left: 9px;
+
+  .marketing-message {
+    padding: 4px 5px;
+    margin-right: 5px;
+  }
 }
+
 
 .marketing-diff {
   font-size: 10px;
