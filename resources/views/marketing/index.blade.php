@@ -159,14 +159,14 @@
                         <td style="max-width: 80px">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <span class="marketing-message" :style="{'background-color' : (marketing.company.reports_email_count == 0) ? 'grey' : 'yellow'}">
-                                        @{{ marketing.company.reports_email_count }}
+                                    <span class="marketing-message" :style="{'background-color' : (Object.keys(marketing.company.reports_email).length === 0) ? '#999' : '#fcff77'}">
+                                        @{{ Object.keys(marketing.company.reports_email).length }}
                                     </span>
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
                                 </div>
                                 <div class="col-md-6">
-                                    <span class="marketing-message" :style="{'background-color' : (marketing.company.reports_email_count == 0) ? 'grey' : 'yellow'}">
-                                        @{{ marketing.company.reports_sms_count }}
+                                    <span class="marketing-message" :style="{'background-color' : (Object.keys(marketing.company.reports_sms).length === 0) ? '#999' : '#fcff77'}">
+                                        @{{Object.keys(marketing.company.reports_sms).length }}
                                     </span>
                                     <i class="fa fa-mobile" aria-hidden="true"></i>
                                 </div>

@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Models\Marketing\Company;
 use App\Models\Marketing\Marketing;
+use App\Models\SmsEmailReport;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 class MarketingRepository
@@ -51,11 +52,11 @@ class MarketingRepository
         $marketing = Marketing::where(['month' => $month, 'year' => $year])
             ->with(['company.offices.reviews',
                 'company' => function ($query) use ($month, $year) {
-                    $query->withCount(['reports_email' => function ($query) use ($month, $year) {
+                    $query->with(['reports_email' => function ($query) use ($month, $year) {
                         $query->time('where', 'email1_timestamp', $year, $month)
                             ->time('orWhere', 'email2_timestamp', $year, $month)
                             ->time('orWhere', 'email3_timestamp', $year, $month);
-                    }])->withCount(['reports_sms' => function ($query) use ($month, $year) {
+                    }])->with(['reports_sms' => function ($query) use ($month, $year) {
                         $query->time('where', 'sms1_timestamp', $year, $month)
                             ->time('orWhere', 'sms2_timestamp', $year, $month)
                             ->time('orWhere', 'sms3_timestamp', $year, $month);
