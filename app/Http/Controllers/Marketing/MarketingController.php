@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Marketing;
 
 use App\Http\Controllers\Controller;
+use App\Models\Marketing\Company;
 use App\Models\Marketing\Marketing;
 use App\Services\MarketingService;
 use App\Services\ReportService;
@@ -33,7 +34,7 @@ class MarketingController extends Controller
 
         $marketingData = $this->marketingService->getData($month, $year);
 
-        //dd($marketingData->marketings[1]);
+
 
         $statuses = Marketing::getStatuses();
         $statuses_pr = Marketing::getStatusesPr();

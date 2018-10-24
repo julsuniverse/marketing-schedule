@@ -3,6 +3,7 @@
 namespace App\Models\Marketing;
 
 use App\Events\CompanySaved;
+use App\Events\CompanyUpdated;
 use App\Models\Office;
 use App\Models\SmsEmailReport;
 use Illuminate\Database\Eloquent\Model;
@@ -29,6 +30,7 @@ class Company extends Model
      */
     protected $dispatchesEvents = [
         'created' => CompanySaved::class,
+        'updated' => CompanyUpdated::class
     ];
 
     /**
