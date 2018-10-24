@@ -50,6 +50,7 @@ class MarketingRepository
     public function getMarketing($month, $year, $paginate = false)
     {
         $marketing = Marketing::where(['month' => $month, 'year' => $year, 'active' => 1])
+            ->join('company', 'marketings.company_id', '=', 'company.id')
             ->with(['company.offices.reviews',
                 'company' => function ($query) use ($month, $year) {
                     $query->with(['reports_email' => function ($query) use ($month, $year) {
@@ -64,7 +65,8 @@ class MarketingRepository
                         ->with(['keywords' => function ($query) use ($month, $year) {
                             $query->where(['month' => $month, 'year' => $year]);
                         }]);
-                }]);
+
+                }])->orderBy('company.company_name');
 
         if ($paginate) {
             return $marketing->paginate($paginate);
