@@ -31,7 +31,7 @@ class MarketingRepository
      * @param \App\Models\Marketing\Marketing $marketing
      * @return int
      */
-    public function countReviews(Marketing $marketing) :int
+    public function countReviews(Marketing $marketing): int
     {
         $count = 0;
         foreach ($marketing->company->offices as $office) {
@@ -49,7 +49,8 @@ class MarketingRepository
      */
     public function getMarketing($month, $year, $paginate = false)
     {
-        $marketing = Marketing::where(['month' => $month, 'year' => $year])
+        $marketing = Marketing::where(['month' => $month, 'year' => $year, 'active' => 1])
+            ->join('company', 'marketings.company_id', '=', 'company.id')
             ->with(['company.offices.reviews',
                 'company' => function ($query) use ($month, $year) {
                     $query->with(['reports_email' => function ($query) use ($month, $year) {
@@ -61,12 +62,13 @@ class MarketingRepository
                             ->time('orWhere', 'sms2_timestamp', $year, $month)
                             ->time('orWhere', 'sms3_timestamp', $year, $month);
                     }])
-                    ->with(['keywords' => function($query) use ($month, $year) {
-                        $query->where(['month' => $month, 'year' => $year]);
-                    }]);
-                }]);
+                        ->with(['keywords' => function ($query) use ($month, $year) {
+                            $query->where(['month' => $month, 'year' => $year]);
+                        }]);
 
-        if($paginate) {
+                }])->orderBy('company.company_name');
+
+        if ($paginate) {
             return $marketing->paginate($paginate);
         }
 
@@ -76,10 +78,21 @@ class MarketingRepository
     /**
      * @return void
      */
-    public function truncate() : void
+    public function truncate(): void
     {
         Marketing::truncate();
     }
 
+    /**
+     * @param Company $company
+     */
+    public function changeActive(Company $company)
+    {
+        Marketing::where([
+            'company_id' => $company->id,
+            'month' => date('m'),
+            'year' => date('Y')
+        ])->update(['active' => $company->marketing == 0 ? 0 : 1]);
+    }
 
 }

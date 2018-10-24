@@ -16,6 +16,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\CompanySaved' => [
             'App\Listeners\CompanySavedListener',
         ],
+        'App\Events\CompanyUpdated' => [
+            'App\Listeners\CompanyUpdatedListener',
+        ],
     ];
 
     /**

@@ -42,7 +42,7 @@ class CreateMarketingFromCompany extends Command
     public function handle()
     {
         $companies = Company::where([
-            ['domain_id', '!=', null],
+            //['domain_id', '!=', null],
             'marketing' => 1]
         )->get();
 
