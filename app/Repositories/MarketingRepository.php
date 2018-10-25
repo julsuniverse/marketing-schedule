@@ -11,14 +11,16 @@ class MarketingRepository
 {
     /**
      * @param \App\Models\Marketing\Company $company
+     * @param bool $month
+     * @param bool $year
      * @return \App\Models\Marketing\Marketing
      */
-    public function create(Company $company): Marketing
+    public function create(Company $company, $month = false, $year = false): Marketing
     {
 
         $marketing = $company->marketings()->create([
-            'month' => date('m'),
-            'year' => date('Y')
+            'month' => $month ?: date('m'),
+            'year' => $year ?: date('Y')
         ]);
 
         $marketing->reviews = $this->countReviews($marketing);
@@ -85,13 +87,15 @@ class MarketingRepository
 
     /**
      * @param Company $company
+     * @param bool|integer $month
+     * @param bool|integer $year
      */
-    public function changeActive(Company $company)
+    public function changeActive(Company $company, $month = false, $year = false)
     {
         Marketing::where([
             'company_id' => $company->id,
-            'month' => date('m'),
-            'year' => date('Y')
+            'month' => $month ?: date('m'),
+            'year' => $year ?: date('Y')
         ])->update(['active' => $company->marketing == 0 ? 0 : 1]);
     }
 
