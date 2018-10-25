@@ -34,8 +34,6 @@ class MarketingController extends Controller
 
         $marketingData = $this->marketingService->getData($month, $year);
 
-
-
         $statuses = Marketing::getStatuses();
         $statuses_pr = Marketing::getStatusesPr();
 
