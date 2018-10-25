@@ -11,14 +11,16 @@ class MarketingRepository
 {
     /**
      * @param \App\Models\Marketing\Company $company
+     * @param bool $month
+     * @param bool $year
      * @return \App\Models\Marketing\Marketing
      */
-    public function create(Company $company): Marketing
+    public function create(Company $company, $month = false, $year = false): Marketing
     {
 
         $marketing = $company->marketings()->create([
-            'month' => date('m'),
-            'year' => date('Y')
+            'month' => $month ?: date('m'),
+            'year' => $year ?: date('Y')
         ]);
 
         $marketing->reviews = $this->countReviews($marketing);
