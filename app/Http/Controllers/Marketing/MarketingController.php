@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Marketing;
 
 use App\Http\Controllers\Controller;
-use App\Models\Marketing\Company;
 use App\Models\Marketing\Marketing;
 use App\Services\MarketingService;
 use App\Services\ReportService;

@@ -22,3 +22,6 @@ Route::post('/report/{marketing}', 'Marketing\MarketingController@report');
 Route::post('/keyword/store', 'Marketing\KeywordController@store');
 Route::post('/keyword/edit', 'Marketing\KeywordController@edit');
 Route::post('/keyword/delete', 'Marketing\KeywordController@delete');
+
+//Route::get('/company', 'CompanyController@index');
+Route::resource('company', 'CompanyController');

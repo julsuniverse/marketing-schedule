@@ -4,11 +4,12 @@ require('metismenu');
 require('./sb-admin-2');
 require('bootstrap-datepicker');
 require('datatables');
-require('jquery-validation');
 require('datatables-bootstrap');
+require('jquery-validation');
 require('datatables-responsive');
 require('./layout.js');
 require('./marketing.js');
+require('./company.js');
 
 import Vue from 'vue';
 

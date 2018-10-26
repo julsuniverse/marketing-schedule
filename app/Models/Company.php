@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Models\Marketing;
+namespace App\Models;
 
 use App\Events\CompanySaved;
 use App\Events\CompanyUpdated;
+use App\Models\Marketing\Keyword;
+use App\Models\Marketing\Marketing;
 use App\Models\Office;
 use App\Models\SmsEmailReport;
 use Illuminate\Database\Eloquent\Model;

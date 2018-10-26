@@ -79950,11 +79950,12 @@ __webpack_require__("./node_modules/metismenu/dist/metisMenu.js");
 __webpack_require__("./resources/assets/js/sb-admin-2.js");
 __webpack_require__("./node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js");
 __webpack_require__("./node_modules/datatables/media/js/jquery.dataTables.js");
-__webpack_require__("./node_modules/jquery-validation/dist/jquery.validate.js");
 __webpack_require__("./node_modules/datatables-bootstrap/js/dataTables.bootstrap.js");
+__webpack_require__("./node_modules/jquery-validation/dist/jquery.validate.js");
 __webpack_require__("./node_modules/datatables-responsive/js/dataTables.responsive.js");
 __webpack_require__("./resources/assets/js/layout.js");
 __webpack_require__("./resources/assets/js/marketing.js");
+__webpack_require__("./resources/assets/js/company.js");
 
 
 
@@ -80018,6 +80019,19 @@ window.axios.defaults.headers.common = {
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
+
+/***/ }),
+
+/***/ "./resources/assets/js/company.js":
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+    $('#company-dataTables').DataTable({
+        responsive: true
+        //paging: false
+        //pagingType: 'simple_numbers'
+    });
+});
 
 /***/ }),
 
@@ -80600,9 +80614,11 @@ function additional_urls(type, soc_id, off_id, com_id) {
 /***/ "./resources/assets/js/marketing.js":
 /***/ (function(module, exports) {
 
-$('#marketing-dataTables').DataTable({
-    responsive: true,
-    paging: false
+$(document).ready(function () {
+    $('#marketing-dataTables').DataTable({
+        responsive: true,
+        paging: false
+    });
 });
 
 /***/ }),
