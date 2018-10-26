@@ -22,6 +22,8 @@
             <h2 class="heading">@yield('sub-title')</h2>
             <div class="add-line clear"></div>
 
+            @include('layout.errors')
+
             @yield('content')
         </div>
     </div>
