@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCompany;
 use App\Models\Company;
 use App\Models\Level;
+use Illuminate\Http\Request;
+
 
 class CompanyController extends Controller
 {
@@ -45,5 +47,12 @@ class CompanyController extends Controller
     {
         Company::where('id', $company->id)->first()->update(['is_active' => 0]);
         return redirect('company');
+    }
+
+    public function changeMarketing(Request $request)
+    {
+        Company::where('id', $request->company_id)->first()->update([
+            'marketing' => $request->marketing
+        ]);
     }
 }

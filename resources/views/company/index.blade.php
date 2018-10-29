@@ -31,7 +31,12 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $company->company_name }}</td>
-                        <td> {{ $company->marketing }}</td>
+                        <td>
+                            <marketing-toogle
+                                    :company_id="{{ $company->id }}"
+                                    :marketing="{{ $company->marketing }}"
+                            ></marketing-toogle>
+                        </td>
                         <td></td>
                         <td></td>
                         <td></td>

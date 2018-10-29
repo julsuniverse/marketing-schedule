@@ -25,4 +25,5 @@ Route::post('/keyword/delete', 'Marketing\KeywordController@delete');
 
 Route::get('company/archive', 'Company\ArchiveController@index')->name('company.archive.index');
 Route::put('company/archive/{company}', 'Company\ArchiveController@recover')->name('company.archive.recover');
+Route::post('company/change-marketing', 'Company\CompanyController@changeMarketing');
 Route::resource('company', 'Company\CompanyController');
