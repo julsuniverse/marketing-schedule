@@ -36,7 +36,10 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
+                        <!-- Company Action -->
+                        <td>
+                            <a href="{{ route('company.edit', $company) }}" class="btn btn-xs btn-success fa fa-pencil btn-action"></a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

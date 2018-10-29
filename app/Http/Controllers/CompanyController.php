@@ -28,4 +28,22 @@ class CompanyController extends Controller
         Company::create($request->input());
         return redirect('company');
     }
+
+    public function edit(Company $company)
+    {
+        $levels = Level::get();
+        return view('company.edit', compact('company', 'levels'));
+    }
+
+    public function update(Company $company, StoreCompany $request)
+    {
+        $request->validated();
+        Company::where('id', $company->id)->first()->update($request->input());
+        return redirect('company');
+    }
+
+    public function show()
+    {
+        echo 'show';
+    }
 }

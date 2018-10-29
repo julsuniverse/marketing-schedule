@@ -25,19 +25,19 @@ class StoreCompany extends FormRequest
     {
         return [
             'company_name' => 'required|string|max:255',
-            'company_phone' => 'integer|max:255',
-            'company_email' => 'string|max:255|email',
-            'company_google_email' => 'string|max:255|email',
-            'company_google_password' => 'string|max:255',
-            'company_ip_address' => 'string|max:255',
-            'company_notes' => 'string',
-            'company_client_name' => 'string|max:255',
-            'company_client_phone' => 'integer|max:255',
+            'company_phone' => 'nullable|string|max:255',
+            'company_email' => 'nullable|string|max:255|email',
+            'company_google_email' => 'nullable|string|max:255|email',
+            'company_google_password' => 'nullable|string|max:255',
+            'company_ip_address' => 'nullable|string|max:255',
+            'company_notes' => 'nullable|string',
+            'company_client_name' => 'nullable|string|max:255',
+            'company_client_phone' => 'nullable|string|max:255',
             'marketing' => 'boolean',
             'smtp_host' => 'required|string|max:255',
             'smtp_user' => 'required|string|max:255',
             'smtp_password' => 'required|string|max:255',
-            'smtp_port' => 'required|integer|max:255',
+            'smtp_port' => 'required|integer',
             'smtp_secure' => 'required|string|max:3',
             'levels_id' => 'required|integer'
         ];
