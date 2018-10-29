@@ -2,17 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCompany;
 use App\Models\Company;
 use App\Models\Level;
-use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {
     public function index()
     {
-        $companies = Company::paginate(20);
+        $companies = Company::where('is_active', 1)->paginate(20);
         return view('company.index', compact('companies'));
     }
 
@@ -42,8 +40,9 @@ class CompanyController extends Controller
         return redirect('company');
     }
 
-    public function show()
+    public function destroy(Company $company)
     {
-        echo 'show';
+        Company::where('id', $company->id)->first()->update(['is_active' => 0]);
+        return redirect('company');
     }
 }

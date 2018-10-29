@@ -39,6 +39,7 @@
                         <!-- Company Action -->
                         <td>
                             <a href="{{ route('company.edit', $company) }}" class="btn btn-xs btn-success fa fa-pencil btn-action"></a>
+                            @include('company.includes.delete')
                         </td>
                     </tr>
                 @endforeach

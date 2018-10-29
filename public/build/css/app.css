@@ -11714,6 +11714,18 @@ div.dtr-modal div.dtr-modal-background {
   background-repeat: no-repeat;
 }
 
+.btn-danger {
+  color: #ffffff;
+  background-color: #c71c22;
+  border-color: #c71c22;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e12b31), color-stop(60%, #c71c22), to(#b5191f));
+  background-image: linear-gradient(#e12b31, #c71c22 60%, #b5191f);
+  background-repeat: no-repeat;
+  -webkit-filter: none;
+          filter: none;
+  border-bottom: 1px solid #9a161a;
+}
+
 .btn-success {
   color: #ffffff;
   background-color: #73a839;
@@ -11789,5 +11801,9 @@ a:hover {
 
 [v-cloak] {
   display: none;
+}
+
+.display-inline-block {
+  display: inline-block;
 }
 
