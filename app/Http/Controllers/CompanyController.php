@@ -12,8 +12,7 @@ class CompanyController extends Controller
 {
     public function index()
     {
-        $companies = Company::get();
-
+        $companies = Company::paginate(20);
         return view('company.index', compact('companies'));
     }
 
@@ -26,9 +25,7 @@ class CompanyController extends Controller
     public function store(StoreCompany $request)
     {
         $request->validated();
-
         Company::create($request->input());
-
         return redirect('company');
     }
 }

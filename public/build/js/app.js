@@ -80025,13 +80025,12 @@ window.axios.defaults.headers.common = {
 /***/ "./resources/assets/js/company.js":
 /***/ (function(module, exports) {
 
-$(document).ready(function () {
+/*$(document).ready(function() {
     $('#company-dataTables').DataTable({
-        responsive: true
-        //paging: false
-        //pagingType: 'simple_numbers'
+        responsive: true,
+        paging: false
     });
-});
+});*/
 
 /***/ }),
 
@@ -80617,7 +80616,8 @@ function additional_urls(type, soc_id, off_id, com_id) {
 $(document).ready(function () {
     $('#marketing-dataTables').DataTable({
         responsive: true,
-        paging: false
+        paging: false,
+        info: false
     });
 });
 
