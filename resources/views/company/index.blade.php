@@ -29,7 +29,7 @@
             <tbody>
                 @foreach($companies as $company)
                     <tr>
-                        <td></td>
+                        <td>{{ $loop->iteration }}</td>
                         <td>{{ $company->company_name }}</td>
                         <td> {{ $company->marketing }}</td>
                         <td></td>

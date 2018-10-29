@@ -91,7 +91,7 @@ $baseUrl = "https://review.wwwebdesignstudios.com/lmms/";
                     <ul class="nav nav-second-level">
                         <li><a href="{{ $baseUrl }}company.php?page=add">Add Company</a> </li>
                         <li><a href="{{ route('company.index') }}" >View Companies</a></li>
-                        <li><a href="@if($company_counter > 0) {{ $baseUrl }}company.php?page=list_archived_companies" @endif >Archived Companies</a></li>
+                        <li><a href="@if($company_counter > 0) {{ route('company.archive.index') }}" @endif >Archived Companies</a></li>
                         <li style="border-top:1px solid #eee;"><a href="{{ $baseUrl }}company.php?page=add_social_site_name">Add Review Site Name</a> </li>
                         <li><a href="@if($company_counter > 0) {{ $baseUrl }}company.php?page=list_social_site_name"@endif >View Review Site Name</a> </li>
                         <li style="display:none"><a href="{{ $baseUrl }}company.php?page=list_offices">&nbsp;</a> </li>

@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Company;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCompany;
 use App\Models\Company;
 use App\Models\Level;
@@ -10,7 +11,7 @@ class CompanyController extends Controller
 {
     public function index()
     {
-        $companies = Company::where('is_active', 1)->paginate(20);
+        $companies = Company::where('is_active', 1)->orderBy('company_name')->paginate(20);
         return view('company.index', compact('companies'));
     }
 
