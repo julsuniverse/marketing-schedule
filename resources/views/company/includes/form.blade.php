@@ -69,11 +69,11 @@
     </div>
 
     <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-10">
+        <div class="col-sm-offset-3 col-sm-6">
             <div class="checkbox">
                 <label>
                     <input type="hidden" name="marketing" value="0">
-                    <input type="checkbox" name="marketing" value="1"> <b>Marketing</b>
+                    <input type="checkbox" name="marketing" value="1" checked="{{ old('marketing', isset($company->marketing)) ? 'true' : 'false' }}"> <b>Marketing</b>
                 </label>
             </div>
         </div>
