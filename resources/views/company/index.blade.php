@@ -43,7 +43,19 @@
                             {{ $company->count_reviews }}
                         </td>
                         <!-- View User -->
-                        <td></td>
+                        <td>
+                            @if(count($company->users) > 0)
+                                @foreach($company->users as $user)
+                                    <a href="#" class="text-info">
+                                        {{ $user->user_name }}
+                                    </a>
+                                @endforeach
+                            @else
+                                <small>
+                                    <em>no user</em>
+                                </small>
+                            @endif
+                        </td>
                         <!-- Social Profile -->
                         <td></td>
                         <!-- Office -->

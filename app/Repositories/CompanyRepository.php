@@ -19,6 +19,7 @@ class CompanyRepository
             ->with(['offices' => function($query) {
                 $query->withCount('reviews');
             }])
+            ->with('users')
             ->orderBy('company_name')
             ->paginate();
 

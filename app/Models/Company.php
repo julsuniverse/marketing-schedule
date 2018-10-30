@@ -89,4 +89,9 @@ class Company extends Model
     {
         return $this->belongsToMany(Keyword::class, 'company_keywords')->withPivot(['month', 'year', 'count', 'completed']);
     }
+
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
 }
