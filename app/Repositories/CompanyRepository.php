@@ -20,7 +20,7 @@ class CompanyRepository
                 $query->withCount('reviews');
             }])
             ->orderBy('company_name')
-            ->paginate(20);
+            ->paginate();
 
         return $companies;
     }

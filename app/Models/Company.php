@@ -18,6 +18,7 @@ class Company extends Model
     const STATUS_ACTIVE = 1;
     const STATUS_INACTIVE = 0;
 
+    protected $perPage = 20;
     /**
      * @var array
      */

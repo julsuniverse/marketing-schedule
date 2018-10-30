@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Marketing extends Model
 {
+    protected $connection = 'mysql';
     /**
      * @var array
      */
