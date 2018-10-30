@@ -19,8 +19,12 @@
     </div>
     <div id="page-wrapper">
         <div class="row" id="app">
-            <h2 class="heading">@yield('sub-title')</h2>
+            <h2 class="heading pull-left">@yield('sub-title')</h2>
+            @yield('sub-title-button')
+
             <div class="add-line clear"></div>
+
+            @include('layout.errors')
 
             @yield('content')
         </div>

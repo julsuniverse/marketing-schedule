@@ -2,6 +2,7 @@
 
 namespace App\Models\Marketing;
 
+use App\Models\Company;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -11,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Marketing extends Model
 {
+    protected $connection = 'mysql';
     /**
      * @var array
      */

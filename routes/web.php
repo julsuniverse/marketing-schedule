@@ -22,3 +22,8 @@ Route::post('/report/{marketing}', 'Marketing\MarketingController@report');
 Route::post('/keyword/store', 'Marketing\KeywordController@store');
 Route::post('/keyword/edit', 'Marketing\KeywordController@edit');
 Route::post('/keyword/delete', 'Marketing\KeywordController@delete');
+
+Route::get('company/archive', 'Company\ArchiveController@index')->name('company.archive.index');
+Route::put('company/archive/{company}', 'Company\ArchiveController@recover')->name('company.archive.recover');
+Route::post('company/change-marketing', 'Company\CompanyController@changeMarketing');
+Route::resource('company', 'Company\CompanyController');

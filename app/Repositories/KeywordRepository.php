@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Models\Marketing\Company;
+use App\Models\Company;
 use App\Models\Marketing\Keyword;
 
 class KeywordRepository

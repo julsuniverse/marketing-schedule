@@ -2,10 +2,12 @@
 
 namespace App\Models\Marketing;
 
+use App\Models\Company;
 use Illuminate\Database\Eloquent\Model;
 
 class Keyword extends Model
 {
+    protected $connection = 'mysql';
     /**
      * @var array
      */

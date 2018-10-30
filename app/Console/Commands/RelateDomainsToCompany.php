@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Marketing\Company;
+use App\Models\Company;
 use App\Models\Domain;
 use App\Models\Office;
 use Illuminate\Console\Command;
