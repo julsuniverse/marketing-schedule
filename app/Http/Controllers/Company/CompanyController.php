@@ -6,14 +6,21 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCompany;
 use App\Models\Company;
 use App\Models\Level;
+use App\Repositories\CompanyRepository;
 use Illuminate\Http\Request;
 
 
 class CompanyController extends Controller
 {
+    private $companyRepository;
+    public function __construct(CompanyRepository $companyRepository)
+    {
+        $this->companyRepository = $companyRepository;
+    }
+
     public function index()
     {
-        $companies = Company::where('is_active', 1)->orderBy('company_name')->paginate(20);
+        $companies = $this->companyRepository->getActiveCompanies();
         return view('company.index', compact('companies'));
     }
 

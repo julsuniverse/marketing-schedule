@@ -31,15 +31,22 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $company->company_name }}</td>
+                        <!-- Marketing -->
                         <td>
                             <marketing-toogle
                                     :company_id="{{ $company->id }}"
                                     :marketing="{{ $company->marketing }}"
                             ></marketing-toogle>
                         </td>
+                        <!-- Reviews -->
+                        <td>
+                            {{ $company->count_reviews }}
+                        </td>
+                        <!-- View User -->
                         <td></td>
+                        <!-- Social Profile -->
                         <td></td>
-                        <td></td>
+                        <!-- Office -->
                         <td></td>
                         <!-- Company Action -->
                         <td>
