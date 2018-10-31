@@ -151,7 +151,7 @@ $baseUrl = "https://review.wwwebdesignstudios.com/lmms/";
                 <li>
                     <a href="#"><i class="fa fa-share-square-o fa-fw"></i> Social Profile<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a href="@if($company_counter > 0) {{ $baseUrl }}social-profile.php?page=list_companies @endif">View Social Profiles</a> </li>
+                        <li><a href="@if($company_counter > 0) {{ route('social-profile.index') }} @endif">View Social Profiles</a> </li>
                         <li style="display:none"><a href="{{ $baseUrl }}social-profile.php?page=list_profile">&nbsp;</a> </li>
                         <li style="display:none"><a href="{{ $baseUrl }}social-profile.php?page=add_profile">&nbsp;</a> </li>
                     </ul>

@@ -25,4 +25,16 @@ class CompanyRepository
 
         return $companies;
     }
+
+    /**
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
+    public function getWithSocials()
+    {
+        $companies = Company::where('is_active', Company::STATUS_ACTIVE)
+            ->with('socials')
+            ->orderBy('company_name')
+            ->paginate();
+        return $companies;
+    }
 }

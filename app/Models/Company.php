@@ -90,8 +90,16 @@ class Company extends Model
         return $this->belongsToMany(Keyword::class, 'company_keywords')->withPivot(['month', 'year', 'count', 'completed']);
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function users()
     {
         return $this->hasMany(User::class);
+    }
+
+    public function socials()
+    {
+        return $this->hasMany(SocialProfile::class);
     }
 }

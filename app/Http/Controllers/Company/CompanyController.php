@@ -21,7 +21,6 @@ class CompanyController extends Controller
     public function index()
     {
         $companies = $this->companyRepository->getActiveCompanies();
-        //dd($companies);
         return view('company.index', compact('companies'));
     }
 

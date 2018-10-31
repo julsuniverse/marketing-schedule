@@ -27,3 +27,7 @@ Route::get('company/archive', 'Company\ArchiveController@index')->name('company.
 Route::put('company/archive/{company}', 'Company\ArchiveController@recover')->name('company.archive.recover');
 Route::post('company/change-marketing', 'Company\CompanyController@changeMarketing');
 Route::resource('company', 'Company\CompanyController');
+
+Route::get('social-profile/{company}', 'SocialProfileController@show')->name('social-profile.show');
+Route::get('social-profile/{company}/create', 'SocialProfileController@create')->name('social-profile.create');
+Route::resource('social-profile', 'SocialProfileController')->except(['show', 'create']);

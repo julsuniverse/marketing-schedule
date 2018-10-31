@@ -142,8 +142,8 @@
 
     <div class="form-group col-sm-6">
         <div class="row">
-            <div class="col-sm-6">
-                <button class="btn btn-default">Reset form</button>
+            <div class="col-sm-6 text-right">
+                <button class="btn btn-default btn-action">Reset form</button>
             </div>
             <div class="col-sm-6">
                 <button type="submit" class="btn btn-success">{{ isset($company) ? 'Update Company' : 'Add Company' }}</button>
