@@ -57,7 +57,9 @@
                             @endif
                         </td>
                         <!-- Social Profile -->
-                        <td></td>
+                        <td>
+                            <a href="{{ route('social-profile.show', $company) }}" class="text-info">View - ({{ $company->socials_count }})</a>
+                        </td>
                         <!-- Office -->
                         <td></td>
                         <!-- Company Action -->

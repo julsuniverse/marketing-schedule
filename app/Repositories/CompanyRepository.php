@@ -20,6 +20,7 @@ class CompanyRepository
                 $query->withCount('reviews');
             }])
             ->with('users')
+            ->withCount('socials')
             ->orderBy('company_name')
             ->paginate();
 
