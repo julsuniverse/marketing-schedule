@@ -12,6 +12,34 @@
 
 namespace App\Models{
 /**
+ * App\Models\Level
+ *
+ * @property int $id
+ * @property string $level_name
+ * @property string $allowed_text
+ * @property string $default_monthly
+ * @property string $rate_monthly
+ * @property string $csv_limit
+ * @property int $is_active
+ * @property \Illuminate\Support\Carbon $created_at
+ * @property \Illuminate\Support\Carbon $updated_at
+ * @property string $description
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Level whereAllowedText($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Level whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Level whereCsvLimit($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Level whereDefaultMonthly($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Level whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Level whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Level whereIsActive($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Level whereLevelName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Level whereRateMonthly($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Level whereUpdatedAt($value)
+ */
+	class Level extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * Class Review
  *
  * @package App\Models
@@ -31,6 +59,72 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Review whereUpdatedAt($value)
  */
 	class Review extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * Class Company
+ *
+ * @package App\Models
+ * @mixin \Eloquent
+ * @property int $id
+ * @property string $company_name
+ * @property string|null $company_phone
+ * @property string|null $company_email
+ * @property string|null $company_google_email
+ * @property string|null $company_google_password
+ * @property string|null $company_ip_address
+ * @property string|null $company_notes
+ * @property string|null $company_client_name
+ * @property string|null $company_client_phone
+ * @property int $marketing
+ * @property string|null $smtp_host
+ * @property string|null $smtp_user
+ * @property string|null $smtp_password
+ * @property string|null $smtp_port
+ * @property string|null $smtp_secure
+ * @property int $is_active
+ * @property \Illuminate\Support\Carbon $created_at
+ * @property \Illuminate\Support\Carbon $updated_at
+ * @property int $levels_id
+ * @property int $request_level_id
+ * @property string $request_level_date
+ * @property int $request_approved
+ * @property int|null $domain_id
+ * @property-read int $count_reviews
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Marketing\Keyword[] $keywords
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Marketing\Marketing[] $marketings
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Office[] $offices
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\SmsEmailReport[] $reports_email
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\SmsEmailReport[] $reports_sms
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\SocialProfile[] $socials
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $users
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyClientName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyClientPhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyGoogleEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyGooglePassword($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyIpAddress($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyNotes($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyPhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereDomainId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereIsActive($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereLevelsId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereMarketing($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereRequestApproved($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereRequestLevelDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereRequestLevelId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereSmtpHost($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereSmtpPassword($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereSmtpPort($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereSmtpSecure($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereSmtpUser($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereUpdatedAt($value)
+ */
+	class Company extends \Eloquent {}
 }
 
 namespace App\Models{
@@ -130,6 +224,35 @@ namespace App\Models{
 	class Domain extends \Eloquent {}
 }
 
+namespace App\Models{
+/**
+ * Class SocialProfile
+ *
+ * @package App\Models
+ * @mixin \Eloquent
+ * @property int $id
+ * @property string|null $company_social_profile_account_name
+ * @property string|null $company_social_profile_account_url
+ * @property string|null $company_social_profile_account_username
+ * @property string|null $company_social_profile_account_password
+ * @property int $company_id
+ * @property int $is_active
+ * @property \Illuminate\Support\Carbon $created_at
+ * @property \Illuminate\Support\Carbon $updated_at
+ * @property-read \App\Models\Company $company
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\SocialProfile whereCompanyId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\SocialProfile whereCompanySocialProfileAccountName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\SocialProfile whereCompanySocialProfileAccountPassword($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\SocialProfile whereCompanySocialProfileAccountUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\SocialProfile whereCompanySocialProfileAccountUsername($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\SocialProfile whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\SocialProfile whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\SocialProfile whereIsActive($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\SocialProfile whereUpdatedAt($value)
+ */
+	class SocialProfile extends \Eloquent {}
+}
+
 namespace App\Models\Marketing{
 /**
  * Class Marketing
@@ -154,7 +277,15 @@ namespace App\Models\Marketing{
  * @property int $citations_status
  * @property int $pr_status
  * @property int $reviews
+ * @property bool $active
  * @property-read \App\Models\Company $company
+ * @property mixed $diff_calls
+ * @property mixed $diff_forms
+ * @property mixed $diff_reviews
+ * @property mixed $diff_traffic
+ * @property-read mixed $last_email_date
+ * @property-read mixed $last_sms_date
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\Marketing whereActive($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\Marketing whereCalls($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\Marketing whereCitations($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\Marketing whereCitationsStatus($value)
@@ -185,97 +316,13 @@ namespace App\Models\Marketing{
  * @property string $text
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Company[] $companies
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\Keyword whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\Keyword whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\Keyword whereText($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\Keyword whereUpdatedAt($value)
  */
 	class Keyword extends \Eloquent {}
-}
-
-namespace App\Models\Marketing{
-/**
- * App\Models\Marketing\CompanyKeywords
- *
- * @property int $id
- * @property int $company_id
- * @property int $keyword_id
- * @property int $month
- * @property int $year
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\CompanyKeywords whereCompanyId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\CompanyKeywords whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\CompanyKeywords whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\CompanyKeywords whereKeywordId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\CompanyKeywords whereMonth($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\CompanyKeywords whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Marketing\CompanyKeywords whereYear($value)
- */
-	class CompanyKeywords extends \Eloquent {}
-}
-
-namespace App\Models\Marketing{
-/**
- * Class Company
- *
- * @package App\Models
- * @mixin \Eloquent
- * @property int $id
- * @property string $company_name
- * @property string|null $company_phone
- * @property string|null $company_email
- * @property string|null $company_google_email
- * @property string|null $company_google_password
- * @property string|null $company_ip_address
- * @property string|null $company_notes
- * @property string|null $company_client_name
- * @property string|null $company_client_phone
- * @property int $marketing
- * @property string $smtp_host
- * @property string $smtp_user
- * @property string $smtp_password
- * @property string $smtp_port
- * @property string $smtp_secure
- * @property int $is_active
- * @property \Illuminate\Support\Carbon $created_at
- * @property \Illuminate\Support\Carbon $updated_at
- * @property int $levels_id
- * @property int $request_level_id
- * @property string $request_level_date
- * @property int $request_approved
- * @property int|null $domain_id
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Marketing\Keyword[] $keywords
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Marketing\Marketing[] $marketings
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Office[] $offices
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\SmsEmailReport[] $reports_email
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\SmsEmailReport[] $reports_sms
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyClientName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyClientPhone($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyGoogleEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyGooglePassword($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyIpAddress($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyNotes($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCompanyPhone($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereDomainId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereIsActive($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereLevelsId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereMarketing($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereRequestApproved($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereRequestLevelDate($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereRequestLevelId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereSmtpHost($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereSmtpPassword($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereSmtpPort($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereSmtpSecure($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereSmtpUser($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Company whereUpdatedAt($value)
- */
-	class Company extends \Eloquent {}
 }
 
 namespace App\Models{
@@ -336,5 +383,42 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Office whereUpdatedAt($value)
  */
 	class Office extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\User
+ *
+ * @property int $id
+ * @property string $user_name
+ * @property string $user_password
+ * @property string $user_real_name
+ * @property string $user_company_name
+ * @property string $user_phone
+ * @property string $user_email
+ * @property int $user_security
+ * @property string|null $user_logo
+ * @property int $company_id
+ * @property int $roles_id
+ * @property int $is_active
+ * @property \Illuminate\Support\Carbon $created_at
+ * @property \Illuminate\Support\Carbon $updated_at
+ * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereCompanyId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereIsActive($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereRolesId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUserCompanyName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUserEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUserLogo($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUserName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUserPassword($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUserPhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUserRealName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUserSecurity($value)
+ */
+	class User extends \Eloquent {}
 }
 

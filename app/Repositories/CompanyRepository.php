@@ -19,9 +19,22 @@ class CompanyRepository
             ->with(['offices' => function($query) {
                 $query->withCount('reviews');
             }])
+            ->with('users')
             ->orderBy('company_name')
             ->paginate();
 
+        return $companies;
+    }
+
+    /**
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
+    public function getWithSocials()
+    {
+        $companies = Company::where('is_active', Company::STATUS_ACTIVE)
+            ->with('socials')
+            ->orderBy('company_name')
+            ->paginate();
         return $companies;
     }
 }

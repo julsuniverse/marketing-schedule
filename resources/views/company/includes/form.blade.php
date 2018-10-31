@@ -69,11 +69,11 @@
     </div>
 
     <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-10">
+        <div class="col-sm-offset-3 col-sm-6">
             <div class="checkbox">
                 <label>
                     <input type="hidden" name="marketing" value="0">
-                    <input type="checkbox" name="marketing" value="1"> <b>Marketing</b>
+                    <input type="checkbox" name="marketing" value="1" checked="{{ old('marketing', isset($company->marketing)) ? 'true' : 'false' }}"> <b>Marketing</b>
                 </label>
             </div>
         </div>
@@ -142,8 +142,8 @@
 
     <div class="form-group col-sm-6">
         <div class="row">
-            <div class="col-sm-6">
-                <button class="btn btn-default">Reset form</button>
+            <div class="col-sm-6 text-right">
+                <button class="btn btn-default btn-action">Reset form</button>
             </div>
             <div class="col-sm-6">
                 <button type="submit" class="btn btn-success">{{ isset($company) ? 'Update Company' : 'Add Company' }}</button>

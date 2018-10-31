@@ -86,10 +86,15 @@ $baseUrl = "https://review.wwwebdesignstudios.com/lmms/";
                         <li><a href="{{ $baseUrl }}reminder.php?page=list_reminders">View Reminders</a> </li>
                     </ul>
                 </li>
-                <li {{ Request::is('company') || Request::is('company/archive') ? 'class=active' : '' }}>
+                <li {{ Request::is('company') || Request::is('company/create') || Request::is('company/archive') ? 'class=active' : '' }}>
                     <a href="#"><i class="fa fa-building-o fa-fw"></i> Company<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a href="{{ $baseUrl }}company.php?page=add">Add Company</a> </li>
+                        <li>
+                            <a href="{{ route('company.create') }}"
+                                    {{ Request::is('company/create') ? 'class=active' : '' }}>
+                                Add Company
+                            </a>
+                        </li>
                         <li>
                             <a href="{{ route('company.index') }}"
                                     {{ Request::is('company') ? 'class=active' : '' }}>
@@ -143,10 +148,14 @@ $baseUrl = "https://review.wwwebdesignstudios.com/lmms/";
                     </ul>
                 </li>
 
-                <li>
+                <li {{ Request::is('social-profile') || Request::is('social-profile/*') ? 'class=active' : '' }}>
                     <a href="#"><i class="fa fa-share-square-o fa-fw"></i> Social Profile<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a href="@if($company_counter > 0) {{ $baseUrl }}social-profile.php?page=list_companies @endif">View Social Profiles</a> </li>
+                        <li><a href="@if($company_counter > 0) {{ route('social-profile.index') }} @endif"
+                                    {{ Request::is('social-profile') ? 'class=active' : '' }}>
+                                View Social Profiles
+                            </a>
+                        </li>
                         <li style="display:none"><a href="{{ $baseUrl }}social-profile.php?page=list_profile">&nbsp;</a> </li>
                         <li style="display:none"><a href="{{ $baseUrl }}social-profile.php?page=add_profile">&nbsp;</a> </li>
                     </ul>
