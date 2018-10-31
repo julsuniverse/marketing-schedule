@@ -45,6 +45,7 @@
                     <!-- Profile Action -->
                     <td>
                         <a href="{{ route('social-profile.edit', ['social_profile' => $social]) }}" class="btn btn-xs btn-success fa fa-pencil btn-action"></a>
+                        @include('social.includes.delete')
                     </td>
                 </tr>
             @endforeach

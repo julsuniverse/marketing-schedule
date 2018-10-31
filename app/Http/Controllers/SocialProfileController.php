@@ -52,4 +52,10 @@ class SocialProfileController extends Controller
         SocialProfile::where('id', $social_profile->id)->first()->update($request->input());
         return redirect(route('social-profile.show', $social_profile->company_id));
     }
+
+    public function destroy(SocialProfile $social_profile)
+    {
+        SocialProfile::destroy($social_profile->id);
+        return redirect(route('social-profile.show', $social_profile->company_id));
+    }
 }
