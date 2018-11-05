@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models\Marketing;
+namespace App\Models;
 
 use App\Events\CompanySaved;
 use App\Events\CompanyUpdated;
-use App\Models\Office;
-use App\Models\SmsEmailReport;
+use App\Models\Marketing\Keyword;
+use App\Models\Marketing\Marketing;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -15,6 +15,10 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Company extends Model
 {
+    const STATUS_ACTIVE = 1;
+    const STATUS_INACTIVE = 0;
+
+    protected $perPage = 20;
     /**
      * @var array
      */
@@ -32,6 +36,19 @@ class Company extends Model
         'created' => CompanySaved::class,
         'updated' => CompanyUpdated::class
     ];
+
+    /**
+     * @return int
+     */
+    public function getCountReviewsAttribute()
+    {
+        $count = 0;
+        foreach($this->offices as $office) {
+            $count += $office->reviews_count;
+        }
+
+        return $count;
+    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -65,8 +82,24 @@ class Company extends Model
         return $this->hasMany(SmsEmailReport::class, 'company_id', 'id');
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function keywords()
     {
         return $this->belongsToMany(Keyword::class, 'company_keywords')->withPivot(['month', 'year', 'count', 'completed']);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
+
+    public function socials()
+    {
+        return $this->hasMany(SocialProfile::class);
     }
 }

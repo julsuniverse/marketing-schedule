@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Models\Marketing\Company;
+use App\Models\Company;
 use App\Models\Marketing\Marketing;
 use App\Models\SmsEmailReport;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -10,7 +10,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 class MarketingRepository
 {
     /**
-     * @param \App\Models\Marketing\Company $company
+     * @param \App\Models\Company $company
      * @param bool $month
      * @param bool $year
      * @return \App\Models\Marketing\Marketing
@@ -87,7 +87,7 @@ class MarketingRepository
     }
 
     /**
-     * @param Company $company
+     * @param \App\Models\Company $company
      * @param bool|integer $month
      * @param bool|integer $year
      */

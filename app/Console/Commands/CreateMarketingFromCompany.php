@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Marketing\Company;
+use App\Models\Company;
 use App\Models\Marketing\Marketing;
 use App\Repositories\MarketingRepository;
 use App\Services\MarketingService;
