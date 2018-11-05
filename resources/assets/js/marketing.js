@@ -1,4 +1,5 @@
 $('#marketing-dataTables').DataTable({
     responsive: true,
-    paging: false
+    paging: false,
+    info: false
 });

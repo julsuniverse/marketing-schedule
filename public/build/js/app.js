@@ -80602,7 +80602,8 @@ function additional_urls(type, soc_id, off_id, com_id) {
 
 $('#marketing-dataTables').DataTable({
     responsive: true,
-    paging: false
+    paging: false,
+    info: false
 });
 
 /***/ }),
