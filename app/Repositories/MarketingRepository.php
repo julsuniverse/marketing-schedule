@@ -51,7 +51,8 @@ class MarketingRepository
      */
     public function getMarketing($month, $year, $paginate = false)
     {
-        $marketing = Marketing::where(['month' => $month, 'year' => $year, 'active' => 1])
+        $marketing = Marketing::select('marketings.*')
+            ->where(['month' => $month, 'year' => $year, 'active' => 1])
             ->join('company', 'marketings.company_id', '=', 'company.id')
             ->with(['company.offices.reviews',
                 'company' => function ($query) use ($month, $year) {
