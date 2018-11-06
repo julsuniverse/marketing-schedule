@@ -33,6 +33,8 @@ class MarketingController extends Controller
         $year = $request->year ?: date('Y');
 
         $marketingData = $this->marketingService->getData($month, $year);
+        /** ArrayIterator $iterator */
+        $iterator = $marketingData->marketings->getIterator();
 
         $statuses = Marketing::getStatuses();
         $statuses_pr = Marketing::getStatusesPr();

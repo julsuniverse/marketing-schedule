@@ -1,12 +1,13 @@
 <script>
     export default {
         props: [
-          'marketings', 'statuses', 'statuses_pr'
+          'marketings', 'statuses', 'statuses_pr', 'iterator'
         ],
         data() {
             return {
                 activeCompany: null,
                 showKeywords: false,
+                iter: this.iterator
             }
         },
         methods: {

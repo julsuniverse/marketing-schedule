@@ -21,7 +21,8 @@
     </div>
 
     <marketing inline-template
-               :marketings="{{ collect($marketingData->marketings->items()) }}"
+               :marketings="{{ $marketingData->marketings->getCollection() }}"
+               :iterator="{{ ($marketingData->marketings->currentPage() - 1) * $marketingData->marketings->perPage() + 1 }}"
                :statuses="{{ $statuses }}"
                :statuses_pr="{{ $statuses_pr }}"
                v-cloak
@@ -46,7 +47,7 @@
                 </thead>
                 <tbody>
                     <tr v-for="(marketing, index) in marketings" :style="{'background-color': getBackground(marketing)}">
-                        <td>@{{ index + 1}}</td>
+                        <td>@{{ iter + index }}</td>
                         <td>
                             <div @click="selectCompany( marketing.company )">
                                 @{{ marketing.company.company_name }}

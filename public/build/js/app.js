@@ -1825,11 +1825,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['marketings', 'statuses', 'statuses_pr'],
+    props: ['marketings', 'statuses', 'statuses_pr', 'iterator'],
     data: function data() {
         return {
             activeCompany: null,
-            showKeywords: false
+            showKeywords: false,
+            iter: this.iterator
         };
     },
 
