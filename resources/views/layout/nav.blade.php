@@ -25,11 +25,11 @@ $baseUrl = "https://review.wwwebdesignstudios.com/lmms/";
 
     <ul class="nav navbar-top-links navbar-right">
         <li>
-            <a href="#">Dashboard</a>
+            <a href="{{ $baseUrl }}dashboard.php">Dashboard</a>
         </li>
 
         <li>
-            <a href="#">Notifications &nbsp;<span class="badge"><?php echo $total_notifications;?></span></a>
+            <a href="{{ $baseUrl }}notifications.php">Notifications &nbsp;<span class="badge"><?php echo $total_notifications;?></span></a>
         </li>
 
         <li class="dropdown">
