@@ -64,6 +64,9 @@
                 this.clicked = !this.clicked;
             },
             addCompany() {
+                if(this.activeButton == 'disabled') {
+                    return;
+                }
                 axios({
                     method: 'POST',
                     url: '/keyword/store',
@@ -165,10 +168,13 @@
                     this.matches = 0;
                 }
                 return keywords;
+            },
+            activeButton() {
+                return this.value.length === 0 ? 'disabled' : '';
             }
         },
         mounted() {
-            console.log('keywords', this.keywords);
+            //
         }
     }
 </script>

@@ -1707,6 +1707,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         addCompany: function addCompany() {
             var _this = this;
 
+            if (this.activeButton == 'disabled') {
+                return;
+            }
             axios({
                 method: 'POST',
                 url: '/keyword/store',
@@ -1809,10 +1812,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 this.matches = 0;
             }
             return keywords;
+        },
+        activeButton: function activeButton() {
+            return this.value.length === 0 ? 'disabled' : '';
         }
     },
     mounted: function mounted() {
-        console.log('keywords', this.keywords);
+        //
     }
 });
 
