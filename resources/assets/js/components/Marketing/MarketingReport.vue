@@ -17,6 +17,7 @@
         methods: {
             click() {
                 $('#spinner').show();
+                console.log('marketing_id', this.marketing_id);
 
                 axios({
                     method: 'POST',

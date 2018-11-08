@@ -13,6 +13,7 @@ class ReportMarketing extends Mailable
 
     /** @var \App\Models\Marketing\Marketing $marketing */
     private $marketing;
+    private $marketingDate;
 
     /**
      * @param \App\Models\Marketing\Marketing $marketing
@@ -20,6 +21,7 @@ class ReportMarketing extends Mailable
     public function __construct(Marketing $marketing)
     {
         $this->marketing = $marketing;
+        $this->marketingDate = date('F, Y', strtotime('01-' .$this->marketing->month . '-' . $this->marketing->year));
     }
 
     /**
@@ -27,8 +29,8 @@ class ReportMarketing extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.marketing.report', ['marketing' => $this->marketing])
+        return $this->view('emails.marketing.report', ['marketing' => $this->marketing, 'date' => $this->marketingDate])
             ->from(config('app.report_sender'))
-            ->subject('Monthly Marketing Schedule Process for ' . date('F, Y'));
+            ->subject('Monthly Marketing Schedule Process for ' . $this->marketingDate);
     }
 }
