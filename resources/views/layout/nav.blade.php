@@ -20,7 +20,7 @@ $baseUrl = "https://review.wwwebdesignstudios.com/lmms/";
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a style="padding:10px;" class="navbar-brand" href="#"><img src="/images/logo.png" height="32px"></a>
+        <a style="padding:10px;" class="navbar-brand" href="{{ $baseUrl }}dashboard.php"><img src="/images/logo.png" height="32px"></a>
     </div>
 
     <ul class="nav navbar-top-links navbar-right">
@@ -77,7 +77,7 @@ $baseUrl = "https://review.wwwebdesignstudios.com/lmms/";
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
                 <li>
-                    <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                    <a href="{{ $baseUrl }}dashboard.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-bell fa-fw"></i> Reminders<span class="fa arrow"></span></a>
