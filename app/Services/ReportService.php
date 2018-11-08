@@ -20,7 +20,7 @@ class ReportService
      */
     public function make(Marketing $marketing)
     {
-        $marketing = $marketing->with(['company.offices.reviews',
+        $marketingNew = Marketing::where('id', $marketing->id)->with(['company.offices.reviews',
             'company' => function ($query) use ($marketing) {
                 $query->withCount(['reports_email' => function ($query) use ($marketing) {
                     $query->time('where', 'email1_timestamp', $marketing->year, $marketing->month)
@@ -33,6 +33,6 @@ class ReportService
                 }]);
             }])->first();
 
-        \Mail::to($this->admin_email)->send(new ReportMarketing($marketing));
+        \Mail::to($this->admin_email)->send(new ReportMarketing($marketingNew));
     }
 }

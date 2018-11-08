@@ -2053,6 +2053,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         click: function click() {
             $('#spinner').show();
+            console.log('marketing_id', this.marketing_id);
 
             axios({
                 method: 'POST',

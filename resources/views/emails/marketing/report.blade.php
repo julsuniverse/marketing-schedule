@@ -4,7 +4,7 @@
     <div>
         <div>
             <h1> {{ $marketing->company->company_name }}</h1>
-            <span><i>Reporting for: {{ date('F, Y') }}</i></span>
+            <span><i>Reporting for: {{ $date }}</i></span>
         </div>
         <div>
             <h2>Website Conversion Information</h2>
