@@ -138,7 +138,7 @@ input[type="file"]{
 
 .disabled-gray {
 	background-color: #7e878a !important;
-	border-color: #7e878a !important;
+	border-color: #5e6365 !important;
 }
 
 @media (max-width: 767px){
