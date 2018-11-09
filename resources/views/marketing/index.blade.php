@@ -189,6 +189,7 @@
                         <td>
                             <marketing-report
                                     :marketing_id="marketing.id"
+                                    :company_email="marketing.company.company_email"
                             ></marketing-report>
                         </td>
                     </tr>

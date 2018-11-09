@@ -70,8 +70,8 @@ class MarketingController extends Controller
             ]);
     }
 
-    public function report(Marketing $marketing)
+    public function report(Marketing $marketing, $to_admin = false)
     {
-        $this->reportService->make($marketing);
+        $this->reportService->make($marketing, $to_admin);
     }
 }

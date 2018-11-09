@@ -11284,7 +11284,7 @@ input[type="file"]{
 }
 
 .btn {
-	display: block;
+	display: inline-block;
 }
 
 .no-padding {
