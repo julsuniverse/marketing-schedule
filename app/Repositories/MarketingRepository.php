@@ -68,7 +68,9 @@ class MarketingRepository
                         /*->with(['keywords' => function ($query) use ($month, $year) {
                             $query->where(['month' => $month, 'year' => $year]);
                         }]);*/
-                        ->with('keywords');
+                        ->with(['keywords' => function ($query) use ($month, $year) {
+                            $query->orderBy('company_keywords.completed');
+                        }]);
 
                 }])->orderBy('company.company_name');
 

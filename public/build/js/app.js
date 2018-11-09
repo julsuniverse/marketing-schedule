@@ -1728,7 +1728,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 if (index != -1) {
                     _this.keywords[index] = new_keywords;
                 } else {
-                    _this.keywords.push(new_keywords);
+                    _this.keywords.unshift(new_keywords); //вставить в начало
                 }
                 _this.activeCompany.keywords = _this.keywords;
             }).catch(function (response) {

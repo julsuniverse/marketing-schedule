@@ -84,7 +84,7 @@
                         if(index != -1) {
                             this.keywords[index] = new_keywords;
                         } else {
-                            this.keywords.push(new_keywords);
+                            this.keywords.unshift(new_keywords); //вставить в начало
                         }
                         this.activeCompany.keywords = this.keywords;
                     })
