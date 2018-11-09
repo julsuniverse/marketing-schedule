@@ -1686,6 +1686,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['activeCompany', 'month', 'year'],
@@ -68705,24 +68708,27 @@ var render = function() {
                     }
                   }
                 }),
-                _vm._v(
-                  "\n                " +
-                    _vm._s(keyword.text) +
-                    "\n                (" +
-                    _vm._s(keyword.pivot.count) +
-                    ")\n                "
-                ),
-                _c(
-                  "span",
-                  {
-                    on: {
-                      click: function($event) {
-                        _vm.deleteKeyword(keyword)
+                _vm._v(" "),
+                _c("span", { staticClass: "keywords-text" }, [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(keyword.text) +
+                      "\n                    (" +
+                      _vm._s(keyword.pivot.count) +
+                      ")\n                "
+                  ),
+                  _c(
+                    "span",
+                    {
+                      on: {
+                        click: function($event) {
+                          _vm.deleteKeyword(keyword)
+                        }
                       }
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-close" })]
-                )
+                    },
+                    [_c("i", { staticClass: "fa fa-close" })]
+                  )
+                ])
               ])
             }),
             _vm._v(" "),

@@ -10,11 +10,14 @@
                 <div class="company-name">{{ activeCompany.company_name }}</div>
                 <div class="key" v-for="keyword in filterShow">
                     <input type="checkbox" :checked="keyword.pivot.completed" @change="complete(keyword)" />
-                    {{ keyword.text }}
-                    ({{ keyword.pivot.count }})
+                    <span class="keywords-text">
+                        {{ keyword.text }}
+                        ({{ keyword.pivot.count }})
                     <span @click="deleteKeyword(keyword)">
                         <i class="fa fa-close"></i>
                     </span>
+                    </span>
+
                 </div>
 
                 <nav aria-label="Page navigation" class="keywords-pagination">
