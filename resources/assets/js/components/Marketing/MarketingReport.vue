@@ -3,7 +3,7 @@
         <button class="btn btn-info btn-xs" @click="click()" :class="disabledClass" :disabled="disabled">
             <i class="fa fa-sign-out" aria-hidden="true"></i>
         </button>
-        <button class="btn btn-primary btn-xs" @click="clickAdmin()">
+        <button class="btn btn-brown btn-xs" @click="clickAdmin()">
             <i class="fa fa-file-text-o" aria-hidden="true"></i>
         </button>
     </div>

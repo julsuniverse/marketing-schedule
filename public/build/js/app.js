@@ -68622,7 +68622,7 @@ var render = function() {
     _c(
       "button",
       {
-        staticClass: "btn btn-primary btn-xs",
+        staticClass: "btn btn-brown btn-xs",
         on: {
           click: function($event) {
             _vm.clickAdmin()
