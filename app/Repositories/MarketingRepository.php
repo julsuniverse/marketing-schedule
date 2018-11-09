@@ -65,9 +65,10 @@ class MarketingRepository
                             ->time('orWhere', 'sms2_timestamp', $year, $month)
                             ->time('orWhere', 'sms3_timestamp', $year, $month);
                     }])
-                        ->with(['keywords' => function ($query) use ($month, $year) {
+                        /*->with(['keywords' => function ($query) use ($month, $year) {
                             $query->where(['month' => $month, 'year' => $year]);
-                        }]);
+                        }]);*/
+                        ->with('keywords');
 
                 }])->orderBy('company.company_name');
 

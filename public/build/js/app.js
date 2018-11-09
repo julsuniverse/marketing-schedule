@@ -2043,9 +2043,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['marketing_id'],
+    props: ['marketing_id', 'company_email'],
     data: function data() {
         return {};
     },
@@ -2063,6 +2068,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }).finally(function () {
                 $('#spinner').hide();
             });
+        },
+        clickAdmin: function clickAdmin() {
+            $('#spinner').show();
+            console.log('marketing_id', this.marketing_id);
+
+            axios({
+                method: 'POST',
+                url: '/report/' + this.marketing_id + '/1'
+            }).then(function (response) {}).catch(function (response) {
+                alert('Something went wrong');
+            }).finally(function () {
+                $('#spinner').hide();
+            });
+        }
+    },
+    computed: {
+        disabled: function disabled() {
+            return this.company_email == '' ? 'disabled' : false;
+        },
+        disabledClass: function disabledClass() {
+            return this.company_email == '' ? 'disabled-gray' : '';
         }
     }
 });
@@ -68572,23 +68598,45 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "button",
-    {
-      staticClass: "btn btn-info btn-xs",
-      on: {
-        click: function($event) {
-          _vm.click()
+  return _c("div", [
+    _c(
+      "button",
+      {
+        staticClass: "btn btn-info btn-xs",
+        class: _vm.disabledClass,
+        attrs: { disabled: _vm.disabled },
+        on: {
+          click: function($event) {
+            _vm.click()
+          }
         }
-      }
-    },
-    [
-      _c("i", {
-        staticClass: "fa fa-sign-out",
-        attrs: { "aria-hidden": "true" }
-      })
-    ]
-  )
+      },
+      [
+        _c("i", {
+          staticClass: "fa fa-sign-out",
+          attrs: { "aria-hidden": "true" }
+        })
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "button",
+      {
+        staticClass: "btn btn-primary btn-xs",
+        on: {
+          click: function($event) {
+            _vm.clickAdmin()
+          }
+        }
+      },
+      [
+        _c("i", {
+          staticClass: "fa fa-file-text-o",
+          attrs: { "aria-hidden": "true" }
+        })
+      ]
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

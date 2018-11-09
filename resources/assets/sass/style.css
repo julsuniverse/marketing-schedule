@@ -129,11 +129,16 @@ input[type="file"]{
 }
 
 .btn {
-	display: block;
+	display: inline-block;
 }
 
 .no-padding {
 	padding: 0 !important;
+}
+
+.disabled-gray {
+	background-color: #7e878a !important;
+	border-color: #5e6365 !important;
 }
 
 @media (max-width: 767px){

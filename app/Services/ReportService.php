@@ -17,8 +17,9 @@ class ReportService
 
     /**
      * @param \App\Models\Marketing\Marketing $marketing
+     * @param bool $to_admin
      */
-    public function make(Marketing $marketing)
+    public function make(Marketing $marketing, $to_admin = false)
     {
         $marketingNew = Marketing::where('id', $marketing->id)->with(['company.offices.reviews',
             'company' => function ($query) use ($marketing) {
@@ -33,6 +34,7 @@ class ReportService
                 }]);
             }])->first();
 
-        \Mail::to($this->admin_email)->send(new ReportMarketing($marketingNew));
+        //TODO: if !$to_admin => change email to company_email
+        $to_admin ? \Mail::to($this->admin_email)->send(new ReportMarketing($marketingNew)) : \Mail::to($this->admin_email)->send(new ReportMarketing($marketingNew));
     }
 }
