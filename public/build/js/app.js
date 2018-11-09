@@ -1633,6 +1633,62 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Company/Marketing.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['company_id', 'marketing'],
+    data: function data() {
+        return {
+            value: this.marketing
+        };
+    },
+
+    methods: {
+        changeMarketing: function changeMarketing() {
+            this.changeValue();
+            axios({
+                method: 'POST',
+                url: 'company/change-marketing',
+                data: {
+                    'company_id': this.company_id,
+                    'marketing': this.value
+                }
+            }).then(function (response) {}).catch(function (response) {
+                alert('Something went wrong');
+            });
+        },
+        changeValue: function changeValue() {
+            this.value = this.value === 1 ? 0 : 1;
+        }
+    },
+    computed: {
+        text: function text() {
+            if (this.value === 1) {
+                return "ON";
+            }
+
+            return "OFF";
+        },
+        button_class: function button_class() {
+            if (this.value === 1) {
+                return "btn-primary";
+            }
+
+            return "btn-danger";
+        }
+    }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Marketing/Keywords.vue":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -68591,6 +68647,39 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-1100f066\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Company/Marketing.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "span",
+    {
+      staticClass: "btn btn-xs btn-action",
+      class: _vm.button_class,
+      on: {
+        click: function($event) {
+          _vm.changeMarketing()
+        }
+      }
+    },
+    [_vm._v(_vm._s(_vm.text))]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-1100f066", module.exports)
+  }
+}
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-57acc64a\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Marketing/MarketingReport.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -80006,11 +80095,12 @@ __webpack_require__("./node_modules/metismenu/dist/metisMenu.js");
 __webpack_require__("./resources/assets/js/sb-admin-2.js");
 __webpack_require__("./node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js");
 __webpack_require__("./node_modules/datatables/media/js/jquery.dataTables.js");
-__webpack_require__("./node_modules/jquery-validation/dist/jquery.validate.js");
 __webpack_require__("./node_modules/datatables-bootstrap/js/dataTables.bootstrap.js");
+__webpack_require__("./node_modules/jquery-validation/dist/jquery.validate.js");
 __webpack_require__("./node_modules/datatables-responsive/js/dataTables.responsive.js");
 __webpack_require__("./resources/assets/js/layout.js");
 __webpack_require__("./resources/assets/js/marketing.js");
+__webpack_require__("./resources/assets/js/company.js");
 
 
 
@@ -80019,6 +80109,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing-color', __webpa
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing-report', __webpack_require__("./resources/assets/js/components/Marketing/MarketingReport.vue"));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('keywords', __webpack_require__("./resources/assets/js/components/Marketing/Keywords.vue"));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing', __webpack_require__("./resources/assets/js/components/Marketing/Marketing.vue"));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing-toogle', __webpack_require__("./resources/assets/js/components/Company/Marketing.vue"));
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     el: '#app'
@@ -80074,6 +80165,66 @@ window.axios.defaults.headers.common = {
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
+
+/***/ }),
+
+/***/ "./resources/assets/js/company.js":
+/***/ (function(module, exports) {
+
+/*$(document).ready(function() {
+    $('#company-dataTables').DataTable({
+        responsive: true,
+        paging: false
+    });
+});*/
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/Company/Marketing.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Company/Marketing.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-1100f066\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Company/Marketing.vue")
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Company/Marketing.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1100f066", Component.options)
+  } else {
+    hotAPI.reload("data-v-1100f066", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
 
 /***/ }),
 
@@ -80656,10 +80807,12 @@ function additional_urls(type, soc_id, off_id, com_id) {
 /***/ "./resources/assets/js/marketing.js":
 /***/ (function(module, exports) {
 
-$('#marketing-dataTables').DataTable({
-    responsive: true,
-    paging: false,
-    info: false
+$(document).ready(function () {
+    $('#marketing-dataTables').DataTable({
+        responsive: true,
+        paging: false,
+        info: false
+    });
 });
 
 /***/ }),
@@ -80695,12 +80848,12 @@ $(function () {
     });
 
     var url = window.location;
-    var element = $('ul.nav a').filter(function () {
+    /*var element = $('ul.nav a').filter(function() {
         return this.href == url || url.href.indexOf(this.href) == 0;
     }).addClass('active').parent().parent().addClass('in').parent();
     if (element.is('li')) {
         element.addClass('active');
-    }
+    }*/
 });
 
 /***/ }),
