@@ -2086,6 +2086,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     computed: {
         disabled: function disabled() {
             return this.company_email == '' ? 'disabled' : false;
+        },
+        disabledClass: function disabledClass() {
+            return this.company_email == '' ? 'disabled-gray' : '';
         }
     }
 });
@@ -68600,7 +68603,7 @@ var render = function() {
       "button",
       {
         staticClass: "btn btn-info btn-xs",
-        class: _vm.disabled,
+        class: _vm.disabledClass,
         attrs: { disabled: _vm.disabled },
         on: {
           click: function($event) {

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button class="btn btn-info btn-xs" @click="click()" :class="disabled" :disabled="disabled">
+        <button class="btn btn-info btn-xs" @click="click()" :class="disabledClass" :disabled="disabled">
             <i class="fa fa-sign-out" aria-hidden="true"></i>
         </button>
         <button class="btn btn-primary btn-xs" @click="clickAdmin()">
@@ -60,6 +60,9 @@
         computed: {
             disabled() {
                 return (this.company_email == '') ? 'disabled' : false;
+            },
+            disabledClass() {
+                return (this.company_email == '') ? 'disabled-gray' : '';
             }
         }
     }

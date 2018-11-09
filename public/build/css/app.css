@@ -11291,6 +11291,11 @@ input[type="file"]{
 	padding: 0 !important;
 }
 
+.disabled-gray {
+	background-color: #7e878a !important;
+	border-color: #7e878a !important;
+}
+
 @media (max-width: 767px){
 	.navbar .dropdown-menu a {
 	    color: #444;
