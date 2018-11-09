@@ -34,7 +34,6 @@ class ReportService
                 }]);
             }])->first();
 
-        //TODO: if !$to_admin => change email to company_email
-        $to_admin ? \Mail::to($this->admin_email)->send(new ReportMarketing($marketingNew)) : \Mail::to($this->admin_email)->send(new ReportMarketing($marketingNew));
+        $to_admin ? \Mail::to($this->admin_email)->send(new ReportMarketing($marketingNew)) : \Mail::to($marketingNew->company->company_email)->send(new ReportMarketing($marketingNew));
     }
 }

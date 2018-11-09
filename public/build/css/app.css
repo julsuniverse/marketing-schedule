@@ -11606,8 +11606,8 @@ div.dtr-modal div.dtr-modal-background {
 
 .keywords {
   border: 2px solid #ea8201;
-  max-width: 320px;
-  width: 320px;
+  max-width: 420px;
+  width: 420px;
   background-color: #fff;
   position: absolute;
   top: 0;
@@ -11630,12 +11630,22 @@ div.dtr-modal div.dtr-modal-background {
 .keywords .keywords-inner {
   position: absolute;
   right: 0;
-  width: 320px;
+  width: 420px;
   height: 406px;
+  overflow-x: scroll;
 }
 
 .keywords .keywords-inner.keywords-inner-hide {
   right: -320;
+}
+
+.keywords .keywords-inner .keywords-text {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: block;
+  margin-top: -23px;
+  margin-left: 18px;
 }
 
 .keywords .company-name {
@@ -11687,7 +11697,7 @@ div.dtr-modal div.dtr-modal-background {
   width: 132px;
   content: "keywords";
   position: absolute;
-  right: 266px;
+  right: 367px;
   top: 104px;
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
