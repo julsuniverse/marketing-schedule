@@ -8,7 +8,7 @@
 
             <div class="keywords-inner" :class="clicked ? '' : 'keywords-inner-hide'">
                 <div class="company-name">{{ activeCompany.company_name }}</div>
-                <div class="key" v-for="keyword in filterShow">
+                <div class="key" v-for="keyword in filterShow" :class="highlight(keyword)">
                     <input type="checkbox" :checked="keyword.pivot.completed" @change="complete(keyword)" />
                     <span class="keywords-text">
                         {{ keyword.text }}
@@ -144,6 +144,9 @@
                     .catch(response => {
                         alert('Something went wrong');
                     })
+            },
+            highlight(keyword) {
+                return keyword.pivot.month == this.month && keyword.pivot.year == this.year ? 'keywords-background' : '';
             }
         },
         computed: {

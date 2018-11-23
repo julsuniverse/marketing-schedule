@@ -1787,6 +1787,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }).catch(function (response) {
                 alert('Something went wrong');
             });
+        },
+        highlight: function highlight(keyword) {
+            return keyword.pivot.month == this.month && keyword.pivot.year == this.year ? 'keywords-background' : '';
         }
     },
     computed: {
@@ -68698,38 +68701,42 @@ var render = function() {
             ]),
             _vm._v(" "),
             _vm._l(_vm.filterShow, function(keyword) {
-              return _c("div", { staticClass: "key" }, [
-                _c("input", {
-                  attrs: { type: "checkbox" },
-                  domProps: { checked: keyword.pivot.completed },
-                  on: {
-                    change: function($event) {
-                      _vm.complete(keyword)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "keywords-text" }, [
-                  _vm._v(
-                    "\n                    " +
-                      _vm._s(keyword.text) +
-                      "\n                    (" +
-                      _vm._s(keyword.pivot.count) +
-                      ")\n                "
-                  ),
-                  _c(
-                    "span",
-                    {
-                      on: {
-                        click: function($event) {
-                          _vm.deleteKeyword(keyword)
-                        }
+              return _c(
+                "div",
+                { staticClass: "key", class: _vm.highlight(keyword) },
+                [
+                  _c("input", {
+                    attrs: { type: "checkbox" },
+                    domProps: { checked: keyword.pivot.completed },
+                    on: {
+                      change: function($event) {
+                        _vm.complete(keyword)
                       }
-                    },
-                    [_c("i", { staticClass: "fa fa-close" })]
-                  )
-                ])
-              ])
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "keywords-text" }, [
+                    _vm._v(
+                      "\n                    " +
+                        _vm._s(keyword.text) +
+                        "\n                    (" +
+                        _vm._s(keyword.pivot.count) +
+                        ")\n                "
+                    ),
+                    _c(
+                      "span",
+                      {
+                        on: {
+                          click: function($event) {
+                            _vm.deleteKeyword(keyword)
+                          }
+                        }
+                      },
+                      [_c("i", { staticClass: "fa fa-close" })]
+                    )
+                  ])
+                ]
+              )
             }),
             _vm._v(" "),
             _c(

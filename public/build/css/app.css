@@ -11715,6 +11715,10 @@ div.dtr-modal div.dtr-modal-background {
   right: -52px;
 }
 
+.keywords-background {
+  background-color: #e0ffec;
+}
+
 #spinner {
   position: absolute;
   top: 0;
