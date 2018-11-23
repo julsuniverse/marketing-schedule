@@ -28,7 +28,7 @@
                v-cloak
     >
         <div id="marketing">
-            <table class="table table-hover table-bordered table-responsive marketing-table" id="marketing-dataTables">
+            <table class="table table-hover table-bordered table-responsive marketing-table">
                 <thead>
                 <tr class="table-header">
                     <th>#</th>

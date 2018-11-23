@@ -3,9 +3,14 @@
 }
 
 .marketing-table {
-  td {
+  margin-top: 10px;
+  tbody > tr > td {
     position: relative;
+    padding: 4px 6px;
+    vertical-align: middle;
+    font-size: 13px;
   }
+
 }
 
 .marketing-td {
@@ -15,7 +20,7 @@
     text-align: left;
   }
   .marketing-cell-color {
-    height: 42px;
+    height: 35px;
     padding-top: 10px;
     padding-left: 3px;
   }
@@ -51,7 +56,7 @@
 }
 
 .marketing-message-cell {
-  height: 42px;
+  height: 21px;
   padding-top: 6px;
   padding-left: 9px;
 
