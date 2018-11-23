@@ -9,7 +9,7 @@
             <div class="keywords-inner" :class="clicked ? '' : 'keywords-inner-hide'">
                 <div class="company-name">{{ activeCompany.company_name }}</div>
                 <div class="key" v-for="keyword in filterShow" :class="highlight(keyword)">
-                    <input type="checkbox" :checked="keyword.pivot.completed" @change="complete(keyword)" />
+                    <input type="checkbox" :checked="keyword.pivot.completed" @change="complete(keyword)"/>
                     <span class="keywords-text">
                         {{ keyword.text }}
                         ({{ keyword.pivot.count }})
@@ -33,10 +33,13 @@
                 <div class="add">
                     <input
                             type="text"
+                            id="keyword-input"
                             v-model="value"
                             @keypress="current_page = 1"
                             name="keyword"
                             placeholder="Enter keyword"
+                            autofocus
+                            ref="key"
                     />
                     <span class="matches">{{ matches }}</span>
                     <span class="add-keyword" @click="addCompany()">
@@ -90,6 +93,7 @@
                             this.keywords.unshift(new_keywords); //вставить в начало
                         }
                         this.activeCompany.keywords = this.keywords;
+                        $(this.$refs.key).focus();
                     })
                     .catch(response => {
                         alert('Something went wrong');

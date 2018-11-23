@@ -1689,6 +1689,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['activeCompany', 'month', 'year'],
@@ -1734,6 +1737,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     _this.keywords.unshift(new_keywords); //вставить в начало
                 }
                 _this.activeCompany.keywords = _this.keywords;
+                $(_this.$refs.key).focus();
             }).catch(function (response) {
                 alert('Something went wrong');
             }).finally(function () {
@@ -68784,10 +68788,13 @@ var render = function() {
                     expression: "value"
                   }
                 ],
+                ref: "key",
                 attrs: {
                   type: "text",
+                  id: "keyword-input",
                   name: "keyword",
-                  placeholder: "Enter keyword"
+                  placeholder: "Enter keyword",
+                  autofocus: ""
                 },
                 domProps: { value: _vm.value },
                 on: {
