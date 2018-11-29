@@ -11524,8 +11524,16 @@ div.dtr-modal div.dtr-modal-background {
   position: relative;
 }
 
-.marketing-table td {
+.marketing-table {
+  margin-top: 10px;
+}
+
+.marketing-table tbody > tr > td {
   position: relative;
+  padding: 4px 6px;
+  vertical-align: middle;
+  font-size: 13px;
+  line-height: 1;
 }
 
 .marketing-td {
@@ -11538,7 +11546,7 @@ div.dtr-modal div.dtr-modal-background {
 }
 
 .marketing-td .marketing-cell-color {
-  height: 42px;
+  height: 35px;
   padding-top: 10px;
   padding-left: 3px;
 }
@@ -11575,14 +11583,14 @@ div.dtr-modal div.dtr-modal-background {
 }
 
 .marketing-message-cell {
-  height: 42px;
+  height: 21px;
   padding-top: 6px;
   padding-left: 9px;
 }
 
 .marketing-message-cell .marketing-message {
   padding: 4px 5px;
-  margin-right: 5px;
+  margin-right: 2px;
 }
 
 .marketing-diff {
@@ -11713,6 +11721,10 @@ div.dtr-modal div.dtr-modal-background {
 
 #open-close.open-close-hide {
   right: -52px;
+}
+
+.keywords-background {
+  background-color: #e0ffec;
 }
 
 .btn-action {

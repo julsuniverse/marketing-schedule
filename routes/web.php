@@ -15,6 +15,7 @@ Route::get('/', function() {
    return redirect('/marketing');
 });
 Route::get('/marketing/{month?}/{year?}', 'Marketing\MarketingController@index')->name('marketing');
+Route::post('/marketing/change-toogle', 'Marketing\MarketingController@changeToogle');
 Route::post('/update', 'Marketing\MarketingController@update');
 Route::post('/update-colors', 'Marketing\MarketingController@updateColors');
 Route::post('/report/{marketing}/{to_admin?}', 'Marketing\MarketingController@report');

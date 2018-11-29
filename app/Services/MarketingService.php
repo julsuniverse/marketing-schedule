@@ -118,6 +118,10 @@ class MarketingService
             return 0;
         }
 
+        if($old !== 0 && $new === 0) {
+            return 0;
+        }
+
         if($old > $new) {
             $res = ($new - $old) / $old * 100;
         } else {

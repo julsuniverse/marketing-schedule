@@ -73,4 +73,12 @@ class MarketingController extends Controller
     {
         $this->reportService->make($marketing, $to_admin);
     }
+
+    public function changeToogle(Request $request)
+    {
+        //dd($request);
+        Marketing::where('id', $request->marketing_id)->first()->update([
+            $request->type.'_toogle' => $request->value
+        ]);
+    }
 }

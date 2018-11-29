@@ -28,7 +28,7 @@
                v-cloak
     >
         <div id="marketing">
-            <table class="table table-hover table-bordered table-responsive marketing-table" id="marketing-dataTables">
+            <table class="table table-hover table-bordered table-responsive marketing-table">
                 <thead>
                 <tr class="table-header">
                     <th>#</th>
@@ -43,6 +43,7 @@
                     <th>Reviews</th>
                     <th>Text/Emails</th>
                     <th>Report</th>
+                    <th>Toogles</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -191,6 +192,15 @@
                                     :marketing_id="marketing.id"
                                     :company_email="marketing.company.company_email"
                             ></marketing-report>
+                        </td>
+                        <!-- Toogles -->
+                        <td>
+                            <toogles
+                                :marketing_id="marketing.id"
+                                :google="marketing.google_toogle"
+                                :email="marketing.email_toogle"
+                                :review="marketing.review_toogle"
+                            ></toogles>
                         </td>
                     </tr>
 
