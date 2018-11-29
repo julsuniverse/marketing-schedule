@@ -2105,6 +2105,105 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Marketing/Toogles.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['marketing_id', 'google', 'email', 'review'],
+    data: function data() {
+        return {
+            google_value: this.google,
+            email_value: this.email,
+            review_value: this.review,
+
+            type_google: 'google',
+            type_email: 'email',
+            type_review: 'review'
+        };
+    },
+
+    methods: {
+        changeGoogle: function changeGoogle() {
+            this.changeValue(this.type_google);
+            axios({
+                method: 'POST',
+                url: 'marketing/change-toogle',
+                data: {
+                    'marketing_id': this.marketing_id,
+                    'type': 'google',
+                    'value': this.google_value
+                }
+            }).catch(function (response) {
+                alert('Something went wrong');
+            });
+        },
+        changeEmail: function changeEmail() {
+            this.changeValue(this.type_email);
+            axios({
+                method: 'POST',
+                url: 'marketing/change-toogle',
+                data: {
+                    'marketing_id': this.marketing_id,
+                    'type': 'email',
+                    'value': this.email_value
+                }
+            }).catch(function (response) {
+                alert('Something went wrong');
+            });
+        },
+        changeReview: function changeReview() {
+            this.changeValue(this.type_review);
+            axios({
+                method: 'POST',
+                url: 'marketing/change-toogle',
+                data: {
+                    'marketing_id': this.marketing_id,
+                    'type': 'review',
+                    'value': this.review_value
+                }
+            }).then(function (response) {}).catch(function (response) {
+                alert('Something went wrong');
+            });
+        },
+        changeValue: function changeValue(toogle) {
+            if (toogle == this.type_google) {
+                this.google_value = !this.google_value;
+            }
+            if (toogle == this.type_email) {
+                this.email_value = this.email_value === 1 ? 0 : 1;
+            }
+            if (toogle == this.type_review) {
+                this.review_value = this.review_value === 1 ? 0 : 1;
+            }
+        },
+        text: function text(value) {
+            if (value) {
+                return "ON";
+            }
+            return "OFF";
+        },
+        button_class: function button_class(value) {
+            if (value) {
+                return "btn-success";
+            }
+            return "disabled-gray";
+        }
+    }
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -68989,6 +69088,90 @@ if (false) {
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-b1861712\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Marketing/Toogles.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "span",
+      {
+        staticClass: "btn btn-xs btn-action",
+        class: _vm.button_class(_vm.google_value),
+        attrs: { id: "google" },
+        on: {
+          click: function($event) {
+            _vm.changeGoogle()
+          }
+        }
+      },
+      [
+        _c("i", {
+          staticClass: "fa fa-google",
+          attrs: { "aria-hidden": "true" }
+        }),
+        _vm._v(" " + _vm._s(_vm.text(_vm.google_value)))
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "span",
+      {
+        staticClass: "btn btn-xs btn-action",
+        class: _vm.button_class(_vm.email_value),
+        attrs: { id: "email" },
+        on: {
+          click: function($event) {
+            _vm.changeEmail()
+          }
+        }
+      },
+      [
+        _c("i", {
+          staticClass: "fa fa-envelope",
+          attrs: { "aria-hidden": "true" }
+        }),
+        _vm._v(" " + _vm._s(_vm.text(_vm.email_value)))
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "span",
+      {
+        staticClass: "btn btn-xs btn-action",
+        class: _vm.button_class(_vm.review_value),
+        attrs: { id: "review" },
+        on: {
+          click: function($event) {
+            _vm.changeReview()
+          }
+        }
+      },
+      [
+        _c("i", {
+          staticClass: "fa fa-comments-o",
+          attrs: { "aria-hidden": "true" }
+        }),
+        _vm._v(" " + _vm._s(_vm.text(_vm.review_value)))
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-b1861712", module.exports)
+  }
+}
+
+/***/ }),
+
 /***/ "./node_modules/vue/dist/vue.common.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -80039,6 +80222,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing-color', __webpa
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing-report', __webpack_require__("./resources/assets/js/components/Marketing/MarketingReport.vue"));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('keywords', __webpack_require__("./resources/assets/js/components/Marketing/Keywords.vue"));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('marketing', __webpack_require__("./resources/assets/js/components/Marketing/Marketing.vue"));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('toogles', __webpack_require__("./resources/assets/js/components/Marketing/Toogles.vue"));
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     el: '#app'
@@ -80326,6 +80510,54 @@ if (false) {(function () {
     hotAPI.createRecord("data-v-57acc64a", Component.options)
   } else {
     hotAPI.reload("data-v-57acc64a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/Marketing/Toogles.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Marketing/Toogles.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-b1861712\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Marketing/Toogles.vue")
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Marketing/Toogles.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-b1861712", Component.options)
+  } else {
+    hotAPI.reload("data-v-b1861712", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
